@@ -1,0 +1,3 @@
+# MDBOOK Test
+
+This is a test to see if `mdbook` is a viable means of creating this spec, as I would like to use Markdown rather than HTML for writing it, and I want to get going right away with no nonsense. `mdbook` may allow just that...
