@@ -1,2 +1,15 @@
 [book]
-title = "My First Book"
+title = "Scratch Specification"
+authors = ["Endless-Ocean"]
+description = "A formal programming language specification of Scratch."
+
+[build]
+build-dir = "docs"
+create-missing = false
+
+[output.html]
+additional-css = ["custom.css"]
+additional-js = ["scratchblocks.js"]
+smart-punctuation = true
+mathjax-support = true
+

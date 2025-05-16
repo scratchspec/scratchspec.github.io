@@ -1,5 +1,8 @@
-# MDBOOK Test
+# Scratch Specification
 
-This is a test to see if `mdbook` is a viable means of creating this spec, as I would like to use Markdown rather than HTML for writing it, and I want to get going right away with no nonsense. `mdbook` may allow just that...
+This is an attempt to create a formal programming language specification of Scratch.
 
-Hmm...
+<pre class="blocks">
+when gf clicked
+move (10) steps
+</pre>
