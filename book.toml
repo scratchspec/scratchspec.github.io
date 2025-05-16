@@ -8,7 +8,6 @@ build-dir = "docs"
 create-missing = false
 
 [output.html]
-additional-css = ["custom.css"]
 additional-js = ["scratchblocks.js"]
 smart-punctuation = true
 mathjax-support = true
