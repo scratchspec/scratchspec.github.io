@@ -72,13 +72,17 @@ Targets run code. They are the **sprites** and **stage** in a project. They are 
 
 There are some key distinctions to be made, however. Targets come in two forms- as a **sprite**, or the **stage**. Here are the key differences between them:
 
-| Ability          | Sprites                                           | Stage                                              |
-|------------------|---------------------------------------------------|----------------------------------------------------|
-| Target?          | **Yes** (programmable, handles assets, etcetera)  | **Yes** (programmable, handles assets, etcetera)   |
-| Movable?         | **Yes** (its rendered image can be moved around)  | **No** (rendered image is in the center)           |
-| Rotatable?       | **Yes** (its rendered image can be rotated about) | **No** (rendered image is right side up)           |
-| Resizable?       | **Yes** (its rendered image can be scaled)        | **No** (rendered image is not scaled)              |
-| Layerable?       | **Yes** (goes in front of/behind other sprites)   | **No** (always behind all the sprites)             |
-| Local variables? | **Yes** (its variables can only be set by itself) | **No** (all targets can set its variables)         |
-| Independent?     | **Yes** (can be downloaded and exist on its own)  | **No** (not downloadable, exists in project**\***) |
-| Deletable?       | **Yes** (can be entirely deleted from a project)  | **No** (one and only one exists in every project)  |
+| Ability          | Sprites                                           | Stage                                                |
+|------------------|---------------------------------------------------|------------------------------------------------------|
+| Target?          | **Yes** (programmable, handles assets, etcetera)  | **Yes** (programmable, handles assets, etcetera)     |
+| Movable?         | **Yes** (its rendered image can be moved around)  | **No** (rendered image is in the center)             |
+| Rotatable?       | **Yes** (its rendered image can be rotated about) | **No** (rendered image is right side up)             |
+| Resizable?       | **Yes** (its rendered image can be scaled)        | **No** (rendered image is not scaled)                |
+| Layerable?       | **Yes** (goes in front of/behind other sprites)   | **No** (always behind all the sprites)               |
+| Local variables? | **Yes** (its variables can only be set by itself) | **No** (all targets can set its variables)           |
+| Independent?     | **Yes** (can be downloaded and exist on its own)  | **No** (not downloadable*, exists in project)        |
+| Deletable?       | **Yes** (can be entirely deleted from a project)  | **No*** (one* and only one* exists in every project) |
+
+> *It could be in theory, however Scratch 3.0 does not give the user this power. If implemented with care, one could perhaps add this behavior in their own implementation of Scratch without compromising accuracy, however projects with such features may not work properly in ordinary Scratch.
+
+As seen in this table, the stage is more of a limited and unique target, whereas the sprites are what one primarily works with in their code in order to create more modular as well as interactive projects.
