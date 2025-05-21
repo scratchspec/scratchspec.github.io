@@ -12,6 +12,7 @@ This document is a serious attempt to create a formal programming language speci
 > - Just **have** some **ideas**, **motivation**, or **feedback** for improving this specification
 > 
 > Then please, by all means, if there's something you'd like to contribute:
+> 
 > - **Create a pull request** or issue in this GitHub repository highlighting what you want to change (**must be 13+ years old to create one**)
 > - **Comment** what you want to change **on my profile** ([@Endless-Ocean on Scratch](https://scratch.mit.edu/users/Endless-Ocean/))
 
@@ -83,6 +84,6 @@ There are some key distinctions to be made, however. Targets come in two forms- 
 | Independent?     | **Yes** (can be downloaded and exist on its own)  | **No** (not downloadable*, exists in project)        |
 | Deletable?       | **Yes** (can be entirely deleted from a project)  | **No*** (one and only one exists in every project)   |
 
-> * This feature could exist in theory, however the existing implementation of Scratch 3.0 does not allow this. If handled with care, one could perhaps add this behavior in their own implementation of Scratch without compromising on accuracy, however projects with such features may not work properly in ordinary Scratch.
+> *This feature could exist in theory, however the existing implementation of Scratch 3.0 does not allow this. If handled with care, one could perhaps add this behavior in their own implementation of Scratch without compromising on accuracy, however projects with such features may not work properly in ordinary Scratch.
 
 As seen in this table, the stage is more of a limited and unique target, whereas the sprites are what one primarily works with in their code in order to create more modular as well as interactive projects.
