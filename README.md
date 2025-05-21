@@ -3,7 +3,9 @@
 This document is a serious attempt to create a formal programming language specification of Scratch 3.0.
 
 > [!TIP]
-> **The Scratch specification needs your help!** Please comment on my profile ([@Endless-Ocean on Scratch](https://scratch.mit.edu/users/Endless-Ocean/)) or create a pull request (must be **13+**) if you are willing to:
+> **The Scratch specification needs your help!**
+>
+> Please comment on my profile ([@Endless-Ocean on Scratch](https://scratch.mit.edu/users/Endless-Ocean/)) or create a pull request (must be **13+**) if you are willing to:
 > 
 > - **Summarize key points** of sections (things can get *ridiculously wordy* at times)
 > - **Provide insight** into the workings of Scratch (know info that should be here)
