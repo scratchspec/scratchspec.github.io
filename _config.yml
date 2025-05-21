@@ -1,8 +1,8 @@
 # Site settings
-title: Your Project Title
-repository: your-username/your-repository
+title: Scratch Specification
+repository: OceanIsEndless/scratch-spec
 description: >-
-  A description of your project
+  A formal programming language specification of Scratch 3.0.
 
 markdown: GFM 
 plugins:
