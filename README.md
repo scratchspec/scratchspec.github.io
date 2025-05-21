@@ -4,15 +4,15 @@ This document is a serious attempt to create a formal programming language speci
 
 > [!TIP]
 > **The Scratch specification needs your help!** If you are able to:
-
+> 
 > - **Summarize key points** of sections (things can get *ridiculously wordy* at times)
 > - **Provide insight** into the workings of Scratch (know info that should be here)
 > - **Fact check** info to verify accuracy (add links to projects, code, wiki, forums)
 > - Make sure everything looks good (**correct formatting, spelling, grammar, etc**)
 > - Just **have** some **ideas**, **motivation**, or **feedback** for improving this specification
-
+> \
 > Then please, by all means, if there's something you'd like to contribute:
-
+> 
 > - **Create a pull request** or issue in this GitHub repository highlighting what you want to change (**must be 13+ years old to create one**)
 > - **Comment** what you want to change **on my profile** ([@Endless-Ocean on Scratch](https://scratch.mit.edu/users/Endless-Ocean/))
 
