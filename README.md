@@ -267,8 +267,8 @@ In Scratch, the following types of values exist:
 
 - [String](#string)
 - [Number](#number)
-  - [`Infinity`](#infinity)
   - [`-Infinity`](#-infinity)
+  - [`Infinity`](#infinity)
   - [`NaN`](#nan)
 - [Boolean](#boolean)
   - [`true`](#true)
