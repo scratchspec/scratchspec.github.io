@@ -4,7 +4,6 @@ repository: OceanIsEndless/scratch-spec
 description: >-
   A formal programming language specification of Scratch 3.0.
 
-name: true
 title: false
 
 markdown: GFM 
