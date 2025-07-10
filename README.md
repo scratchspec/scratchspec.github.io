@@ -80,6 +80,8 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
     - [Variable blocks](#variable-blocks)
     - [List blocks](#list-blocks)
     - [Custom blocks](#custom-blocks)
+    - [Pen blocks](#pen-blocks)
+    - [Obsolete blocks](#obsolete-blocks)
 
 ## Introduction
 
@@ -400,7 +402,7 @@ A string containing no letters. It has a [length](#length) of `0` and is the onl
 
 #### Undefined
 
-A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by obsolete blocks. In most cases, however, Scratch uses `0` or an empty string to represent nothing.
+A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [obsolete blocks](#obsolete-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
 
 #### Username
 
@@ -601,3 +603,9 @@ Technically, this block can report any username registered with the Scratch webs
 ### List blocks
 
 ### Custom blocks
+
+### Pen blocks
+
+### Obsolete blocks
+
+TODO: add info on [obsolete blocks](https://en.scratch-wiki.info/wiki/Obsolete_Blocks)
