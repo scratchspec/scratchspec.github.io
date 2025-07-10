@@ -2,6 +2,8 @@
 
 A detailed explanation of how Scratch 3.0 works as a programming language.
 
+> This is a work in progress. It's nowhere near complete. Please [contribute](#contributing) if you can!
+
 ## Contents
 
 - [Scratch Specification](#scratch-specification)
@@ -269,8 +271,8 @@ In Scratch, the following types of values exist:
   - [`-Infinity`](#-infinity)
   - [`NaN`](#nan)
 - [Boolean](#boolean)
-  - `true`
-  - `false`
+  - [`true`](#true)
+  - [`false`](#false)
 - [`undefined`](#undefined)
 
 There are lots of terms used to refer to these types of values and particular subsets of them. They are referenced throughout this specification and explained below:
