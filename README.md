@@ -2,7 +2,7 @@
 
 A detailed explanation of how Scratch 3.0 works as a programming language.
 
-> This is a work in progress. It's nowhere near complete. Please [contribute](#contributing) if you can!
+> This is a work in progress; it's nowhere near complete. Please [contribute](#contributing) if you can!
 
 ## Contents
 
