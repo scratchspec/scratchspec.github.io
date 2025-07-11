@@ -2,7 +2,7 @@
 
 A detailed explanation of how Scratch 3.0 works as a programming language.
 
-> This is a work in progress; it's nowhere near complete. Please [contribute](#contributing) if you can!
+> This is a work in progress; it's nowhere near complete. **Please [contribute](#contributing) if you can!** I need help with this if it's to be done...
 
 ## Contents
 
@@ -22,11 +22,14 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
         - [Right Edge](#right-edge)
         - [Top Edge](#top-edge)
         - [Bottom Edge](#bottom-edge)
+      - [Lists](#lists)
+        - [Max Items](#max-items)
     - [Ideas](#ideas)
       - [Block](#block)
       - [Clone](#clone)
       - [Edge](#edge)
       - [Flag](#flag)
+      - [List](#list)
       - [Project](#project)
       - [Script](#script)
       - [Sprite](#sprite)
@@ -34,7 +37,6 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
       - [Target](#target)
       - [User](#user)
       - [Variable](#variable)
-      - [List](#list)
     - [Values](#values)
       - [Value](#value)
       - [Angle](#angle)
@@ -59,6 +61,9 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
         - [Empty String](#empty-string)
       - [Undefined](#undefined)
       - [Username](#username)
+      - [X Position](#x-position)
+      - [Y Position](#y-position)
+      - [Other Values](#other-values)
     - [Procedures](#procedures)
       - [Casting](#casting)
         - [To String](#to-string)
@@ -68,6 +73,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
           - [Truthy](#truthy)
         - [Fencing](#fencing)
   - [Palette](#palette)
+    - [Example block](#example-block)
     - [Motion blocks](#motion-blocks)
       - [Move steps block](#move-steps-block)
     - [Looks blocks](#looks-blocks)
@@ -82,6 +88,11 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
     - [Custom blocks](#custom-blocks)
     - [Pen blocks](#pen-blocks)
     - [Hidden blocks](#hidden-blocks)
+  - [Appendices](#appendices)
+    - [File Format](#file-format)
+      - [SB3](#sb3)
+      - [SB2](#sb2)
+      - [SB](#sb)
 
 ## Introduction
 
@@ -136,21 +147,21 @@ A fully functional implementation of Scratch should be capable of all these thin
 
 ### Constants
 
-These constant values will show up a lot throughout this specification.
+These constant values will show up a lot throughout this specification. They can be changed to one's liking, however for true accuracy to Scratch, they should all have their "**Standard Scratch**:" values.
 
 #### Stage Bounds
 
 ##### Stage Width
 
-The horizontal length of the stage. This is an arbitrary positive integer.
+The horizontal size of the stage. This is an arbitrary positive [integer](#integer).
 
 **Standard Scratch**: `480`
 
-**For widescreen**: `640`
+**Widescreen** (via unofficial modifications): `640`
 
 ##### Stage Height
 
-The vertical length of the stage. This is an arbitrary positive integer.
+The vertical size of the stage. This is an arbitrary positive [integer](#integer).
 
 **Standard Scratch**: `360`
 
@@ -186,6 +197,16 @@ The vertical position of the bottom edge. This is derived from the [stage height
 
 **Standard Scratch**: `-180`
 
+#### Lists
+
+##### Max Items
+
+The maximum [length](#length) of a [list](#list), aka the most items that one list can hold. This limit is imposed to prevent excessive memory usage by [projects](#project).
+
+**Standard Scratch**: `200000`
+
+**Modified Scratch**: None (many Scratch mods do not enforce this limit)
+
 ### Ideas
 
 The following ideas are referenced throughout this specification:
@@ -213,6 +234,10 @@ Refers to the bounds that restrict the graphics of a [project](#project) from ex
 #### Flag
 
 The button that is intended to run scripts that start a project. It is also known as the green flag in official Scratch. It is meant to make the project `Go`, as it is labelled in its title text on the Scratch website. When clicked, it runs any scripts under [when flag clicked blocks](#when-flag-clicked-block).
+
+#### List
+
+A series of [items](#item) stored together in sequence. Each item is referenced by its numerical index (aka item #), a positive [integer](#integer) ranging from `1` to the [length](#length) of the list (inclusive). Lists can be empty, meaning that they have a length of `0` and contain no items. There is also a [maximum number of items](#max-items) that a list can hold, aka a limit to its length.
 
 #### Project
 
@@ -258,10 +283,6 @@ The individual who is interacting with the [project](#project) and provides inpu
 A container with a [name](#name) that can hold any one [value](#value). Every variable is attached to a [target](#target). If it is attached to a [sprite](#sprite), it can only be set by that sprite. If it is attached to the [stage](#stage), it can be set by any sprite, including the stage.
 
 There are two kinds of variables. Some variables are defined and named by the creator of a [project](#project) on a target-by-target basis and interacted with by [variable blocks](#variable-blocks), while all targets have variables that exist by default and can only be interacted with via their dedicated blocks (not variable blocks). Some examples of user-defined variables would be `(score)` or `(index)` (completely custom), while examples of built-in variables would be `(x position)`, `(direction)`, `(size)`, `(volume)`, and `(tempo)` (exist in every target).
-
-#### List
-
-A series of [items](#item) stored together in sequence. Each item is referenced by its numerical index (aka item #), a positive [integer](#integer) ranging from `1` to the [length](#length) of the list (inclusive).
 
 ### Values
 
@@ -352,7 +373,7 @@ A [number](#number) that is not a fraction, aka a whole number (e.g. `42`, `-37`
 
 #### Item
 
-A [value](#value) in a list.
+A [value](#value) in a [list](#list).
 
 #### Length
 
@@ -394,7 +415,7 @@ A number that is not a number. When casted to a string, it is written as `NaN`. 
 
 #### String
 
-A series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](#truthy) *except* the [empty](#empty-string).
+A series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](#truthy) *except* the [empty string](#empty-string).
 
 ##### Empty String
 
@@ -402,7 +423,7 @@ A string containing no letters. It has a [length](#length) of `0` and is the onl
 
 #### Undefined
 
-A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
+A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
 
 #### Username
 
@@ -445,6 +466,30 @@ Thus, for a truly accurate recreation of Scratch, the `username` block should **
 
 In most cases, however, projects will probably not notice anything wrong with the username (but a few niche ones *could* break), so long as it only contains valid characters (A-Z, a-z, 0-9, _, -) and is between 3-20 letters in length, as previously stated. In general, usernames are really just any arbitrary [string](#string) that identifies a user.
 
+#### X Position
+
+A horizontal position on the Scratch coordinate plane. All [sprites](#sprite) have one. (TODO: document coordinate system)
+
+#### Y Position
+
+A vertical position on the Scratch coordinate plane. All [sprites](#sprite) have one. (TODO: document coordinate system)
+
+#### Other Values
+
+> Inclusion of this section is up for debate. Feel free to offer insight!
+
+Other kinds values can potentially exist in modified or bugged versions of Scratch. This is because Scratch is built on JavaScript, and although it is highly unlikely for a project to work with any type of value other than the ones listed above, there is always the potential for other JavaScript primitives to be glitched into the project, e.g. by setting the value via developer tools, or some wider unknown issue.
+
+They will not be specified in this specification as of yet (since they cannot be obtained through *official* means), but other values that could potentially be encountered in the rarest of cases are:
+
+- `null`: A special value representing nothing. Distinct from [undefined](#undefined) in that it is meant to *explicitly* be nothing, whereas undefined exists for representing unknown behavior or values.
+  - The author of this specification does not know if `null` can be produced by existing blocks without modification.
+    - If it is found to be an obtainable value, it may be documented further. Otherwise, it will not be, and is likely not necessary for inclusion in a reimplementation of Scratch.
+  - This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](https://turbowarp.org/) that still has largely the same behaviors.)
+    - When [casted](#to-string) to a [string](#string), it is written as `null`.
+    - When [casted](#to-number) to a [number](#number), it is casted to `0`.
+    - When [casted](#to-boolean) to a [boolean](#boolean), it is [`false`](#falsy).
+
 ### Procedures
 
 The following procedures are often performed by Scratch and are mentioned throughout this document:
@@ -455,14 +500,16 @@ Most blocks automatically convert [values](#value) between types through the use
 
 ##### To String
 
-Scratch uses the following logic to convert any given [value](#value) into a [string](#string):
+Scratch uses the following logic to convert any given [value](#value) to a [string](#string):
 
-- If the value is a [string](#string), return the value since it is already a string.
+- If the value is a [string](#string):
+  - Return the value, as it is already a string.
 - If the value is a [number](#number):
   - Follow the [logic JavaScript does](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) to cast a number to a string. (TODO: specify this better)
   - If the value is [NaN](#nan), return the string `NaN`.
   - If the value is [Infinity](#infinity), return the string `Infinity`.
   - If the value is [-Infinity](#infinity), return the string `-Infinity`.
+- If the value is a [boolean](#boolean):
   - If the value is [true](#boolean), return the string `true`.
   - If the value is [false](#boolean), return the string `false`.
 - If the value is [undefined](#undefined), return the string `undefined`.
@@ -471,29 +518,27 @@ Scratch uses the following logic to convert any given [value](#value) into a [st
 
 Scratch uses the following logic to convert any given [value](#value) into a [number](#number):
 
-- If the value is a [number](#number):
-  - Return the value, as it is already a number.
-- If the value is a [boolean](#boolean):
-  - If the value is [true](#boolean), return the number `1`.
-  - If the value is [false](#boolean), return the number `0`.
-- If the value is a [string](#string):
-  - If the value is not a number when converted according to [these rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion):
-    - Return the number `0`
-  - Otherwise:
-    - Return the value as a number (TODO: specify better b/c JavaScript logic)
+- If the value is a [number](#number), return the value as it is.
+- If the value is [undefined](#undefined), return the number `0`.
+- If the value is [true](#true), return the number `1`.
+- If the value is [false](#false), return the number `0`.
+- If the value is a [string](#string) or [something else](#other-values):
+  - If the value can be converted to a number according to [these rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), return it. Otherwise, return the number `0`. (TODO: specify string -> number coercion better b/c JavaScript logic)
 
 ##### To Boolean
 
 ###### Falsy
 
-A value is **falsy**, or casted to `false`, if:
+A value is **falsy**, or casted to [`false`](#false), if:
 
-- The value is an **empty [string](#string)** (contains no letters, has a [length](#length) of `0`)
-- The value is the numbers `0`, `-0`, or [`NaN`](#nan).
+- The value is an [**empty string**](#empty-string) (no letters, [length](#length) is `0`)
+- The value is a [number](#number) **`0`**, **`-0`**, or [**`NaN`**](#nan).
+- The value is [**undefined**](#undefined).
+- The value is **`false`**.
 
 ###### Truthy
 
-Any value that is not considered **[falsy](#falsy)** is **truthy** and casted to `true`.
+Any value that is **not** [**falsy**](#falsy) is considered **truthy** and casted to [`true`](#true).
 
 ##### Fencing
 
@@ -508,6 +553,31 @@ This procedure is only applied after the position or size of the sprite changes.
 ## Palette
 
 This section documents each and every block in Scratch, and its precise functionality.
+
+> How to organize and refer to these blocks is up for debate. Feel free to offer insight!
+
+### Example block
+
+> This is an example section about a block. It does not exist in Scratch.
+
+**Operation:**
+
+A brief overview of the block's function and essential info.
+
+**Block:**
+
+```sb
+the block in scratchblocks with its [ARG]uments
+```
+
+**Arguments:**
+
+`ARG`: [the kind of value the argument is casted to](#values)
+What it means.
+
+**Procedure:**
+
+A deep dive into what the block does in fulfilling its operation.
 
 ### Motion blocks
 
@@ -528,6 +598,7 @@ move (STEPS) steps
 **Arguments**:
 
 `STEPS`: [number](#number)
+The number of steps (aka pixels) to move.
 
 **Procedure:**
 
@@ -535,9 +606,9 @@ The x position of the sprite is changed by the **sine of the sprite's direction*
 
 This can be expressed as:
 
-$x' = x + \sin(d) * S$
+$x' = x + \sin(d) \cdot S$
 
-$y' = y + \cos(d) * S$
+$y' = y + \cos(d) \cdot S$
 
 Where $S$ is the `STEPS` to move, $d$ is the direction of the sprite, and $x$ and $y$ are the x and y positions of the sprite, respectively.
 
@@ -613,3 +684,33 @@ These blocks are "hidden," meaning they exist in Scratch but are not typically u
 It is important to note, however, that most of these blocks do not do anything, and thus have limited use cases. In fact, this is where the kind of value [`undefined`](#undefined) is found in the Scratch programming environment; reporter blocks that no longer perform any operation, but must exist for compatibility reasons and provide a value of some sort when run, simply report this special value that is usually not seen anywhere else in Scratch, which is the value used in JavaScript to represent what is not known of or defined.
 
 TODO: add info on [hidden blocks](https://en.scratch-wiki.info/wiki/Hidden_Blocks)
+
+## Appendices
+
+This section is for additional information about Scratch that is not necessarily relevant to its runtime behavior, but is good to know in addition, especially for creating  feature-complete implementations.
+
+### File Format
+
+> This section will be expanded once other stuff gets documented. For now, runtime behavior is more pressing than file formatting.
+
+Scratch projects can be saved and loaded from a computer as files. Scratch has several project file formats, each with their own complicated structures and loading behaviors. Even with a perfectly accurate runtime environment, a saved project that is not properly loaded may not work as it was intended to, and could very well break!
+
+#### SB3
+
+The .sb3 file format is the standard format for storing Scratch **3.0** projects, the version of Scratch that this specification documents. In reality, it is a renamed [.zip](https://en.wikipedia.org/wiki/ZIP_(file_format)) file that contains the following files:
+
+- `project.json`, a [.json](https://en.wikipedia.org/wiki/JSON) file storing info.
+- Various image files used as [costumes](#costume).
+- Various audio files used as [sounds](#sound).
+
+#### SB2
+
+The .sb2 file format is the standard format for storing Scratch **2.0** projects, the version of Scratch preceding Scratch 3.0, the version that this specification documents.
+
+The standard Scratch 3.0 editor is compatible with .sb2 files. It has a procedure for converting .sb2 files to [.sb3](#sb3) files, which it then loads.
+
+#### SB
+
+The .sb file format is the standard format for storing projects from Scratch **1.4** and earlier, which are early versions of Scratch that work drastically different than modern Scratch due to the major changes in between. Unlike [.sb2](#sb2) and [.sb3](#sb3) files, .sb files are stored in binary using a much less human-readable format.
+
+Despite major differences, the standard Scratch 3.0 editor remains compatible with .sb files. It has a procedure for converting .sb files to .sb2 files, which it then converts to .sb3 files and loads.
