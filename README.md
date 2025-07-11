@@ -81,7 +81,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
     - [List blocks](#list-blocks)
     - [Custom blocks](#custom-blocks)
     - [Pen blocks](#pen-blocks)
-    - [Obsolete blocks](#obsolete-blocks)
+    - [Hidden blocks](#hidden-blocks)
 
 ## Introduction
 
@@ -402,7 +402,7 @@ A string containing no letters. It has a [length](#length) of `0` and is the onl
 
 #### Undefined
 
-A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [obsolete blocks](#obsolete-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
+A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
 
 #### Username
 
@@ -606,6 +606,10 @@ Technically, this block can report any username registered with the Scratch webs
 
 ### Pen blocks
 
-### Obsolete blocks
+### Hidden blocks
 
-TODO: add info on [obsolete blocks](https://en.scratch-wiki.info/wiki/Obsolete_Blocks)
+These blocks are "hidden," meaning they exist in Scratch but are not typically used or known of, most being kept for compatibility reasons (e.g. blocks that were added in previous versions of Scratch but have since been removed) and a few for internal use (e.g. to pass as input to other blocks `TODO: Explain shadow blocks`). They are kept in order to maintain support for both older projects and  Scratch's internal programming.
+
+It is important to note, however, that most of these blocks do not do anything, and thus have limited use cases. In fact, this is where the kind of value [`undefined`](#undefined) is found in the Scratch programming environment; reporter blocks that no longer perform any operation, but must exist for compatibility reasons and provide a value of some sort when run, simply report this special value that is usually not seen anywhere else in Scratch, which is the value used in JavaScript to represent what is not known of or defined.
+
+TODO: add info on [hidden blocks](https://en.scratch-wiki.info/wiki/Hidden_Blocks)
