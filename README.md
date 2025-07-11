@@ -443,7 +443,7 @@ A project could potentially utilize any of these ways to detect if it is actuall
 
 Thus, for a truly accurate recreation of Scratch, the `username` block should **only report registered usernames** with the Scratch website, and a project which remembers usernames (e.g. via cloud variables) should **never encounter the same username with different casing that it has seen before**, except in extraordinarily rare cases where the casing of a user's username was officially changed by the Scratch team. The username should also not be changed while the project is running; the moment the project is started, whatever username the username block reports will be the username for the entire duration of time for which it runs.
 
-In most cases, however, projects will probably not notice anything wrong with the username (the a few niche ones *could* break), so long as it only contains valid characters (A-Z, a-z, 0-9, _, -) and is between 3-20 letters in length, as previously stated. In general, usernames are really just any arbitrary [string](#string) that identifies a user.
+In most cases, however, projects will probably not notice anything wrong with the username (but a few niche ones *could* break), so long as it only contains valid characters (A-Z, a-z, 0-9, _, -) and is between 3-20 letters in length, as previously stated. In general, usernames are really just any arbitrary [string](#string) that identifies a user.
 
 ### Procedures
 
