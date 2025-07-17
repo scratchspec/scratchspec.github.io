@@ -257,7 +257,7 @@ Below is a list of blocks that have been or still need to be documented here. (F
     * [ ] `(x position)`
     * [ ] `(y position)`
     * [ ] `(direction)`
-  * [ ] [**Hidden**](#hidden-blocks)
+  * [ ] [**Hidden**](#hidden-blocks)/[**Obsolete**](#obsolete-blocks)
     * [ ] `scroll right ()`
     * [ ] `scroll up ()`
     * [ ] `align scene [ v]`
@@ -406,6 +406,8 @@ Refers to the bounds that restrict the graphics of a [project](#project) from ex
 
 #### Flag
 
+> The usefulness of defining "Flag" is up for debate. Feel free to offer insight!
+
 The button that is intended to run scripts that start a project. It is also known as the green flag in official Scratch. It is meant to make the project `Go`, as it is labelled in its title text on the Scratch website. When clicked, it runs any scripts under [when flag clicked blocks](#when-flag-clicked-block).
 
 #### JavaScript
@@ -424,7 +426,7 @@ A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is 
 
 #### Project
 
-A stage and optionally some sprites packaged together to do something.
+A stage and optionally some sprites packaged together to do something. They can be loaded into a [runtime](#runtime) and executed. They can also be saved as [project files](#file-format).
 
 #### Runtime
 
@@ -1207,4 +1209,3 @@ If you know of a Scratch modification that is in use by a decent number of peopl
   * If the same block just so happens to exist on several platforms without any clear origination (*or* does not work the same way), then it is OK to document them separately, especially if they have identical opcodes but different behavior.
 
 Though please make sure that the platform you wish to add is actually a modification of Scratch 3.0, and not an entirely different application. This spec is for Scratch 3.0 and offshoots of it, but a platform must share near identical base behaviors with Scratch 3.0 to be added here. For example, [Snap&zwj;*!*](https://snap.berkeley.edu/) was built off of an early version of Scratch, but is now a completely independent first-class block-based language with its own programming paradigm, and is not built with or at all related to Scratch 3.0. Other block-based Scratch-*like* apps deserve [their own spec](https://snap.berkeley.edu/snap/help/SnapManual.pdf) instead.
-
