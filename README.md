@@ -132,7 +132,8 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
     * [WeDo 2.0 blocks](#wedo-20-blocks)
     * [Force and Acceleration blocks](#force-and-acceleration-blocks)
     * [CoreEx blocks](#coreex-blocks)
-    * [Hidden blocks](#hidden-blocks)
+      * [Standard CoreEx blocks](#standard-coreex-blocks)
+      * [Hidden CoreEx blocks](#hidden-coreex-blocks)
   * [Appendices](#appendices)
     * [File Format](#file-format)
       * [SB3](#sb3)
@@ -144,7 +145,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
       * [TurboWarp](#turbowarp)
         * [TurboWarp blocks](#turbowarp-blocks)
           * [Last key pressed block](#last-key-pressed-block)
-      * [Addon blocks](#addon-blocks)
+        * [Addon blocks](#addon-blocks)
       * [PenguinMod](#penguinmod)
       * [snail-ide](#snail-ide)
       * [Unsandboxed](#unsandboxed)
@@ -221,11 +222,11 @@ Why not?
 
 ## TODO
 
-> This spec is a work in progress; it's nowhere near complete. **Please [contribute](#contributing) if you can!** I need help with this if it's to be done...
+> This spec is a work in progress; it's nowhere near complete. **Please [contribute](#contributing) if you can!** Anywhere that says TODO is something that needs to be worked on, as well as any sections that are empty or missing.
 
 Various things need to be worked on to make this a good resource:
 
-* **Cleanup excessive linking and wordiness.** Links to headings should only be applied if they offer further context about a section and have not been previously or recently linked to in said section. Additionally, this specification should explain everything about Scratch with **no extra wordiness or fluff.** Unfortunately, @OceanIsEndless has a *strong* tendency to do both of these. It is unclear what its structure should be as well.
+* **Cleanup excessive linking and wordiness.** Links to headings should only be applied if they offer further context about a section and have not been previously or recently linked to in said section. Additionally, this specification should explain everything about Scratch with **no extra wordiness or fluff.** (Unfortunately, @OceanIsEndless has a *strong* tendency to do both of these.) It is unclear what its structure should be as well.
 * ⚠️ ‼️ **Cite reliable sources.** ‼️ ⚠️ This specification should provide references to the code of Scratch itself (not just wikis) to prove its claims and hopefully be an accurate source of information about the Scratch programming language. It has not been decided how to best reference material though. (Just link them, or go wiki style?)
 
 ### TODO: Blocks
@@ -257,21 +258,29 @@ Below is a list of blocks that have been or still need to be documented here. (F
     * [ ] `(x position)`
     * [ ] `(y position)`
     * [ ] `(direction)`
-  * [ ] [**Hidden**](#hidden-blocks)/[**Obsolete**](#obsolete-blocks)
+  * [ ] [**Hidden**](#hidden-blocks) (**specify** what they do, even if nothing at all)
     * [ ] `scroll right ()`
     * [ ] `scroll up ()`
     * [ ] `align scene [ v]`
     * [ ] `(x scroll)`
     * [ ] `(y scroll)`
-  * [ ] [**Nonstandard**](#nonstandard-blocks) (PenguinMod, snail-ide, Unsandboxed)
-    * [ ] `move [ v] () steps`
-    * [ ] `change by x: () y: ()`
-    * [ ] `point towards x: () y: ()`
-    * [ ] `turn around`
-    * [ ] `if touching ( v), bounce`
-    * [ ] `set rotation style [look at | up-down v]`
-    * [ ] `move to stage [ v]`
-    * [ ] `(rotation style)`
+  * [ ] [**Obsolete**](#obsolete-blocks) (**imagine** what they *would* do if operational)
+    * [ ] `scroll right ()`
+    * [ ] `scroll up ()`
+    * [ ] `align scene [ v]`
+    * [ ] `(x scroll)`
+    * [ ] `(y scroll)`
+  * [ ] [**Nonstandard**](#nonstandard-blocks) (blocks that [mods](#mod) of Scratch added)
+    * [ ] [PenguinMod](#penguinmod)
+      * [ ] `move [ v] () steps`
+      * [ ] `change by x: () y: ()`
+      * [ ] `point towards x: () y: ()`
+      * [ ] `turn around`
+      * [ ] `if touching ( v), bounce`
+      * [ ] `set rotation style [look at | up-down v]`
+      * [ ] `move to stage [ v]`
+    * [ ] [Unsandboxed](#unsandboxed)
+      * [ ] `(rotation style)`
 * [ ] [Looks blocks](#looks-blocks)
 * [ ] [Sound blocks](#sound-blocks)
 * [ ] [Event blocks](#event-blocks)
@@ -282,6 +291,7 @@ Below is a list of blocks that have been or still need to be documented here. (F
 * [ ] [List blocks](#list-blocks)
 * [ ] [Custom blocks](#custom-blocks)
 * [ ] [Addon blocks](#addon-blocks)
+* [ ] *other categories of blocks*
 * [ ] TODO: Write list of blocks TODO :)
 
 </details>
@@ -868,7 +878,9 @@ After the sprite is moved, its position is [fenced](#fencing-position).
 
 #### Hidden motion blocks
 
-These motion blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These motion blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Looks blocks
 
@@ -878,21 +890,31 @@ These blocks relate to the looks, or appearance of targets. They manipulate the 
 
 These looks blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden looks blocks
 
-These looks blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These looks blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Sound blocks
 
 These blocks relate to sound, or the playback of audio. They play the sound files that a sprite has access to and manipulate the volume and sound effects of a sprite in order to make it stream sounds however is needed.
 
+TODO
+
 #### Standard sound blocks
 
 These sound blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden sound blocks
 
-These sound blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These sound blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Events blocks
 
@@ -902,9 +924,13 @@ These blocks relate to the start of a script. They cause scripts to run in order
 
 These events blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden events blocks
 
-These events blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These events blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Control blocks
 
@@ -914,9 +940,13 @@ These blocks relate to the execution of other blocks. They cause scripts to run 
 
 These control blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden control blocks
 
-These control blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These control blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Sensing blocks
 
@@ -925,6 +955,8 @@ These blocks relate to sensing, or detecting various values. They can read infor
 #### Standard sensing blocks
 
 These sensing blocks are officially supported in Scratch 3.0:
+
+TODO
 
 ##### Username block
 
@@ -955,7 +987,9 @@ Technically, this block can report any username registered with the Scratch webs
 
 #### Hidden sensing blocks
 
-These sensing blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These sensing blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Operators blocks
 
@@ -965,9 +999,13 @@ TODO: Add description
 
 These operators blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden operators blocks
 
-These operators blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These operators blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Variables blocks
 
@@ -977,9 +1015,13 @@ TODO: Add description
 
 These variables blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden variables blocks
 
-These variables blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These variables blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### List blocks
 
@@ -989,9 +1031,13 @@ TODO: Add description
 
 These list blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden list blocks
 
-These list blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These list blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 ### Custom blocks
 
@@ -1001,9 +1047,13 @@ TODO: Add description
 
 These custom blocks are officially supported in Scratch 3.0:
 
+TODO
+
 #### Hidden custom blocks
 
-These custom blocks exist in Scratch 3.0 but are not actively supported, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+These custom blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally:
+
+TODO
 
 #### Special custom blocks
 
@@ -1019,59 +1069,81 @@ TODO: Specify!!!
 
 TODO: Add description
 
+TODO: Add sections
+
 ### Pen blocks
 
 TODO: Add description
+
+TODO: Add sections
 
 ### Video Sensing blocks
 
 TODO: Add description
 
+TODO: Add sections
+
 ### Text to Speech blocks
 
 TODO: Add description
+
+TODO: Add sections
 
 ### Translate blocks
 
 TODO: Add description
 
+TODO: Add sections
+
 ### Makey Makey blocks
 
 TODO: Add description
+
+TODO: Add sections
 
 ### micro:bit blocks
 
 TODO: Add description
 
+TODO: Add sections
+
 ### LEGO EV3 blocks
 
 TODO: Add description
+
+TODO: Add sections
 
 ### BOOST blocks
 
 TODO: Add description
 
+TODO: Add sections
+
 ### WeDo 2.0 blocks
 
 TODO: Add description
+
+TODO: Add sections
 
 ### Force and Acceleration blocks
 
 TODO: Add description
 
+TODO: Add sections
+
 ### CoreEx blocks
 
+These two extension blocks do not do anything and simply existed with the purpose of testing Scratch 3.0's extension system. They can still be used in projects, though they do not do anything useful and the odds of encountering them in the wild (normal Scratch projects) are *highly* slim.
 
+#### Standard CoreEx blocks
 
-These two extension blocks do not do anything and simply existed with the purpose of testing Scratch 3.0's extension system. They can still be used in projects, though they do not do anything and the odds of encountering them in the wild (normal Scratch projects) are *highly* slim.
+There are no standard CoreEx blocks, as they were never intended to be used in projects.
 
-### Hidden blocks
+#### Hidden CoreEx blocks
 
-These blocks are "hidden," meaning they exist in Scratch but are not typically used or known of, most being kept for compatibility reasons (e.g. blocks that were added in previous versions of Scratch but have since been removed) and a few for internal use (e.g. to pass as input to other blocks `TODO: Explain shadow blocks`). They are kept in order to maintain support for both older projects and Scratch's internal programming.
+These CoreEx blocks exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility reasons or being used internally for testing:
 
-It is important to note, however, that most of these blocks do not do anything, and thus have limited use cases. In fact, this is where the kind of value [`undefined`](#undefined) is found in the Scratch programming environment; reporter blocks that no longer perform any operation, but must exist for compatibility reasons and provide a value of some sort when run, simply report this special value that is usually not seen anywhere else in Scratch, which is the value used in JavaScript to represent what is not known of or defined.
-
-TODO: add info on [hidden blocks](https://en.scratch-wiki.info/wiki/Hidden_Blocks)
+TODO
 
 ## Appendices
 
@@ -1091,17 +1163,23 @@ The .sb3 file format is the standard format for storing Scratch **3.0** projects
 * Various image files used as [costumes](#costume).
 * Various audio files used as [sounds](#sound).
 
+TODO: Specify!!!
+
 #### SB2
 
 The .sb2 file format is the standard format for storing Scratch **2.0** projects, the version of Scratch preceding Scratch 3.0, the version that this specification documents.
 
 The standard Scratch 3.0 editor is compatible with .sb2 files. It has a procedure for converting .sb2 files to [.sb3](#sb3) files, which it then loads.
 
+TODO: Specify!!
+
 #### SB
 
 The .sb file format is the standard format for storing projects from Scratch **1.4** and earlier, which are early versions of Scratch that work drastically different than modern Scratch due to the major changes in between. Unlike [.sb2](#sb2) and [.sb3](#sb3) files, .sb files are stored in binary using a much less human-readable format.
 
 Despite major differences, the standard Scratch 3.0 editor remains compatible with .sb files. It has a procedure for converting .sb files to .sb2 files, which it then converts to .sb3 files and loads.
+
+TODO: Specify!
 
 ### Obsolete Blocks
 
@@ -1117,7 +1195,7 @@ Unlike the rest of this specification, the content of this section is more up to
 
 > This section is not a high priority, as this specification is primarily meant to document standard Scratch. In the future, it is hoped this spec will include other branches of Scratch. This way, the behavior of projects created with them can be officially documented and remain recreatable if needed (e.g. for highly compatible [ports](https://en.wikipedia.org/wiki/Porting) of Scratch).
 
-This section serves to document blocks that do not exist at all in Scratch, but have been added unofficially to [modifications](#mod) of Scratch. This includes both blocks added as "custom extensions," and blocks added directly to the palette. They are specified here in order to allow projects using these non-standard blocks to function properly if one were to reimplement the Scratch VM with implementing these blocks in mind.
+This section serves to document blocks that do not exist at all in Scratch, but have been added unofficially to [modifications](#mod) of Scratch. This includes both blocks added as "custom extensions," and blocks added directly to the [palette](#palette). They are specified here in order to allow projects using these non-standard blocks to function properly if one were to reimplement the Scratch VM with implementing these blocks in mind.
 
 > This is a dynamic section and may never be able to satisfy any particular standards for completeness. [You can help](#contributing) by adding [missing blocks](#todo-blocks) with reliable sources (e.g. links to source code).
 
@@ -1174,9 +1252,9 @@ None
 
 When the runtime first starts, no [keys](#key) have been pressed. If the block is run before any keys are pressed, it reports the [empty string](#empty-string). Otherwise, the [name](#name) of the last key to have been pressed is reported.
 
-#### Addon blocks
+##### Addon blocks
 
-These blocks are added by TurboWarp addons.
+These blocks are added by TurboWarp addons. They are not actually real blocks, but rather [custom blocks](#custom-blocks) without definitions in disguise!
 
 #### PenguinMod
 
