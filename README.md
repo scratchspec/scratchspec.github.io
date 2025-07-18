@@ -37,6 +37,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
       * [JavaScript](#javascript)
       * [List](#list)
       * [Mod](#mod)
+      * [Opcode](#opcode)
       * [Project](#project)
       * [Runtime](#runtime)
       * [Script](#script)
@@ -89,7 +90,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
     * [Example block](#example-block)
     * [Motion blocks](#motion-blocks)
       * [Standard motion blocks](#standard-motion-blocks)
-        * [Move steps block](#move-steps-block)
+        * [motion\_movesteps](#motion_movesteps)
       * [Hidden motion blocks](#hidden-motion-blocks)
     * [Looks blocks](#looks-blocks)
       * [Standard looks blocks](#standard-looks-blocks)
@@ -105,7 +106,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
       * [Hidden control blocks](#hidden-control-blocks)
     * [Sensing blocks](#sensing-blocks)
       * [Standard sensing blocks](#standard-sensing-blocks)
-        * [Username block](#username-block)
+        * [sensing\_username](#sensing_username)
       * [Hidden sensing blocks](#hidden-sensing-blocks)
     * [Operators blocks](#operators-blocks)
       * [Standard operators blocks](#standard-operators-blocks)
@@ -434,6 +435,10 @@ A series of [items](#item) stored together in sequence. Each item is referenced 
 
 A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see the [relevant appendix](#nonstandard-blocks).
 
+#### Opcode
+
+A [name](#name) unique to every [block](#block) in the Scratch programming language. It tells blocks what to do. For example, if the opcode of a block is [`motion_movesteps`](#motion_movesteps), it attempts to move steps.
+
 #### Project
 
 A stage and optionally some sprites packaged together to do something. They can be loaded into a [runtime](#runtime) and executed. They can also be saved as [project files](#file-format).
@@ -580,7 +585,7 @@ A [value](#value) in a [list](#list).
 
 #### Key
 
-A [name](#name) used by Scratch for referring to a key on the [user](#user)'s keyboard. Specific keys are referred to by name. To refer to any arbitrary key (as in, "press any key to continue"), the name `any` can be used. 
+A [name](#name) used by Scratch for referring to a key on the [user](#user)'s keyboard. Specific keys are referred to by name. To refer to any arbitrary key (as in, "press any key to continue"), the name `any` can be used.
 
 It is good to note that Scratch does not standardly support special keys other than the ones listed below, making it more versatile across platforms (i.e. it won't conflict with keyboard shortcuts used by other applications running on the user's computer).
 
@@ -812,6 +817,8 @@ This section documents each and every block in Scratch, and its precise function
 
 > This is an ***example* section** about a block. It does not exist in Scratch.
 
+The heading for a section about a block should be its opcode, as used in the [SB3](#sb3) [file format](#file-format).
+
 **Operation:**
 
 A brief overview of the block's function and essential info.
@@ -824,8 +831,9 @@ the block in scratchblocks with its [ARG]uments
 
 **Arguments:**
 
-`ARG`: [the kind of value this argument is casted to before use in the procedure](#values)
-What it means.
+| Name: | [Casted](#casting) to:                                                                                                    | Provides the:                  |
+|:-----:|:-------------------------------------------------------------------------------------------------------------------------:|:------------------------------:|
+| `ARG` | [the kind of value this argument is casted to before use by the block, linking to the procedure used to cast it](#values) | What it provides to the block. |
 
 **Procedure:**
 
@@ -839,7 +847,7 @@ These blocks relate to motion, or moving sprites. They manipulate the x position
 
 These motion blocks are officially supported in Scratch 3.0:
 
-##### Move steps block
+##### motion_movesteps
 
 **Operation:**
 
@@ -853,8 +861,9 @@ move (STEPS) steps
 
 **Arguments**:
 
-`STEPS`: [number](#to-number)
-The number of steps (aka pixels) to move.
+| Name: | [Casted](#casting) to: | Provides the:                         |
+|:-----:|:----------------------:|:-------------------------------------:|
+|`STEPS`| [number](#to-number)   | Number of steps (aka pixels) to move. |
 
 **Procedure:**
 
@@ -958,7 +967,7 @@ These sensing blocks are officially supported in Scratch 3.0:
 
 TODO
 
-##### Username block
+##### sensing_username
 
 **Operation:**
 
@@ -1215,8 +1224,9 @@ the block in scratchblocks with its [ARG]uments
 
 **Arguments:**
 
-`ARG`: [the kind of value this argument is casted to before use in the procedure](#values)
-What it means.
+| Name: | [Casted](#casting) to:                                                                                                    | Provides the:                  |
+|:-----:|:-------------------------------------------------------------------------------------------------------------------------:|:------------------------------:|
+| `ARG` | [the kind of value this argument is casted to before use by the block, linking to the procedure used to cast it](#values) | What it provides to the block. |
 
 **Procedure:**
 
@@ -1250,7 +1260,7 @@ None
 
 **Procedure:**
 
-When the runtime first starts, no [keys](#key) have been pressed. If the block is run before any keys are pressed, it reports the [empty string](#empty-string). Otherwise, the [name](#name) of the last key to have been pressed is reported.
+When the [runtime](#runtime) first starts, no [keys](#key) have been pressed. If the block is run before any keys are pressed, it reports the [empty string](#empty-string). Otherwise, the [name](#name) of the last key to have been pressed is reported.
 
 ##### Addon blocks
 
