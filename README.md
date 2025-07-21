@@ -30,7 +30,12 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
         * [Max Items](#max-items)
         * [Max Clones](#max-clones)
     * [Ideas](#ideas)
+      * [Asset](#asset)
+        * [Costume](#costume)
+        * [Sound](#sound)
       * [Block](#block)
+        * [Standard Blocks](#standard-blocks)
+        * [Hidden Blocks](#hidden-blocks)
       * [Clone](#clone)
       * [Edge](#edge)
       * [Flag](#flag)
@@ -54,10 +59,6 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
         * [True](#true)
         * [False](#false)
       * [Direction](#direction)
-      * [Rotation Style](#rotation-style)
-        * [Rotation Style: All Around](#rotation-style-all-around)
-        * [Rotation Style: Left-Right](#rotation-style-left-right)
-        * [Rotation Style: Don't Rotate](#rotation-style-dont-rotate)
       * [Integer](#integer)
       * [Item](#item)
       * [Key](#key)
@@ -68,6 +69,10 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
         * [Infinity](#infinity)
         * [-Infinity](#-infinity)
         * [NaN](#nan)
+      * [Rotation Style](#rotation-style)
+        * [Rotation Style: All Around](#rotation-style-all-around)
+        * [Rotation Style: Left-Right](#rotation-style-left-right)
+        * [Rotation Style: Don't Rotate](#rotation-style-dont-rotate)
       * [String](#string)
         * [Empty String](#empty-string)
       * [Undefined](#undefined)
@@ -202,6 +207,7 @@ This specification exists to document the behavior of Scratch 3.0 as a programmi
 * **Accurately porting Scratch to run natively on other platforms**
   * It could help efforts to make Scratch available on platforms that aren't web-based (if any).
   * @OceanIsEndless, the initial creator of this specification, has a lot of wild ideas on their mind regarding Scratch. Their ideas are likely not at all worth their time, but writing this spec will allow them to try doing interesting things such as creating a Scratch to [Desmos](https://www.desmos.com/calculator) packager, or porting Scratch to the [Wii](https://en.wikipedia.org/wiki/Wii). A bit ambitious, yes, and absolutely crazy—but a specification like this could aid projects like these and more. It can help ensure compatibility and easy coding.
+  * It could help this super cool rapidly-developing [3DS port](https://github.com/NateXS/Scratch-3DS), though the spec may not be done before contributors  over there figure out how Scratch works for themselves anyway. :)
 * **Recreating parts of Scratch (blocks, scripts) for demonstration**
   * For educational reasons, one might want to recreate the behavior of certain parts of Scratch without the full force of the Scratch editor on hand. This spec will eventually provide information ranging from exact block behaviors to full-on runtime execution, making understanding the way each part of Scratch works simple.
 * **Improving Scratch in the future while keeping it 100% compatible**
@@ -212,8 +218,8 @@ This specification exists to document the behavior of Scratch 3.0 as a programmi
   * This kind of blends together all of the previous points. If the Scratch editor were to magically disappear or break entirely (it won't, but in theory), then the Scratch Wiki could guide you in making a fairly accurate reimplementation of Scratch, but would fall short in exactly reproducing the runtime behavior, procedures, and quirks of Scratch, from scratch (literally). Although the wiki strives to be all-encompassing (and it is indeed very far-reaching), a document solely dedicated to the functionality of Scratch will help preserve its literal, programmatic behavior in one organized doc.
 * **"Real" programming languages have them.**
   * [Scratch is cool](https://blob.codes/scratch-is-cool/). It is [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness). Lots of languages far less significant than Scratch have [programming language specifications](https://en.wikipedia.org/wiki/Programming_language_specification). And yet Scratch lacks one. The Scratch Wiki helps document the **ideas** of Scratch, but a singular document dedicated to specifying *exactly* all that Scratch does could help it secure official programming language status.
-  * **Who knows what?**
-    * If this spec is made reliable enough, it could be cited (or at least, the underlying sources that it will eventually reference for verifability) in the underdeveloped [Wikipedia page about Scratch ***as a programming language***](https://en.wikipedia.org/wiki/Scratch_(programming_language)).
+* **Who knows what?**
+  * If this spec is made reliable enough, it could be cited (or at least, the underlying sources that it will eventually reference for verifability) in the underdeveloped [Wikipedia page about Scratch ***as a programming language***](https://en.wikipedia.org/wiki/Scratch_(programming_language)).
   
 It could be argued that this specification is reinventing the wheel in some ways. However, if it is ever completed, it could serve as a great resource for Scratch 3.0.
 
@@ -265,7 +271,7 @@ Below is a list of blocks that have been or still need to be documented here. (F
     * [ ] `align scene [ v]`
     * [ ] `(x scroll)`
     * [ ] `(y scroll)`
-  * [ ] [**Obsolete**](#obsolete-blocks) (**imagine** what they *would* do if operational)
+  * [ ] [**Obsolete**](#obsolete-blocks) (**imagine** what they *would* do if kept operational)
     * [ ] `scroll right ()`
     * [ ] `scroll up ()`
     * [ ] `align scene [ v]`
@@ -284,11 +290,11 @@ Below is a list of blocks that have been or still need to be documented here. (F
       * [ ] `(rotation style)`
 * [ ] [Looks blocks](#looks-blocks)
 * [ ] [Sound blocks](#sound-blocks)
-* [ ] [Event blocks](#event-blocks)
+* [ ] [Events blocks](#events-blocks)
 * [ ] [Control blocks](#control-blocks)
 * [ ] [Sensing blocks](#sensing-blocks)
-* [ ] [Operator blocks](#operator-blocks)
-* [ ] [Variable blocks](#variable-blocks)
+* [ ] [Operators blocks](#operators-blocks)
+* [ ] [Variables blocks](#variables-blocks)
 * [ ] [List blocks](#list-blocks)
 * [ ] [Custom blocks](#custom-blocks)
 * [ ] [Addon blocks](#addon-blocks)
@@ -395,6 +401,18 @@ The maximum number of [clones](#clone) that can exist at one time. If this limit
 
 The following ideas are referenced throughout this specification:
 
+#### Asset
+
+A [costume](#costume) or [sound](#sound).
+
+##### Costume
+
+A costume is an [image file](https://en.wikipedia.org/wiki/Digital_image) and a type of [asset](#asset) that can be graphically rendered to represent a [target](#target). It can be identified by its [name](#name) or [number](#integer). Costumes can either be [bitmap](https://en.wikipedia.org/wiki/Raster_graphics) or [vector](https://en.wikipedia.org/wiki/Vector_graphics).
+
+##### Sound
+
+A sound is an [audio file](https://en.wikipedia.org/wiki/Digital_audio) and a type of [asset](#asset) that can be audibly played to the user via [blocks](#block). It can be identified by its [name](#name).
+
 #### Block
 
 The fundamental component of Scratch as a programming language. In fact, they are similar to function calls in other programming languages. Every block:
@@ -404,6 +422,14 @@ The fundamental component of Scratch as a programming language. In fact, they ar
 * Can be run and reports (i.e. outputs, returns) a single value (or [none at all](#undefined))
 
 Blocks can be run, meaning that its operation is performed using the arguments it is given and the value resulting from the operation is reported, if any. When put together, blocks create [scripts](#script).
+
+##### Standard Blocks
+
+[Blocks](#block) that are officially supported in Scratch 3.0. They are the most commonly used blocks in [scripts](#script) by far.
+
+##### Hidden Blocks
+
+[Blocks](#block) that exist in Scratch 3.0 but are not actively supported or used on their own, either being kept for compatibility with projects created in older versions of Scratch or being used internally. Some are functional, some are not. [Scripts](#script) may use them on occasion, but they are found less often than [standard blocks](#standard-blocks) due to their obscurity.
 
 #### Clone
 
@@ -486,7 +512,7 @@ The individual who is interacting with the [project](#project) and provides inpu
 
 A container with a [name](#name) that can hold any one [value](#value). Every variable is attached to a [target](#target). If it is attached to a [sprite](#sprite), it can only be set by that sprite. If it is attached to the [stage](#stage), it can be set by any sprite, including the stage.
 
-There are two kinds of variables. Some variables are defined and named by the creator of a [project](#project) on a target-by-target basis and interacted with by [variable blocks](#variable-blocks), while all targets have variables that exist by default and can only be interacted with via their dedicated blocks (not variable blocks). Some examples of user-defined variables would be `(score)` or `(index)` (completely custom), while examples of built-in variables would be `(x position)`, `(direction)`, `(size)`, `(volume)`, and `(tempo)` (exist in every target).
+There are two kinds of variables. Some variables are defined and named by the creator of a [project](#project) on a target-by-target basis and interacted with by [variables blocks](#variables-blocks), while all targets have variables that exist by default and can only be interacted with via their dedicated blocks (not variable blocks). Some examples of user-defined variables would be `(score)` or `(index)` (completely custom), while examples of built-in variables would be `(x position)`, `(direction)`, `(size)`, `(volume)`, and `(tempo)` (exist in every target).
 
 ### Values
 
@@ -494,9 +520,9 @@ In Scratch, the following types of values exist:
 
 * [String](#string)
 * [Number](#number)
-  * [`-Infinity`](#-infinity)
+* * [`NaN`](#nan)
   * [`Infinity`](#infinity)
-  * [`NaN`](#nan)
+  * [`-Infinity`](#-infinity)
 * [Boolean](#boolean)
   * [`true`](#true)
   * [`false`](#false)
@@ -514,11 +540,11 @@ A [number](#number) intended to be in [degrees](https://en.wikipedia.org/wiki/De
 
 #### Answer
 
-A [string](#string) provided to the [project](#project) by the [user](#user) as [input](#input) via the [ask and wait block](#ask-and-wait-block).
+A [string](#string) provided to the [project](#project) by the [user](#user) as input via the [ask and wait block](#ask-and-wait-block).
 
 #### Boolean
 
-A special value that is used to represent the result of a logical operation. It is always either [`true`](#true) or [`false`](#false).
+A special type of [value](#value) that is used to represent the result of a logical operation. It is always either [`true`](#true) or [`false`](#false).
 
 ##### True
 
@@ -541,6 +567,73 @@ set [direction v] to ((((angle) + (179)) mod (360)) * (179))
 ```
 
 The way that a sprite's direction impacts how it is rendered is determined by that sprite's [rotation style](#rotation-style).
+
+#### Integer
+
+A [number](#number) that is not a fraction, aka a whole number (e.g. `42`, `-37`). Many [blocks](#block) report integers (e.g. `round ()`, `costume [number v]`, `loudness`, `item # of () in [list v]`) and expect integers (e.g. `item () of [list v]`), just to name a few.
+
+#### Item
+
+A [value](#value) in a [list](#list).
+
+#### Key
+
+A [name](#name) used by Scratch for referring to a key on the [user](#user)'s keyboard. Specific keys are referred to by name. To refer to any arbitrary key (as in, "press any key to continue"), the name `any` can be used.
+
+It is good to note that Scratch does not standardly support special keys other than the ones listed below, making it more versatile across platforms (i.e. it won't conflict with keyboard shortcuts used by other applications running on the user's computer).
+
+| Keyboard Key         | Key Name (string)            |
+|:--------------------:|:-----------------------------:|
+| ⌨️ (any key)         | `any`                           |
+| <kbd>space bar</kbd> | `space`                          |
+| <kbd>↑</kbd> arrow   | `up arrow`                        |
+| <kbd>↓</kbd> arrow   | `down arrow`                       |
+| <kbd>→</kbd> arrow   | `right arrow`                       |
+| <kbd>←</kbd> arrow   | `left arrow`                         |
+| <kbd>Return ↵</kbd>  | `enter`                               |
+| <kbd>A</kbd>, <kbd>B</kbd>, ...<kbd>Z</kbd> <br>(alphabet keys) | `a`, `b`, ...`z`<br>(the lowercase letter) |
+| <kbd>1</kbd>, <kbd>2</kbd>, ...<kbd>0</kbd><br>(number keys) | `1`, `2`, ...`0`<br>(the numerical digit) |
+| Other keys | The label of the key<br>or the letter it makes<br>when typed as text |
+
+TODO: Document all keys and figure out exactly what keys Scratch does and doesn't support and how it handles unlisted keys)
+
+#### Length
+
+A positive [integer](#integer) representing how many [letters](#letter) or [items](#item) there are in a [string](#string) or [list](#list), respectively.
+
+#### Letter
+
+An individual [UTF-16](https://en.wikipedia.org/wiki/UTF-16) [code unit](https://developer.mozilla.org/en-US/docs/Glossary/Code_unit). Several joined together create a [string](#string). In Scratch, letters cannot be directly interacted with per se; getting a letter from a string just reports another string containing only that letter.
+
+#### Name
+
+A [string](#string) with the intention of identifying something. This can be applied to a great number of things, but is usually used in regards to a variable, list, costume, sound, [user](#username), or [sprite](#sprite).
+
+#### Number
+
+A [numerical](https://en.wikipedia.org/wiki/Number) [value](#value). Most numbers are [real](https://en.wikipedia.org/wiki/Real_number) and can be positive (`+`), negative (`-`), whole (`#`), or fractional (`#.#`). In [JavaScript](#javascript), these numbers are internally stored as [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) values. Thus, Scratch follows largely the same rules JavaScript does when operating on numbers, though with exceptions. In addition to real numbers, special kinds of numbers exist too, which are for situations that cannot be fully expressed with real numbers.
+
+##### Infinity
+
+A special [number](#number) that is always greater than any other number. When [casted](#to-string) to a [string](#string), it is written as `Infinity`. It is created when the result of a mathematical operation is too large to be represented as a real number.
+
+```sb
+[Infinity] + (1) // Infinity
+[10 ^ v] of (1000) // Infinity
+[log v] of (0) // -Infinity
+(1) / [Infinity] // 0
+(1) / (0) // Infinity
+```
+
+##### -Infinity
+
+A special [number](#number) that is always lower than any other number. When [casted](#to-string) to a [string](#string), it is written as `-Infinity`. It is created in the same manner as [Infinity](#infinity).
+
+Whether `-Infinity` or `Infinity` is produced by an operation is determined in the same way that a real number would be negative or not. For example, `(1) / (n)` produces a positive number, while `(-1) / (n)` produces a negative number. In the same manner, `(1) / (0)` produces positive infinity, while `(-1) / (0)` produces negative infinity.
+
+##### NaN
+
+A special [number](#number) that is not a number. When [casted](#to-string) to a [string](#string), it is written as `NaN`. It is interpreted as a `0` when passed as input to other mathematical operations, unlike in [JavaScript](#javascript) where it causes most operations to report `NaN`. It can be produced by doing unknown or unrepresentable things with numbers, such as multiplying `Infinity` and zero, adding `Infinity` to `-Infinity`, or getting the square root of a negative number.
 
 #### Rotation Style
 
@@ -575,82 +668,17 @@ The following table describes a sprite's *rendered* direction when using differe
 
 ![A demonstration of the "don't rotate" rotation style](./img/don't-rotate.gif)
 
-#### Integer
-
-A [number](#number) that is not a fraction, aka a whole number (e.g. `42`, `-37`). Many blocks produce integers (e.g. `round ()`, `costume [number v]`, `loudness`, `item # of () in [list v]`) and expect integers (e.g. `item () of [list v]`), just to name a few.
-
-#### Item
-
-A [value](#value) in a [list](#list).
-
-#### Key
-
-A [name](#name) used by Scratch for referring to a key on the [user](#user)'s keyboard. Specific keys are referred to by name. To refer to any arbitrary key (as in, "press any key to continue"), the name `any` can be used.
-
-It is good to note that Scratch does not standardly support special keys other than the ones listed below, making it more versatile across platforms (i.e. it won't conflict with keyboard shortcuts used by other applications running on the user's computer).
-
-| Keyboard Key         | Key Name (string)            |
-|:--------------------:|:-----------------------------:|
-| ⌨️ (any key)         | `any`                           |
-| <kbd>space bar</kbd> | `space`                          |
-| <kbd>↑</kbd> arrow   | `up arrow`                        |
-| <kbd>↓</kbd> arrow   | `down arrow`                       |
-| <kbd>→</kbd> arrow   | `right arrow`                       |
-| <kbd>←</kbd> arrow   | `left arrow`                         |
-| <kbd>Return ↵</kbd>  | `enter`                               |
-| <kbd>A</kbd>, <kbd>B</kbd>, ...<kbd>Z</kbd> <br>(alphabet keys) | `a`, `b`, ...`z`<br>(the letter) |
-| <kbd>1</kbd>, <kbd>2</kbd>, ...<kbd>0</kbd><br>(number keys) | `1`, `2`, ...`0`<br>(the digit) |
-| Other keys | The label of the key<br>or the letter it makes<br>when typed as text |
-
-#### Length
-
-A positive [integer](#integer) representing how many [letters](#letter) or [items](#item) there are in a [string](#string) or [list](#list), respectively.
-
-#### Letter
-
-An individual [UTF-16](https://en.wikipedia.org/wiki/UTF-16) [code unit](https://developer.mozilla.org/en-US/docs/Glossary/Code_unit). Several joined together create a [string](#string). In Scratch, letters cannot be directly interacted with per se; getting a letter from a string just reports another string containing only that letter.
-
-#### Name
-
-A [string](#string) with the intention of identifying something. This can be applied to a great number of things, but is usually used in regards to a variable, list, costume, sound, [user](#username), or [sprite](#sprite).
-
-#### Number
-
-A [numerical](https://en.wikipedia.org/wiki/Number) value. Most numbers are [real](https://en.wikipedia.org/wiki/Real_number) and can be positive (`+`), negative (`-`), whole (`#`), or fractional (`#.#`). In [JavaScript](#javascript), these numbers are internally stored as [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) values. Thus, Scratch follows largely the same rules JavaScript does when operating on numbers, though with exceptions. In addition to real numbers, special kinds of numbers exist too, which are for situations that cannot be fully expressed with real numbers.
-
-##### Infinity
-
-A special number that is always greater than any other number. When converted to a string, it is written as `Infinity`. It is created when the result of a mathematical operation is too large to be represented as a real number.
-
-```sb
-[Infinity] + (1) // Infinity
-[10 ^ v] of (1000) // Infinity
-[log v] of (0) // -Infinity
-(1) / [Infinity] // 0
-(1) / (0) // Infinity
-```
-
-##### -Infinity
-
-A special number that is always lower than any other number. When converted to a string, it is written as `-Infinity`. It is created in the same manner as [Infinity](#infinity).
-
-Whether `-Infinity` or `Infinity` is produced by an operation is determined in the same way that a real number would be negative or not. For example, `(1) / (n)` produces a positive number, while `(-1) / (n)` produces a negative number. In the same manner, `(1) / (0)` produces positive infinity, while `(-1) / (0)` produces negative infinity.
-
-##### NaN
-
-A special number that is not a number. When casted to a string, it is written as `NaN`. It is interpreted as a `0` when passed as input to other mathematical operations, unlike in JavaScript where it causes most operations to report `NaN`. It can produced by doing unknown or unrepresentable things with numbers, such as multiplying `Infinity` and zero, adding `Infinity` to `-Infinity`, or getting the square root of a negative number.
-
 #### String
 
-A series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](#truthy) except for the [empty string](#empty-string).
+A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](#truthy) except for the [empty string](#empty-string).
 
 ##### Empty String
 
-A string containing no letters. It has a [length](#length) of `0` and is the only string considered [falsy](#falsy). Also known as a "null string," it can be used in place of a value where there is none, e.g. getting an [item](#item) from a [list](#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](#ask-and-wait-block) anything yet.
+A [string](#string) containing no letters. It has a [length](#length) of `0` and is the only string considered [falsy](#falsy). Also known as a "null string," it can be used in place of a value where there is none, e.g. getting an [item](#item) from a [list](#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](#ask-and-wait-block) anything yet.
 
 #### Undefined
 
-A special value that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
+A special [value](#value) that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
 
 #### Username
 
@@ -710,9 +738,9 @@ Other kinds values can potentially exist in modified or bugged versions of Scrat
 They will not be specified in this specification as of yet (since they cannot be obtained through *official* means), but other values that could potentially be encountered in the rarest of cases are:
 
 * `null`: A special value representing nothing. Distinct from [undefined](#undefined) in that it is meant to *explicitly* be nothing, whereas undefined exists for representing unknown behavior or values.
-  * The author of this specification does not know if `null` can be produced by existing blocks without modification.
+  * The writers of this specification do not know if `null` can be produced by existing blocks without modification.
     * If it is found to be an obtainable value, it may be documented further. Otherwise, it will not be, and is likely not necessary for inclusion in a reimplementation of Scratch.
-  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](https://turbowarp.org/) that still has largely the same behaviors.)
+  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](#turbowarp) that still has largely the same behaviors to see how it would behave if somehow obtained.)
     * When [casted](#to-string) to a [string](#string), it is written as `null`.
     * When [casted](#to-number) to a [number](#number), it is casted to `0`.
     * When [casted](#to-boolean) to a [boolean](#boolean), it is [`false`](#falsy).
@@ -768,8 +796,10 @@ Scratch uses the following logic to convert any given [value](#value) to a [bool
 A value is **falsy**, or casted to [**false**](#false), if the value is:
 
 * an [**empty string**](#empty-string) (no letters, [length](#length) is `0`),
-* one of the [numbers](#number) **`0`**, **`-0`**, or [**`NaN`**](#nan),
+* the **[strings](#string) `0`** or **`false`** (case-insensitive),
+* one of the **[numbers](#number) `0`**, **`-0`**, or [**`NaN`**](#nan),
 * [**undefined**](#undefined),
+* **null** (rare),
 * or **false**.
 
 ###### Truthy
@@ -811,7 +841,7 @@ Each fencing procedure is only applied after the position or size of the sprite 
 
 This section documents each and every block in Scratch, and its precise functionality.
 
-> How to organize and refer to these blocks is up for debate. Naming headings for blocks by opcode could work but may seem too cryptic. Feel free to offer insight!
+> How to organize and refer to these blocks is up for debate. Naming headings for blocks by opcode could work (and probably will) but may seem too cryptic. Feel free to offer insight!
 
 ### Example block
 
@@ -1204,7 +1234,7 @@ Unlike the rest of this specification, the content of this section is more up to
 
 > This section is not a high priority, as this specification is primarily meant to document standard Scratch. In the future, it is hoped this spec will include other branches of Scratch. This way, the behavior of projects created with them can be officially documented and remain recreatable if needed (e.g. for highly compatible [ports](https://en.wikipedia.org/wiki/Porting) of Scratch).
 
-This section serves to document blocks that do not exist at all in Scratch, but have been added unofficially to [modifications](#mod) of Scratch. This includes both blocks added as "custom extensions," and blocks added directly to the [palette](#palette). They are specified here in order to allow projects using these non-standard blocks to function properly if one were to reimplement the Scratch VM with implementing these blocks in mind.
+This section serves to document blocks that do not exist at all in Scratch, but have been added unofficially to [modifications](#mod) of Scratch. This includes both blocks added as "custom extensions," and blocks added directly to the [palette](#palette). They are specified here in order to allow projects using these nonstandard blocks to function properly if one were to reimplement the Scratch VM with implementing these blocks in mind.
 
 > This is a dynamic section and may never be able to satisfy any particular standards for completeness. [You can help](#contributing) by adding [missing blocks](#todo-blocks) with reliable sources (e.g. links to source code).
 
@@ -1264,23 +1294,23 @@ When the [runtime](#runtime) first starts, no [keys](#key) have been pressed. If
 
 ##### Addon blocks
 
-These blocks are added by TurboWarp addons. They are not actually real blocks, but rather [custom blocks](#custom-blocks) without definitions in disguise!
+These blocks are added by TurboWarp addons. They are not actually real blocks, but rather [special custom blocks](#special-custom-blocks) without definitions in disguise!
 
 #### PenguinMod
 
-[PenguinMod](https://penguinmod.com/) is a free-to-use visual coding website and a mod of [TurboWarp](#turbowarp). It has a variety of new built-in blocks, and supports most TurboWarp extensions as well as its own community-made ones. It also adds features for advanced use.
+[PenguinMod](https://penguinmod.com/) is a mod of [TurboWarp](#turbowarp). It supports most TurboWarp extensions and introduces some community-made ones of its own.
 
 TODO: Document PenguinMod blocks
 
 #### snail-ide
 
-[Snail IDE](https://snail-ide.js.org/) is a mod of [PenguinMod](#penguinmod) that adds many new blocks, extensions, and features. It supports most PenguinMod blocks and adds many more of its own.
+[Snail IDE](https://snail-ide.js.org/) is a mod of [PenguinMod](#penguinmod). It supports most of PenguinMod's blocks and adds some of its own.
 
 TODO: Document Snail IDE blocks
 
 #### Unsandboxed
 
-[Unsandboxed](https://alpha.unsandboxed.org/#0) is a mod of [TurboWarp](#turbowarp) that is intended to be a powerful in-browser tool for creating games. It is compatible with TurboWarp blocks adds several new blocks and is modified with features specifically for building games easily.
+[Unsandboxed](https://alpha.unsandboxed.org/#0) is a mod of [TurboWarp](#turbowarp) for building games. It is compatible with TurboWarp's blocks and adds some of its own.
 
 TODO: Document Unsandboxed blocks
 
@@ -1292,7 +1322,7 @@ If you know of a Scratch modification that is in use by a decent number of peopl
   * Add a section above this one under [Nonstandard blocks](#nonstandard-blocks)
   * Give a brief description that highlights what it adds to Scratch as a language (must add new blocks and/or alter runtime behavior)
 * Specification of its unique blocks
-  * See [Example nonstandard block](#example-nonstandard-block) for details on how to add an entry for a block. Be sure to put the entry under a relevant category, which should then be entered below the relevant platform's section. For example, the `log ()` block in [TurboWarp](#turbowarp) is in the Addon blocks category, which is then under the TurboWarp section, since that is the platform it was added to.
+  * See [Example nonstandard block](#example-nonstandard-block) for details on how to add an entry for a block. Be sure to put the entry under a relevant category, which should then be entered below the relevant platform's section. For example, the `log ()` block in [TurboWarp](#turbowarp) is in the [Addon blocks](#addon-blocks) category, which is then under the TurboWarp section, since that is the platform it was added to.
   * If a mod adds a new block, and a mod is made of that mod (thus inheriting the new block), **do not document the block twice**. Blocks should be documented under the platform they first appear on. If blocks are shared between platforms, find the section for the one it was initially added to and specify it over there.
   * If the same block just so happens to exist on several platforms without any clear origination (*or* does not work the same way), then it is OK to document them separately, especially if they have identical opcodes but different behavior.
 
