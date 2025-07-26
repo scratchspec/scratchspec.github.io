@@ -311,21 +311,22 @@ This section explains the various concepts and rules of Scratch.
 
 At its core, Scratch should be able to:
 
-* Run scripts dynamically; multithreading, looping, timing, etc.
-* Show images on a screen; position, size, turn + draw graphics.
-* Play sounds on speakers; several audio files can play at once.
+* **Change values** in a [runtime](#runtime)
+* **Run scripts** [single-threaded](https://en.wikipedia.org/wiki/Cooperative_multitasking)
+* **Play sounds** using speakers
+* **Show images** and graphics
 
-In an ideal situation, it should also be able to:
+In a fully functional environment, Scratch can access:
 
-* Apply effects to images and sounds
-* Detect loudness via microphone
-* Interact with linked devices
-* Draw graphics dynamically
-* Make requests to the web
-* Know the current time
-* Receive user input
+* A **keyboard** (detect keys the user presses)
+* A **mouse** (read its position and button state)
+* A **microphone** (gauge surrounding loudness)
+* A **clock** (get local and UTC time in milliseconds)
+* **Wi-Fi** (make network requests to external servers)
+* **Bluetooth** (connect to supported hardware)
+* A **webcam** (sense motion in a direction)
 
-A fully functional implementation of Scratch should be capable of all these things, and if not handle it gracefully, this document detailing how to deal with everything.
+If one or more of these things is unavailable, Scratch handles it gracefully.
 
 ### Constants
 
