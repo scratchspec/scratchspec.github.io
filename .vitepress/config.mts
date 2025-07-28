@@ -19,6 +19,7 @@ export default defineConfig({
         items: [
           { text: "Capabilities", link: "/concepts/capabilities" },
           { text: "Constants", link: "/concepts/constants" },
+          { text: "Ideas", link: "/concepts/ideas" },
         ],
       },
     ],
