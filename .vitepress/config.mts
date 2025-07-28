@@ -10,6 +10,15 @@ export default defineConfig({
         items: [
           { text: "Contents", link: "/" },
           { text: "Introduction", link: "/intro" },
+          { text: "FAQ", link: "faq" },
+          { text: "TODO", link: "/todo" },
+        ],
+      },
+      {
+        text: "Concepts",
+        items: [
+          { text: "Capabilities", link: "/concepts/capabilities" },
+          { text: "Constants", link: "/concepts/constants" },
         ],
       },
     ],
