@@ -133,9 +133,9 @@ Blocks can be run, meaning that its operation is performed using the arguments i
 
 ### Clone
 
-A copy created of a [sprite](#sprite) that has all of the original sprite's code, images, and sounds, but operates independently of it. Unlike sprites, clones cannot be directly referenced via existing blocks (e.g. you cannot [glide to](#glide-to-block) it directly without knowing its position ahead of time, as it cannot be selected in the sprite dropdown menu), and exist as their own thing. They are deleted every time the [flag](#flag) is clicked, and can also be deleted manually using the [`delete this clone` block](#delete-clone-block).
+A copy created of a [sprite](#sprite) that has all of the original sprite's code, images, and sounds, but operates independently of it. Unlike sprites, clones cannot be directly referenced via existing blocks (e.g. you cannot [glide to](/palette/#glide-to-block) it directly without knowing its position ahead of time, as it cannot be selected in the sprite dropdown menu), and exist as their own thing. They are deleted every time the [flag](#flag) is clicked, and can also be deleted manually using the [`delete this clone` block](/palette/#delete-clone-block).
 
-Clones can be created with the [create clone block](#create-clone-block) so long as the [maximum number of clones](#max-clones) has not been reached. Code can be written specifically for the clones of a sprite via the use of the [when I start as a clone block](#when-i-start-as-a-clone-block). The [stage](#stage) is the [target](#target) which cannot be cloned, whereas both sprites *and clones* can themselves be cloned.
+Clones can be created with the [create clone block](/palette/#create-clone-block) so long as the [maximum number of clones](#max-clones) has not been reached. Code can be written specifically for the clones of a sprite via the use of the [when I start as a clone block](/palette/#when-i-start-as-a-clone-block). The [stage](#stage) is the [target](#target) which cannot be cloned, whereas both sprites *and clones* can themselves be cloned.
 
 ### Edge
 
@@ -147,7 +147,7 @@ A boundary around the viewing area of the [stage](#stage) that restricts the [co
 
 > The usefulness of defining "Flag" is up for debate. Feel free to offer insight!
 
-The button that is clicked to start a project. It is also known as the green flag. In simple terms, it makes the project `Go`. When clicked, it runs any scripts placed under [when flag clicked blocks](#when-flag-clicked-block).
+The button that is clicked to start a project. It is also known as the green flag. In simple terms, it makes the project `Go`. When clicked, it runs any scripts placed under [when flag clicked blocks](/palette/#when-flag-clicked-block).
 
 ### JavaScript
 
@@ -161,19 +161,19 @@ A series of [items](#item) stored together in sequence. Each item is referenced 
 
 ### Mod
 
-A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see the [relevant appendix](#nonstandard-blocks).
+A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see the [relevant appendix](/palette/#nonstandard-blocks).
 
 ### Opcode
 
-A [name](#name) unique to every [block](#block) in the Scratch programming language. It tells blocks what to do. For example, if the opcode of a block is [`motion_movesteps`](#motion_movesteps), it attempts to move steps.
+A [name](#name) unique to every [block](#block) in the Scratch programming language. It tells blocks what to do. For example, if the opcode of a block is [`motion_movesteps`](/palette/#motion_movesteps), it attempts to move steps.
 
 ### Project
 
-A [stage](#stage) and optionally some [sprites](#sprite) packaged together to do something. They can be loaded into a [runtime](#runtime) and executed. They can also be saved as [project files](#file-format).
+A [stage](#stage) and optionally some [sprites](#sprite) packaged together to do something. They can be loaded into a [runtime](#runtime) and executed. They can also be saved as [project files](/files/).
 
 ### Runtime
 
-The environment in which a [project](#project) is run. It keeps track of the project's current state and executes its code. [Projects files can be loaded into and saved from runtimes](#file-format).
+The environment in which a [project](#project) is run. It keeps track of the project's current state and executes its code. [Projects files can be loaded into and saved from runtimes](/files/).
 
 ### Script
 
@@ -219,7 +219,7 @@ A [named](#name) container belonging to a [target](#target) that holds exactly o
 
 Some variables are created on a project-by-project basis for general use by [scripts](#script). For example, a `(score)` variable can be created to keep track of an arbitrary point value. Others are directly built into the [runtime](#runtime) and cannot be deleted. For example, the [`(x position)`](#x-position) variable always exists in every [sprite](#sprite) to set its rendered horizontal position.
 
-General purpose variables can be interacted with using [variables blocks](#variables-blocks). Runtime variables have their own dedicated blocks instead and are usually limited or sandboxed in some way, unlike general purpose variables.
+General purpose variables can be interacted with using [variables blocks](/palette/#variables-blocks). Runtime variables have their own dedicated blocks instead and are usually limited or sandboxed in some way, unlike general purpose variables.
 
 ## Values
 
@@ -247,7 +247,7 @@ A [number](#number) intended to be in [degrees](https://en.wikipedia.org/wiki/De
 
 ### Answer
 
-A [string](#string) provided to the [project](#project) by the [user](#user) as input via the [ask and wait block](#ask-and-wait-block).
+A [string](#string) provided to the [project](#project) by the [user](#user) as input via the [ask and wait block](/palette/#ask-and-wait-block).
 
 ### Boolean
 
@@ -365,15 +365,15 @@ The following table describes a sprite's *rendered* direction when using differe
 
 #### Rotation Style: All Around
 
-![A demonstration of the "all around" rotation style](./img/all-around.gif)
+![A demonstration of the "all around" rotation style](/img/all-around.gif)
 
 #### Rotation Style: Left-Right
 
-![A demonstration of the "left-right" rotation style](./img/left-right.gif)
+![A demonstration of the "left-right" rotation style](/img/left-right.gif)
 
 #### Rotation Style: Don't Rotate
 
-![A demonstration of the "don't rotate" rotation style](./img/don't-rotate.gif)
+![A demonstration of the "don't rotate" rotation style](/img/don't-rotate.gif)
 
 ### String
 
@@ -381,7 +381,7 @@ A type of [value](#value) consisting of a series (i.e. string) of [letters](#let
 
 #### Empty String
 
-A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](#ask-and-wait-block) anything yet.
+A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/palette/#ask-and-wait-block) anything yet.
 
 ### Undefined
 
@@ -403,7 +403,7 @@ Also, official ("real") usernames are registered with the [Scratch website](http
 
 Official usernames can only be changed under extraordinarily rare circumstances (e.g. the username contained sensitive information about the user that the [Scratch team](https://en.scratch-wiki.info/wiki/Scratch_Team) decided to change for them), meaning that once it is created, it usually cannot be altered later.
 
-Scripts can detect the current user's username via the [(`username`) block](#username-block). If the user is signed in, the block reports their username. If the user is signed out, the block reports an [empty string](#empty-string). In the official Scratch editor, the username reported by the username block should remain constant for the entire run of the project.
+Scripts can detect the current user's username via the [(`username`) block](/palette/#username-block). If the user is signed in, the block reports their username. If the user is signed out, the block reports an [empty string](#empty-string). In the official Scratch editor, the username reported by the username block should remain constant for the entire run of the project.
 
 > The only exception to this rule in official contexts is when the user does the following steps in sequence:
 >
@@ -447,7 +447,7 @@ They will not be specified in this specification as of yet (since they cannot be
 * `null`: A special value representing nothing. Distinct from [undefined](#undefined) in that it is meant to *explicitly* be nothing, whereas undefined exists for representing unknown behavior or values.
   * The writers of this specification do not know if `null` can be produced by existing blocks without modification.
     * If it is found to be an obtainable value, it may be documented further. Otherwise, it will not be, and is likely not necessary for inclusion in a reimplementation of Scratch.
-  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
+  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](/palette/#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
     * When [casted](#to-string) to a [string](#string), it is written as `null`.
     * When [casted](#to-number) to a [number](#number), it is casted to `0`.
     * When [casted](#to-boolean) to a [boolean](#boolean), it is [`false`](#falsy).
