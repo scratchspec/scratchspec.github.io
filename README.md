@@ -416,7 +416,9 @@ A sound is an [audio file](https://en.wikipedia.org/wiki/Digital_audio) and a ty
 
 #### Block
 
-The fundamental component of Scratch as a programming language. In fact, they are similar to function calls in other programming languages. Every block:
+> This will have to be better explained and added to the nonexistent section for script execution.
+
+The fundamental component of Scratch as a programming language. In fact, it is similar to a function call in other programming languages. Every block:
 
 * Accepts values or blocks as arguments
 * Has a specific pre-defined operation that it performs
@@ -426,7 +428,7 @@ Blocks can be run, meaning that its operation is performed using the arguments i
 
 ##### Standard Blocks
 
-[Blocks](#block) that are officially supported in Scratch 3.0. They are the most commonly used blocks in [scripts](#script) by far.
+[Blocks](#block) that are officially supported in Scratch 3.0. They are the most commonly used blocks in [scripts](#script).
 
 ##### Hidden Blocks
 
@@ -440,13 +442,15 @@ Clones can be created with the [create clone block](#create-clone-block) so long
 
 #### Edge
 
-Refers to the bounds that restrict the graphics of a [project](#project) from exceeding its designated region on the user's screen.
+> The usefulness of defining "Edge" is up for debate. It may be best left to the section about [fencing](#fencing). Feel free to offer insight!
+
+A boundary around the viewing area of the [stage](#stage) that restricts the [costume](#costume) of a [sprite](#sprite) from going off-screen.
 
 #### Flag
 
 > The usefulness of defining "Flag" is up for debate. Feel free to offer insight!
 
-The button that is intended to run scripts that start a project. It is also known as the green flag in official Scratch. It is meant to make the project `Go`, as it is labelled in its title text on the Scratch website. When clicked, it runs any scripts under [when flag clicked blocks](#when-flag-clicked-block).
+The button that is clicked to start a project. It is also known as the green flag. In simple terms, it makes the project `Go`. When clicked, it runs any scripts placed under [when flag clicked blocks](#when-flag-clicked-block).
 
 #### JavaScript
 
@@ -468,7 +472,7 @@ A [name](#name) unique to every [block](#block) in the Scratch programming langu
 
 #### Project
 
-A stage and optionally some sprites packaged together to do something. They can be loaded into a [runtime](#runtime) and executed. They can also be saved as [project files](#file-format).
+A [stage](#stage) and optionally some [sprites](#sprite) packaged together to do something. They can be loaded into a [runtime](#runtime) and executed. They can also be saved as [project files](#file-format).
 
 #### Runtime
 
@@ -495,15 +499,15 @@ A kind of [target](#target) that can exist on its own, have [variables](#variabl
 
 #### Stage
 
-A special [target](#target), with one and only one existing in every project, that is shown behind all [sprites](#sprite). It is sort of like the [global scope](https://en.wikipedia.org/wiki/Scope_(computer_science)#Global_scope) found in some programming languages, but it also exists as its own entity.
+A special [target](#target), with one and only one existing in every project that is always shown behind all [sprites](#sprite). It is sort of like the [global scope](https://en.wikipedia.org/wiki/Scope_(computer_science)#Global_scope) found in some programming languages, but it also exists as its own entity.
 
 Unlike [sprites](#sprite), it cannot be moved, pointed, scaled, hidden, or have variables that only it can set. However, it can do everything else a sprite can.
 
 #### Target
 
-An object that runs blocks, shows images, and plays sounds. It has its own [variables](#variable) (aka properties or fields) that are used by contained [scripts](#script) to perform operations.
+An object that runs blocks, shows images, and plays sounds. It has its own [variables](#variable) and [scripts](#script) to perform operations. It can take the form of either a [sprite](#sprite) or the [stage](#stage).
 
-Every target exists as its own unit independent of other targets, but they can be interconnected in some ways. There are two kinds of targets * [sprites](#sprite) and [stages](#stage).
+A target exists as its own independent unit. However, targets can interact with each other in some ways, e.g. via [messages](#message).
 
 #### User
 
@@ -511,9 +515,14 @@ The individual who is interacting with the [project](#project) and provides inpu
 
 #### Variable
 
-A container with a [name](#name) that can hold any one [value](#value). Every variable is attached to a [target](#target). If it is attached to a [sprite](#sprite), it can only be set by that sprite. If it is attached to the [stage](#stage), it can be set by any sprite, including the stage.
+A [named](#name) container belonging to a [target](#target) that holds exactly one [value](#value) and is interacted with via [blocks](#block). The following operations are often performed with variables:
 
-There are two kinds of variables. Some variables are defined and named by the creator of a [project](#project) on a target-by-target basis and interacted with by [variables blocks](#variables-blocks), while all targets have variables that exist by default and can only be interacted with via their dedicated blocks (not variable blocks). Some examples of user-defined variables would be `(score)` or `(index)` (completely custom), while examples of built-in variables would be `(x position)`, `(direction)`, `(size)`, `(volume)`, and `(tempo)` (exist in every target).
+* **Get**: Read the current value of the variable.
+* **Set**: Modify the current value of the variable.
+
+Some variables are created on a project-by-project basis for general use by [scripts](#script). For example, a `(score)` variable can be created to keep track of an arbitrary point value. Others are directly built into the [runtime](#runtime) and cannot be deleted. For example, the [`(x position)`](#x-position) variable always exists in every [sprite](#sprite) to set its rendered horizontal position.
+
+General purpose variables can be interacted with using [variables blocks](#variables-blocks). Runtime variables have their own dedicated blocks instead and are usually limited or sandboxed in some way, unlike general purpose variables.
 
 ### Values
 
@@ -545,19 +554,19 @@ A [string](#string) provided to the [project](#project) by the [user](#user) as 
 
 #### Boolean
 
-A special type of [value](#value) that is used to represent the result of a logical operation. It is always either [`true`](#true) or [`false`](#false).
+A special type of [value](#value) used to represent the result of a logical operation. It is always either [`true`](#true) or [`false`](#false).
 
 ##### True
 
-A kind of [boolean](#boolean) that is used to represent a yes or an affirmative answer as a result of a logical operation. When casted to a [string](#string), it is written as `true`. When casted to a [number](#number), it is casted to `1`. It is considered [truthy](#truthy), as it is itself the definition of truthy.
+A kind of [boolean](#boolean) used to represent a yes or an affirmative answer as a result of a logical operation. When casted to a [string](#string), it is written as `true`. When casted to a [number](#number), it is casted to `1`. It is considered [truthy](#truthy), as it is itself the definition of truthy.
 
 ##### False
 
-A kind of [boolean](#boolean) that is used to represent a no or a negative answer as a result of a logical operation. When casted to a [string](#string), it is written as `false`. When casted to a [number](#number), it is casted to `0`. It is considered [falsy](#falsy), as it is itself the definition of falsy.
+A kind of [boolean](#boolean) used to represent a no or a negative answer as a result of a logical operation. When casted to a [string](#string), it is written as `false`. When casted to a [number](#number), it is casted to `0`. It is considered [falsy](#falsy), as it is itself the definition of falsy.
 
 #### Direction
 
-An [angle](#angle) that determines the way a sprite is turned on the screen. It is always wrapped to remain in the range -179 and 181 (exclusive). An angle $a$ can be converted to a direction $d$ like so:
+An [angle](#angle) determining how a sprite is pointed on the screen. It is always wrapped to remain in the range -179 and 181 (exclusive). An angle $a$ can be converted to a direction $d$ like so:
 
 $d=\operatorname{mod}\left(a+179,360\right)-179$
 
@@ -567,11 +576,11 @@ Or in scratchblocks:
 set [direction v] to ((((angle) + (179)) mod (360)) * (179))
 ```
 
-The way that a sprite's direction impacts how it is rendered is determined by that sprite's [rotation style](#rotation-style).
+The way a sprite's direction impacts how it is rendered is determined by its [rotation style](#rotation-style).
 
 #### Integer
 
-A [number](#number) that is not a fraction, aka a whole number (e.g. `42`, `-37`). Many [blocks](#block) report integers (e.g. `round ()`, `costume [number v]`, `loudness`, `item # of () in [list v]`) and expect integers (e.g. `item () of [list v]`), just to name a few.
+A whole [number](#number), or a number that is not a fraction (e.g. `42`, `-37`). Many [blocks](#block) report integers (e.g. `round ()`, `costume [number v]`, `loudness`, `item # of () in [list v]`) and expect integers (e.g. `item () of [list v]`), just to name a few.
 
 #### Item
 
@@ -634,11 +643,11 @@ Whether `-Infinity` or `Infinity` is produced by an operation is determined in t
 
 ##### NaN
 
-A special [number](#number) that is not a number. When [casted](#to-string) to a [string](#string), it is written as `NaN`. It is interpreted as a `0` when passed as input to other mathematical operations, unlike in [JavaScript](#javascript) where it causes most operations to report `NaN`. It can be produced by doing unknown or unrepresentable things with numbers, such as multiplying `Infinity` and zero, adding `Infinity` to `-Infinity`, or getting the square root of a negative number.
+A special [number](#number) that is not a number. When [casted](#to-string) to a [string](#string), it is written as `NaN`. It is interpreted as a `0` when passed as input to other mathematical operations, unlike in [JavaScript](#javascript) where it causes most operations to report `NaN`. It can be produced by doing unknown or unrepresentable things with numbers, such as multiplying [`Infinity`](#infinity) and zero, adding `Infinity` to [`-Infinity`](#-infinity), or getting the square root of a negative number. Unlike Infinity, it can never be negative.
 
 #### Rotation Style
 
-A [string](#string) that determines how a [sprite](#sprite)'s [direction](#direction) impacts the way it is visibly rotated when rendered. Officially, it can be one of the following strings: `all around`, `left-right`, or `don't rotate`.
+A [string](#string) that determines how a [sprite](#sprite)'s [direction](#direction) impacts the way it is visibly rotated when rendered. Officially, it can only be one of the following strings: `all around`, `left-right`, or `don't rotate`.
 
 * `all around`: The sprite faces in its direction **clockwise**. At `0`, it faces **up**; at `90`, it faces **right**; at `180`, it faces **down**; and at `-90`, it faces **left**.
 * `left-right`: If the sprite's direction is less than `0`, it faces **left** (`-90`). Otherwise, it faces **right** (`90`).
@@ -671,21 +680,21 @@ The following table describes a sprite's *rendered* direction when using differe
 
 #### String
 
-A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](#truthy) except for the [empty string](#empty-string).
+A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](#truthy) except for the [empty string](#empty-string), the string `0`, and the string `false` (case-insensitive), which are considered [falsy](#falsy).
 
 ##### Empty String
 
-A [string](#string) containing no letters. It has a [length](#length) of `0` and is the only string considered [falsy](#falsy). Also known as a "null string," it can be used in place of a value where there is none, e.g. getting an [item](#item) from a [list](#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](#ask-and-wait-block) anything yet.
+A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](#ask-and-wait-block) anything yet.
 
 #### Undefined
 
-A special [value](#value) that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an empty string to represent nothing.
+A special [value](#value) that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](#hidden-blocks). In most cases, however, Scratch uses `0` or an [empty string](#empty-string) to represent nothing.
 
 #### Username
 
-A [name](#name) used to reference a [user](#user). In standard Scratch, usernames are:
+A [name](#name) used to reference a [user](#user). In standard Scratch, usernames:
 
-* Always 3 to 20 [letters](#letter) [long](#length) (inclusive)
+* Are always 3 to 20 [letters](#letter) [long](#length) (inclusive)
 * Can only contain the following symbols:
   * Uppercase Latin letters (A-Z)
   * Lowercase Latin letters (a-z)
@@ -708,7 +717,7 @@ Scripts can detect the current user's username via the [(`username`) block](#use
 > * Signs in to their account from the same window while the project is open
 >   * A menu exists for the user to sign in to their account without reloading the page
 >
-> Then the reported username is changed from the empty string to the username that the user signed in with, without reloading the project. After this happens, the user cannot change their username again without reloading the project or modifying the [runtime](#runtime) directly via developer tools like web inspector.
+> Then the reported username is changed from the empty string to the username that the user signed in with, without reloading the project. After this happens, the user cannot change their username again without reloading the project or modifying the [runtime](#runtime) directly, e.g. via [developer tools](https://en.wikipedia.org/wiki/Web_development_tools).
 
 Due to the aforementioned limitations of real usernames, project *can* technically check if the user's username is "real" or not by:
 
@@ -741,7 +750,7 @@ They will not be specified in this specification as of yet (since they cannot be
 * `null`: A special value representing nothing. Distinct from [undefined](#undefined) in that it is meant to *explicitly* be nothing, whereas undefined exists for representing unknown behavior or values.
   * The writers of this specification do not know if `null` can be produced by existing blocks without modification.
     * If it is found to be an obtainable value, it may be documented further. Otherwise, it will not be, and is likely not necessary for inclusion in a reimplementation of Scratch.
-  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](#turbowarp) that still has largely the same behaviors to see how it would behave if somehow obtained.)
+  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
     * When [casted](#to-string) to a [string](#string), it is written as `null`.
     * When [casted](#to-number) to a [number](#number), it is casted to `0`.
     * When [casted](#to-boolean) to a [boolean](#boolean), it is [`false`](#falsy).
@@ -770,7 +779,7 @@ Scratch uses the following logic to convert any given [value](#value) to a [stri
   * If the value is [**true**](#boolean), **return the string `true`.**
   * If the value is [**false**](#boolean), **return the string `false`.**
 * If the value is [**undefined**](#undefined), **return the string `undefined`.**
-* If the value is [**something else**](#other-values), **follow the logic JavaScript has for the `toString` method of that value** to convert it to a string **and return it.** (Likely unnecessary though, as no known "other values" can be encountered.)
+* If the value is [**something else**](#other-values), **follow the logic [JavaScript](#javascript) has for the `toString` method of that value** to convert it to a string **and return it.** (Likely unnecessary though, as no known "other values" can be encountered.)
   * If the value is somehow **null**, **return the string `null`.**
   * TODO: Explain this step better or maybe just omit it because this step is not needed
 
@@ -786,7 +795,7 @@ Scratch uses the following logic to convert any given [value](#value) to a [numb
 * If the value is a [**string**](#string) or [something else](#other-values):
   * **If the value can be converted to a number** according to [these rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)**, return it.**
   * **Otherwise, return the number `0`.**
-  * TODO: specify string -> number coercion better b/c JavaScript logic
+  * TODO: specify string -> number coercion better b/c [JavaScript](#javascript) logic
 
 ##### To Boolean
 
@@ -796,11 +805,11 @@ Scratch uses the following logic to convert any given [value](#value) to a [bool
 
 A value is **falsy**, or casted to [**false**](#false), if the value is:
 
-* an [**empty string**](#empty-string) (no letters, [length](#length) is `0`),
+* an [**empty string**](#empty-string) (no [letters](#letter), [length](#length) is `0`),
 * the **[strings](#string) `0`** or **`false`** (case-insensitive),
 * one of the **[numbers](#number) `0`**, **`-0`**, or [**`NaN`**](#nan),
 * [**undefined**](#undefined),
-* **null** (rare),
+* [**null**](#other-values) (rare),
 * or **false**.
 
 ###### Truthy
