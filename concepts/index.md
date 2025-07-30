@@ -365,15 +365,23 @@ The following table describes a sprite's *rendered* direction when using differe
 
 #### Rotation Style: All Around
 
+(commented out)
+
+```md
 ![A demonstration of the "all around" rotation style](/img/all-around.gif)
+```
 
 #### Rotation Style: Left-Right
 
+```md
 ![A demonstration of the "left-right" rotation style](/img/left-right.gif)
+```
 
 #### Rotation Style: Don't Rotate
 
+```md
 ![A demonstration of the "don't rotate" rotation style](/img/don't-rotate.gif)
+```
 
 ### String
 
