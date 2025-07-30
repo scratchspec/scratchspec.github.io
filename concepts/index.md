@@ -2,7 +2,7 @@
 
 This section explains the various concepts and rules of Scratch.
 
-{{toc}}
+[[toc]]
 
 ## Capabilities
 
