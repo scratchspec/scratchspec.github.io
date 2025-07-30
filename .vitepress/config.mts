@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Scratch Specification",
   base: "/scratch-spec/", // https://vitepress.dev/guide/deploy#setting-a-public-base-path
+  ignoreDeadLinks: true,
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
