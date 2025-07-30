@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { scratchblocksPlugin } from 'sb-mdit'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -49,5 +50,10 @@ export default defineConfig({
     search: {
       provider: 'local'
     }
+  },
+
+  markdown: {
+    math: true,
+    config: md => md.use(scratchblocksPlugin)
   }
 })
