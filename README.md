@@ -5,7 +5,7 @@ A detailed explanation of how Scratch 3.0 works as a programming language.
 > [!IMPORTANT]
 > **Changes are underway!**
 >
-> This spec is being transitioned over to Vitepress. Parts of it have already been copied over and deleted from here. It will no longer be included in the README. To view it, you'll have to go to the much better [published page](https://oceanisendless.github.io/scratch-spec/). See ya there!
+> This spec is being transitioned over to Vitepress. Parts of it have already been copied over and deleted from here. It will no longer be included in the README. To view it, you'll have to go to the much better [published page](https://oceanisendless.github.io/scratch-spec/). See ya there when it's up and running!
 >
 
 ## Contents
