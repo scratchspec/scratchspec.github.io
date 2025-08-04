@@ -31,7 +31,7 @@ Please [contribute on GitHub](https://github.com/OceanIsEndless/scratch-spec/pul
 
 ### Where to start?
 
-* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the [table of contents](/#contents) and just gloss over whatever you don't need to know.
+* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the [table of contents](/contents/) and just gloss over whatever you don't need to know.
 * If you want **formal definitions** of Scratch terms, see [concepts](/concepts/).
 * If you want to accurately **recreate blocks**, see the [palette](/palette/).
   * If you want to recreate old blocks, see [obsolete blocks](/palette/#obsolete-blocks).
