@@ -26,8 +26,9 @@ export default defineConfig({
         text: 'Introduction',
         link: '/intro/',
         items: [
-          { text: 'Frequently Asked Questions', link: '/intro/#faq' },
-          { text: 'Contributing Guidelines', link: '/intro/#contributing' }
+          { text: 'FAQ', link: '/intro/#faq' },
+          { text: 'Contents', link: '/contents/' },
+          { text: 'Contributing', link: '/intro/#contributing' }
         ]
       },
       {
