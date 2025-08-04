@@ -365,15 +365,27 @@ The following table describes a sprite's *rendered* direction when using differe
 
 #### Rotation Style: All Around
 
-![A demonstration of the "all around" rotation style](/img/all-around.gif)
+<video width="360" height="360" src="/img/all-around.webm" autoplay loop muted playsinline style="
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+"></video>
 
 #### Rotation Style: Left-Right
 
-![A demonstration of the "left-right" rotation style](/img/left-right.gif)
+<video width="360" height="360" src="/img/left-right.webm" autoplay loop muted playsinline style="
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+"></video>
 
 #### Rotation Style: Don't Rotate
 
-![A demonstration of the "don't rotate" rotation style](/img/dont-rotate.gif)
+<video width="360" height="360" src="/img/dont-rotate.webm" autoplay loop muted playsinline style="
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+"></video>
 
 ### String
 
