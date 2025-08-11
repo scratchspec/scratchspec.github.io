@@ -4,6 +4,8 @@ import { scratchblocksPlugin } from 'sb-mdit'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Scratch Specification",
+  description: "An explanation of Scratch 3.0",
+  // head: [['link', { rel: 'icon', href: '/favicon.ico' }]], // https://github.com/vuejs/vitepress/discussions/2475#discussioncomment-11238929
   base: "/scratch-spec/", // https://vitepress.dev/guide/deploy#setting-a-public-base-path
   ignoreDeadLinks: true,
 
@@ -12,9 +14,10 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Intro', link: '/intro/' },
-      { text: 'Concepts', link: '/concepts/' },
+      { text: 'Index', link: '/index/' },
+      { text: 'Ideas', link: '/ideas/' },
       { text: 'Runtime', link: '/runtime/' },
-      { text: 'Blocks', link: '/palette/' },
+      { text: 'Blocks', link: '/blocks/' },
       { text: 'Files', link: '/files/' },
       { text: 'I/O', link: '/io/' },
       { text: 'Network', link: '/network/' },
@@ -27,21 +30,29 @@ export default defineConfig({
         link: '/intro/',
         items: [
           { text: 'FAQ', link: '/intro/#faq' },
-          { text: 'Contents', link: '/contents/' },
-          { text: 'Contributing', link: '/intro/#contributing' }
+          { text: 'Contents', link: '/index/' },
+          {
+            text: 'Contributing', link: '/intro/#contributing', items: [
+              { text: 'TODO', link: '/todo/' }
+            ]
+          }
         ]
       },
       {
         text: 'Concepts',
-        link: '/concepts/',
+        link: '/ideas/',
         items: [
-          { text: 'Capabilities', link: '/concepts/#capabilities' },
-          { text: 'Constants', link: '/concepts/#constants' },
-          { text: 'Ideas', link: '/concepts/#ideas' },
-          { text: 'Values', link: '/concepts/#values' },
-          { text: 'Procedures', link: '/concepts/#procedures' }
+          { text: 'Capabilities', link: '/ideas/#capabilities' },
+          { text: 'Constants', link: '/ideas/#constants' },
+          { text: 'Ideas', link: '/ideas/#ideas' },
+          { text: 'Values', link: '/ideas/#values' },
+          { text: 'Procedures', link: '/ideas/#procedures' }
         ]
       },
+      {
+        text: 'Palette',
+        link: '/blocks/'
+      }
     ],
 
     socialLinks: [
@@ -55,6 +66,9 @@ export default defineConfig({
 
   markdown: {
     math: true,
-    config: md => md.use(scratchblocksPlugin)
+    config: (md) => {
+      md.use(scratchblocksPlugin) // https://github.com/OceanIsEndless/scratch-spec/pull/5#issuecomment-3137259965
+      // May add more if needed
+    }
   }
 })

@@ -11,7 +11,7 @@ hero:
       link: /intro/
     - theme: alt
       text: Contents
-      link: /contents/
+      link: /index/
     - theme: alt
       text: FAQ
       link: /intro/#faq
@@ -21,13 +21,13 @@ features:
     link: /intro/
     details: An explanation of what this spec is trying to achieve.
   - title: Concepts
-    link: /concepts/
+    link: /ideas/
     details: Formal definitions for basic Scratch concepts.
   - title: Runtime
     link: /runtime/
     details: How scripts run.
   - title: Palette
-    link: /palette/
+    link: /blocks/
     details: Every. Block. Ever.
   - title: Project Files
     link: /files/

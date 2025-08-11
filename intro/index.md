@@ -9,7 +9,7 @@ Before reading this specification:
 * **Be sure to have an understanding of computer science.** A good vocabulary, knowledge, and understanding of computational concepts is useful.
 * **Being experienced with working in Scratch is immensely helpful.** Although this specification will try to explain it in full, knowing the basic concepts and quirks of Scratch just by experience will let you skim through this document easily, as not all of it is necessary to read; just to reference for accuracy.
 * Scratch 3.0 is built upon the modern web; although not entirely necessary, **a basic knowledge of [JavaScript](https://en.wikipedia.org/wiki/JavaScript) can come in handy** when it comes to understanding the inner workings, logic, and rules of Scratch, as it is what Scratch runs on. Scratch does a lot of things the same way JavaScript does.
-* **Be familiar with the [scratchblocks](https://scratchblocks.github.io/) [syntax](https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax).** This text-based format is used to represent Scratch [blocks](#block). An option to render the scratchblocks while viewing in-browser is being considered; however, the shapes and colors of the blocks are not necessarily being documented here, but rather their functionality.
+* **Be familiar with the [scratchblocks](https://scratchblocks.github.io/) [syntax](https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax).** This text-based format is used to represent Scratch [blocks](/ideas/#block). Although the blocks currently render while reading in a web browser, it is still good to know how to interpret them textually, especially if block rendering support is somehow unavailable, e.g. when viewing the source Markdown files directly.
 
 ## Sources
 
@@ -24,6 +24,8 @@ Please [contribute on GitHub](https://github.com/OceanIsEndless/scratch-spec/pul
 * **Fact check** info to verify accuracy (add links to projects, code, wiki, forums)
 * Make sure everything looks good (**correct formatting, spelling, grammar**)
 * **Give** some **ideas**, **motivation**, or **feedback** for improving this specification
+
+See the [TODO](/todo/) list for ways you can help!
 
 ## FAQ
 
@@ -55,7 +57,7 @@ This specification exists to document the behavior of Scratch 3.0 as a programmi
 * **Improving Scratch in the future while keeping it 100% compatible**
   * It isn't known if this spec will reach a state that the developers of Scratch could use as reference, but if so, it could help ensure that Scratch projects remain functionally the same after code rewrites.
 * **Directly citing the workings of Scratch without linking wikis or code**
-  * Although the [Scratch Wiki](https://scratch-wiki.info/) and code of Scratch work well for showing Scratch concepts and runtime behavior, one of them tends to abstract away particular functionalities while the other offers thousands of lines of pure [JavaScript](#javascript). This specification is meant to serve as one clear and concise document explaining the behaviors, blocks, and quirks of Scratch 3.0 in all its blocky glory.
+  * Although the [Scratch Wiki](https://scratch-wiki.info/) and code of Scratch work well for showing Scratch concepts and runtime behavior, one of them tends to abstract away particular functionalities while the other offers thousands of lines of pure [JavaScript](/ideas/#javascript). This specification is meant to serve as one clear and concise document explaining the behaviors, blocks, and quirks of Scratch 3.0 in all its blocky glory.
 * **Reimplementing Scratch 3.0 in case of catastrophe**
   * This kind of blends together all of the previous points. If the Scratch editor were to magically disappear or break entirely (it won't, but in theory), then the Scratch Wiki could guide you in making a fairly accurate reimplementation of Scratch, but would fall short in exactly reproducing the runtime behavior, procedures, and quirks of Scratch, from scratch (literally). Although the wiki strives to be all-encompassing (and it is indeed very far-reaching), a document solely dedicated to the functionality of Scratch will help preserve its literal, programmatic behavior in one organized doc.
 * **"Real" programming languages have them.**
