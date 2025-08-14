@@ -29,9 +29,9 @@ features:
   - title: Palette
     link: /blocks/
     details: Every. Block. Ever.
-  - title: Project Files
+  - title: File Format
     link: /files/
-    details: The file formats used to save and load Scratch runtime objects.
+    details: The file formats used to save projects and load them as Scratch runtime objects.
   - title: Input / Output
     link: /io/
     details: How Scratch receives inputs, renders images, and plays sounds.

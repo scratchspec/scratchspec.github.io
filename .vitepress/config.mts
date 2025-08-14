@@ -13,8 +13,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Intro', link: '/intro/' },
       { text: 'Index', link: '/index/' },
+      { text: 'Intro', link: '/intro/' },
       { text: 'Ideas', link: '/ideas/' },
       { text: 'Runtime', link: '/runtime/' },
       { text: 'Blocks', link: '/blocks/' },
@@ -51,7 +51,12 @@ export default defineConfig({
       },
       {
         text: 'Palette',
-        link: '/blocks/'
+        link: '/blocks/',
+        items: [
+          { text: 'Standard Blocks', link: '/blocks/standard/' },
+          { text: 'Obsolete Blocks', link: '/blocks/obsolete/' },
+          { text: 'Nonstandard Blocks', link: '/blocks/nonstandard/' }
+        ]
       }
     ],
 
@@ -66,6 +71,7 @@ export default defineConfig({
 
   markdown: {
     math: true,
+    toc: { level: [1, 2, 3, 4, 5, 6] },
     config: (md) => {
       md.use(scratchblocksPlugin) // https://github.com/OceanIsEndless/scratch-spec/pull/5#issuecomment-3137259965
       // May add more if needed

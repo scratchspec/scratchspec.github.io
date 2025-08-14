@@ -33,11 +33,11 @@ See the [TODO](/todo/) list for ways you can help!
 
 ### Where to start?
 
-* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the [table of contents](/contents/) and just gloss over whatever you don't need to know.
-* If you want **formal definitions** of Scratch terms, see [concepts](/concepts/).
-* If you want to accurately **recreate blocks**, see the [palette](/palette/).
-  * If you want to recreate old blocks, see [obsolete blocks](/palette/#obsolete-blocks).
-  * If you want more blocks, see [nonstandard blocks](/palette/#nonstandard-blocks).
+* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the [table of contents](/index/) and just gloss over whatever you don't need to know.
+* If you want **formal definitions** of Scratch terms, see [Concepts](/ideas/).
+* If you want to accurately **recreate blocks**, see [Palette](/blocks/).
+  * If you want to recreate old blocks, see [obsolete blocks](/blocks/obsolete/).
+  * If you want more blocks, see [nonstandard blocks](/blocks/nonstandard/).
 * If you want to know **how scripts run**, see [runtime](/runtime/).
 * If you want to learn about project files, see [files](/files/).
 * If you want an in-depth explanation of Scratch's **input and output systems**, see [I/O](/io/).

@@ -2,7 +2,11 @@
 
 This section explains the various concepts and rules of Scratch.
 
+::: details Index
+
 [[toc]]
+
+:::
 
 ## Capabilities
 
@@ -161,7 +165,7 @@ A series of [items](#item) stored together in sequence. Each item is referenced 
 
 ### Mod
 
-A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see the [relevant appendix](/palette/#nonstandard-blocks).
+A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see [Nonstandard Blocks](/blocks/nonstandard/).
 
 ### Opcode
 
