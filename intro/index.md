@@ -67,7 +67,7 @@ Also, in a fully functional environment, Scratch can access:
 
 This specification aims to document everything that Scratch does as a programming language, which is actually... a lot!
 
-### What's the point?
+### What's the point? {#whats-the-point}
 
 This specification exists to document the behavior of Scratch 3.0 as a programming language. It can open the door to:
 
