@@ -1,4 +1,4 @@
-# TODO
+# TODO {#/todo/}
 
 This spec is a work in progress; it's nowhere near complete. **Please [contribute](/intro/#contributing) if you can!** Anywhere that says TODO is something that needs to be worked on, as well as any sections that are empty or missing.
 
@@ -14,7 +14,7 @@ Various things need to be worked on to make this a good resource:
 
 This specification should eventually document every block ever! (A bit hopeful, but certainly possible, and most definitely necessary for Scratch 3.0 to be 100% functionally recreatable from this document.)
 
-Below is a list of blocks that have been or still need to be documented here. (Fully specified blocks are crossed off.) Specifying [standard](/ideas/#standard-blocks) blocks is the first priority. Once they are documented, the scope of this spec can be expanded to include [hidden](/ideas/#hidden-blocks), [obsolete](/blocks/obsolete/), and even [nonstandard](/blocks/nonstandard/) blocks as well, probably in that order.
+Below is a list of blocks that have been or still need to be documented here. (Fully specified blocks are crossed off.) Specifying [standard](/ideas/concepts/#standard-blocks) blocks is the first priority. Once they are documented, the scope of this spec can be expanded to include [hidden](/ideas/concepts/#hidden-blocks), [obsolete](/blocks/obsolete/), and even [nonstandard](/blocks/nonstandard/) blocks as well, probably in that order.
 
 :::: details Click to view block list
 
@@ -51,7 +51,7 @@ Below is a list of blocks that have been or still need to be documented here. (F
   * `align scene [ v]`
   * `(x scroll)`
   * `(y scroll)`
-* [**Nonstandard**](/blocks/nonstandard/#motion-blocks) (blocks that [mods](/ideas/#mod) of Scratch added)
+* [**Nonstandard**](/blocks/nonstandard/#motion-blocks) (blocks that [mods](/ideas/concepts/#mod) of Scratch added)
   * [PenguinMod](/blocks/nonstandard/#penguinmod)
     * `move [ v] () steps`
     * `change by x: () y: ()`

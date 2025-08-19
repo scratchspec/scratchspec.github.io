@@ -8,12 +8,12 @@ export default defineConfig({
   // head: [['link', { rel: 'icon', href: '/favicon.ico' }]], // https://github.com/vuejs/vitepress/discussions/2475#discussioncomment-11238929
   base: "/scratch-spec/", // https://vitepress.dev/guide/deploy#setting-a-public-base-path
   ignoreDeadLinks: true,
+  cleanUrls: true,
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Index', link: '/index/' },
       { text: 'Intro', link: '/intro/' },
       { text: 'Ideas', link: '/ideas/' },
       { text: 'Runtime', link: '/runtime/' },
@@ -29,24 +29,22 @@ export default defineConfig({
         text: 'Introduction',
         link: '/intro/',
         items: [
-          { text: 'FAQ', link: '/intro/#faq' },
-          { text: 'Contents', link: '/index/' },
           {
-            text: 'Contributing', link: '/intro/#contributing', items: [
+            text: 'Contribute', link: '/intro/#contributing', collapsed: true, items: [
               { text: 'TODO', link: '/todo/' }
             ]
-          }
+          },
+          { text: 'FAQ', link: '/intro/#faq' },
         ]
       },
       {
-        text: 'Concepts',
+        text: 'Ideas',
         link: '/ideas/',
         items: [
-          { text: 'Capabilities', link: '/ideas/#capabilities' },
-          { text: 'Constants', link: '/ideas/#constants' },
-          { text: 'Ideas', link: '/ideas/#ideas' },
-          { text: 'Values', link: '/ideas/#values' },
-          { text: 'Procedures', link: '/ideas/#procedures' }
+          { text: 'Concepts', link: '/ideas/concepts/' },
+          { text: 'Values', link: '/ideas/values/' },
+          { text: 'Limits', link: '/ideas/limits/' },
+          { text: 'Logic', link: '/ideas/logic/' }
         ]
       },
       {
@@ -57,6 +55,22 @@ export default defineConfig({
           { text: 'Obsolete Blocks', link: '/blocks/obsolete/' },
           { text: 'Nonstandard Blocks', link: '/blocks/nonstandard/' }
         ]
+      },
+      {
+        text: 'File Format',
+        link: '/files/',
+        items: [
+          { text: 'Scratch 3 (.sb3)', link: '/files/#sb3' },
+          { text: 'Scratch 2 (.sb2)', link: '/files/#sb2' },
+          { text: 'Scratch 1 (.sb)', link: '/files/#sb' }
+        ]
+      },
+      {
+        text: 'Test Pages',
+        collapsed: true,
+        items: [
+          { text: 'Single File?', link: '/full/' }
+        ]
       }
     ],
 
@@ -66,6 +80,11 @@ export default defineConfig({
 
     search: {
       provider: 'local'
+    },
+
+    outline: {
+      level: [1, 6],
+      label: 'Contents'
     }
   },
 

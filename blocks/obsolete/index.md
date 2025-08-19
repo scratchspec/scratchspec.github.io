@@ -1,4 +1,4 @@
-# Obsolete Blocks
+# Obsolete Blocks {#/blocks/obsolete/}
 
 ::: info
 
@@ -11,9 +11,3 @@ This section reimagines blocks that *were* supported in earlier versions of Scra
 This way, one could theoretically create an implementation of Scratch 3.0 that accurately supports *every* block from *every* official Scratch version, though obviously with subtle differences due to changes in behavior between Scratch versions.
 
 Unlike the rest of this specification, the content of this section is more up to the imagination, as it dreams of how obsolete blocks *would* behave in modern Scratch, and is not actually observing the behavior of these blocks directly (though it should stay as close as possible to the block's original behavior).
-
-::: details Index
-
-[[toc]]
-
-:::

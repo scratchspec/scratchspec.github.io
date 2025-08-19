@@ -1,4 +1,4 @@
-# Introduction
+# Introduction {#/intro/}
 
 This document is a serious attempt to create a [programming language specification](https://en.wikipedia.org/wiki/Programming_language_specification) of [Scratch 3.0](https://en.scratch-wiki.info/wiki/scratch_3.0). It will detail the exact behavior of Scratch so that it can be accurately reproducible from this document alone, preserving its behavior and aiding in [ports](https://en.wikipedia.org/wiki/Porting) of it to other platforms. This project is entirely "for fun" (note the quotation marks) and is not affilated with the [Scratch Foundation](https://www.scratchfoundation.org/) or related parties in any way whatsoever, though please [donate](https://www.scratchfoundation.org/donate) to them if you can so that they may continue to support and improve [Scratch](https://scratch.mit.edu/) for all.
 
@@ -9,7 +9,7 @@ Before reading this specification:
 * **Be sure to have an understanding of computer science.** A good vocabulary, knowledge, and understanding of computational concepts is useful.
 * **Being experienced with working in Scratch is immensely helpful.** Although this specification will try to explain it in full, knowing the basic concepts and quirks of Scratch just by experience will let you skim through this document easily, as not all of it is necessary to read; just to reference for accuracy.
 * Scratch 3.0 is built upon the modern web; although not entirely necessary, **a basic knowledge of [JavaScript](https://en.wikipedia.org/wiki/JavaScript) can come in handy** when it comes to understanding the inner workings, logic, and rules of Scratch, as it is what Scratch runs on. Scratch does a lot of things the same way JavaScript does.
-* **Be familiar with the [scratchblocks](https://scratchblocks.github.io/) [syntax](https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax).** This text-based format is used to represent Scratch [blocks](/ideas/#block). Although the blocks currently render while reading in a web browser, it is still good to know how to interpret them textually, especially if block rendering support is somehow unavailable, e.g. when viewing the source Markdown files directly.
+* **Be familiar with the [scratchblocks](https://scratchblocks.github.io/) [syntax](https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax).** This text-based format is used to represent Scratch [blocks](/ideas/concepts/#block). Although the blocks currently render while reading in a web browser, it is still good to know how to interpret them textually, especially if block rendering support is somehow unavailable, e.g. when viewing the source Markdown files directly.
 
 ## Sources
 
@@ -33,7 +33,7 @@ See the [TODO](/todo/) list for ways you can help!
 
 ### Where to start?
 
-* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the [table of contents](/index/) and just gloss over whatever you don't need to know.
+* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the sidebar to the left. Use the search bar in the top-left to find something specific. You can gloss over whatever you don't need to know.
 * If you want **formal definitions** of Scratch terms, see [Concepts](/ideas/).
 * If you want to accurately **recreate blocks**, see [Palette](/blocks/).
   * If you want to recreate old blocks, see [obsolete blocks](/blocks/obsolete/).
@@ -43,6 +43,29 @@ See the [TODO](/todo/) list for ways you can help!
 * If you want an in-depth explanation of Scratch's **input and output systems**, see [I/O](/io/).
 * If you want to understand how Scratch handles **cloud variables** and other **web requests**, see [Networking](/network/).
 * If you want a deep dive into Scratch Link and Scratch-to-hardware connectivity, see [Devices](/devices/).
+
+### What can Scratch do?
+
+Although simplistic in nature, Scratch has many complex and useful features built-in.
+
+At its core, Scratch can:
+
+* **Change values** in a [runtime](/ideas/concepts/#runtime)
+* **Run scripts** [single-threaded](https://en.wikipedia.org/wiki/Cooperative_multitasking)
+* **Play sounds** using speakers
+* **Show images** and graphics
+
+Also, in a fully functional environment, Scratch can access:
+
+* A **keyboard** (detect keys the user presses)
+* A **mouse** (read its position and button state)
+* A **microphone** (gauge surrounding loudness)
+* A **clock** (get local and UTC time in milliseconds)
+* **Wi-Fi** (make network requests to external servers)
+* **Bluetooth** (connect to supported hardware)
+* A **webcam** (sense motion in a direction)
+
+This specification aims to document everything that Scratch does as a programming language, which is actually... a lot!
 
 ### What's the point?
 
@@ -57,7 +80,7 @@ This specification exists to document the behavior of Scratch 3.0 as a programmi
 * **Improving Scratch in the future while keeping it 100% compatible**
   * It isn't known if this spec will reach a state that the developers of Scratch could use as reference, but if so, it could help ensure that Scratch projects remain functionally the same after code rewrites.
 * **Directly citing the workings of Scratch without linking wikis or code**
-  * Although the [Scratch Wiki](https://scratch-wiki.info/) and code of Scratch work well for showing Scratch concepts and runtime behavior, one of them tends to abstract away particular functionalities while the other offers thousands of lines of pure [JavaScript](/ideas/#javascript). This specification is meant to serve as one clear and concise document explaining the behaviors, blocks, and quirks of Scratch 3.0 in all its blocky glory.
+  * Although the [Scratch Wiki](https://scratch-wiki.info/) and code of Scratch work well for showing Scratch concepts and runtime behavior, one of them tends to abstract away particular functionalities while the other offers thousands of lines of pure [JavaScript](/ideas/concepts/#javascript). This specification is meant to serve as one clear and concise document explaining the behaviors, blocks, and quirks of Scratch 3.0 in all its blocky glory.
 * **Reimplementing Scratch 3.0 in case of catastrophe**
   * This kind of blends together all of the previous points. If the Scratch editor were to magically disappear or break entirely (it won't, but in theory), then the Scratch Wiki could guide you in making a fairly accurate reimplementation of Scratch, but would fall short in exactly reproducing the runtime behavior, procedures, and quirks of Scratch, from scratch (literally). Although the wiki strives to be all-encompassing (and it is indeed very far-reaching), a document solely dedicated to the functionality of Scratch will help preserve its literal, programmatic behavior in one organized doc.
 * **"Real" programming languages have them.**

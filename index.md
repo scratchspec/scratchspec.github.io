@@ -10,8 +10,8 @@ hero:
       text: Introduction
       link: /intro/
     - theme: alt
-      text: Contents
-      link: /index/
+      text: Quickstart
+      link: /intro/#where-to-start
     - theme: alt
       text: FAQ
       link: /intro/#faq
