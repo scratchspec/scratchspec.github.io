@@ -1,4 +1,4 @@
-# Palette {#/blocks/}
+# Palette {#/palette/}
 
 This section aims to document the programmatic behavior of every block in Scratch 3.0.
 

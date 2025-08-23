@@ -1,3 +1,3 @@
 # Ideas {#/ideas/}
 
-This section explains the various concepts, rules, and jargon of Scratch.
+This section explains the [concepts](/ideas/concepts/), [values](/ideas/values/), [limits](/ideas/limits/), and [logic](/ideas/logic/) of Scratch.

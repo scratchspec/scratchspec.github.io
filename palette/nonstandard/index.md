@@ -1,4 +1,4 @@
-# Nonstandard Blocks
+# Nonstandard Blocks {#/palette/nonstandard/}
 
 ::: info
 
@@ -70,7 +70,7 @@ When the [runtime](/ideas/concepts/#runtime) first starts, no [keys](/ideas/valu
 
 ### Addon blocks
 
-These blocks are added by TurboWarp addons. They are not actually real blocks, but rather [special custom blocks](/blocks/standard/#special-custom-blocks) without definitions in disguise!
+These blocks are added by TurboWarp addons. They are not actually real blocks, but rather [special custom blocks](/palette/standard/#special-custom-blocks) without definitions in disguise!
 
 ## PenguinMod
 

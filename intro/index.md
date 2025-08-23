@@ -31,18 +31,24 @@ See the [TODO](/todo/) list for ways you can help!
 
 *Questions that would be frequently asked if someone were to ask them.*
 
+::: warning
+
+This specification is a **work-in-progress** and is probably not very helpful or accurate at the moment. However, progress is being made, little by little! Just be sure to take what it says with a grain of salt. Most of it has been written without much research, and it will be fact-checked and made more accurate in the future. How it should best present and explain information is still being figured out as well. It will just take a little experimenting before it gets to be a solid resource. Thank you for understanding!
+
+:::
+
 ### Where to start?
 
 * If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the sidebar to the left. Use the search bar in the top-left to find something specific. You can gloss over whatever you don't need to know.
 * If you want **formal definitions** of Scratch terms, see [Concepts](/ideas/).
-* If you want to accurately **recreate blocks**, see [Palette](/blocks/).
-  * If you want to recreate old blocks, see [obsolete blocks](/blocks/obsolete/).
-  * If you want more blocks, see [nonstandard blocks](/blocks/nonstandard/).
+* If you want to accurately **recreate blocks**, see [Palette](/palette/).
+  * If you want to recreate **old blocks**, see [obsolete blocks](/palette/obsolete/).
+  * If you want **more blocks**, see [nonstandard blocks](/palette/nonstandard/).
 * If you want to know **how scripts run**, see [runtime](/runtime/).
 * If you want to learn about project files, see [files](/files/).
-* If you want an in-depth explanation of Scratch's **input and output systems**, see [I/O](/io/).
+* If you want an in-depth explanation of how Scratch receives input, renders graphics, and plays sounds, see [I/O](/io/).
 * If you want to understand how Scratch handles **cloud variables** and other **web requests**, see [Networking](/network/).
-* If you want a deep dive into Scratch Link and Scratch-to-hardware connectivity, see [Devices](/devices/).
+* If you want a deep dive into **Scratch Link** and Scratch-to-**hardware connectivity**, see [Devices](/devices/).
 
 ### What can Scratch do?
 

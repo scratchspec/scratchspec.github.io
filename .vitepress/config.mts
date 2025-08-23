@@ -17,7 +17,7 @@ export default defineConfig({
       { text: 'Intro', link: '/intro/' },
       { text: 'Ideas', link: '/ideas/' },
       { text: 'Runtime', link: '/runtime/' },
-      { text: 'Blocks', link: '/blocks/' },
+      { text: 'Palette', link: '/palette/' },
       { text: 'Files', link: '/files/' },
       { text: 'I/O', link: '/io/' },
       { text: 'Network', link: '/network/' },
@@ -29,12 +29,9 @@ export default defineConfig({
         text: 'Introduction',
         link: '/intro/',
         items: [
-          {
-            text: 'Contribute', link: '/intro/#contributing', collapsed: true, items: [
-              { text: 'TODO', link: '/todo/' }
-            ]
-          },
-          { text: 'FAQ', link: '/intro/#faq' },
+          { text: 'Contribute', link: '/intro/#contributing' },
+          { text: 'TODO', link: '/todo/' },
+          { text: 'FAQ', link: '/intro/#faq' }
         ]
       },
       {
@@ -49,11 +46,11 @@ export default defineConfig({
       },
       {
         text: 'Palette',
-        link: '/blocks/',
+        link: '/palette/',
         items: [
-          { text: 'Standard Blocks', link: '/blocks/standard/' },
-          { text: 'Obsolete Blocks', link: '/blocks/obsolete/' },
-          { text: 'Nonstandard Blocks', link: '/blocks/nonstandard/' }
+          { text: 'Standard Blocks', link: '/palette/standard/' },
+          { text: 'Obsolete Blocks', link: '/palette/obsolete/' },
+          { text: 'Nonstandard Blocks', link: '/palette/nonstandard/' }
         ]
       },
       {
@@ -67,7 +64,6 @@ export default defineConfig({
       },
       {
         text: 'Test Pages',
-        collapsed: true,
         items: [
           { text: 'Single File?', link: '/full/' }
         ]

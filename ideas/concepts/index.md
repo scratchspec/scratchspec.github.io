@@ -28,7 +28,7 @@ Blocks can be run, meaning that its operation is performed using the arguments i
 
 ### Standard Blocks
 
-[Blocks](#block) that exist in Scratch 3.0. Generally, standard blocks are supported, meaning they are being actively maintained and probably will not be removed from Scratch in the future. They are the most commonly used blocks in [scripts](#script). All of them are documented in a [dedicated section](/blocks/standard/).
+[Blocks](#block) that exist in Scratch 3.0. Generally, standard blocks are supported, meaning they are being actively maintained and probably will not be removed from Scratch in the future. They are the most commonly used blocks in [scripts](#script). All of them are documented in a [dedicated section](/palette/standard/).
 
 #### Hidden Blocks
 
@@ -40,9 +40,9 @@ Blocks can be run, meaning that its operation is performed using the arguments i
 
 An independent, temporary copy created of a [sprite](#sprite) that retains all of the original sprite's [scripts](#script), [variables](#variable), [lists](#list), [costumes](#costume), and [sounds](#sound). It exists on its own entirely separate of the original sprite, so the scripts it runs only affect itself. Unlike sprites, it does not have a [name](/ideas/values/#name), is not saved in [project files](/files/), and can be deleted with blocks.
 
-Since it does not have a name, it cannot be directly referenced via existing blocks (e.g. you cannot tell another sprite to [glide to](/blocks/#glide-to-block) it). They are deleted when the runtime stops, and can also be deleted manually using the [`delete this clone` block](/blocks/#delete-clone-block).
+Since it does not have a name, it cannot be directly referenced via existing blocks (e.g. you cannot tell another sprite to [glide to](/palette/#glide-to-block) it). They are deleted when the runtime stops, and can also be deleted manually using the [`delete this clone` block](/palette/#delete-clone-block).
 
-Clones can be created with the [create clone block](/blocks/#create-clone-block) so long as the [maximum number of clones](/ideas/limits/#max-clones) has not been reached. Code can be written specifically for the clones of a sprite via the use of the [when I start as a clone block](/blocks/#when-i-start-as-a-clone-block). The [stage](#stage) is the only [target](#target) which cannot be cloned, whereas both sprites *and clones* can themselves be cloned.
+Clones can be created with the [create clone block](/palette/#create-clone-block) so long as the [maximum number of clones](/ideas/limits/#max-clones) has not been reached. Code can be written specifically for the clones of a sprite via the use of the [when I start as a clone block](/palette/#when-i-start-as-a-clone-block). The [stage](#stage) is the only [target](#target) which cannot be cloned, whereas both sprites *and clones* can themselves be cloned.
 
 ## Edge
 
@@ -54,7 +54,7 @@ A boundary around the viewing area of the [stage](#stage) that restricts the [co
 
 > The usefulness of defining "Flag" is up for debate. Feel free to offer insight!
 
-The button that is clicked to start a project. It is also known as the green flag. In simple terms, it makes the project `Go`. When clicked, it runs any scripts placed under [when flag clicked blocks](/blocks/#when-flag-clicked-block).
+The button that is clicked to start a project. It is also known as the green flag. In simple terms, it makes the project `Go`. When clicked, it runs any scripts placed under [when flag clicked blocks](/palette/#when-flag-clicked-block).
 
 ## JavaScript
 
@@ -68,7 +68,7 @@ A series of [items](/ideas/values/#item) stored together in sequence. Each item 
 
 ## Mod
 
-A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see [Nonstandard Blocks](/blocks/nonstandard/).
+A modification (altered version) of the Scratch 3.0 [runtime](#runtime) that is nonstandard and may introduce new blocks, features, or changes not present in standard Scratch. The majority of this spec will be documenting standard Scratch behavior. For information on nonstandard blocks and behaviors in mods, see [Nonstandard Blocks](/palette/nonstandard/).
 
 ## Project
 
@@ -122,4 +122,4 @@ A [named](/ideas/values/#name) container belonging to a [target](#target) that h
 
 Some variables are created on a project-by-project basis for general use by [scripts](#script). For example, a `(score)` variable can be created to keep track of an arbitrary point value. Others are directly built into the [runtime](#runtime) and cannot be deleted. For example, the [`(x position)`](/ideas/values/#x-position) variable always exists in every [sprite](#sprite) to set its rendered horizontal position.
 
-General purpose variables can be interacted with using [variables blocks](/blocks/#variables-blocks). Runtime variables have their own dedicated blocks instead and are usually limited or sandboxed in some way, unlike general purpose variables.
+General purpose variables can be interacted with using [variables blocks](/palette/#variables-blocks). Runtime variables have their own dedicated blocks instead and are usually limited or sandboxed in some way, unlike general purpose variables.

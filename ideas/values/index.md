@@ -24,7 +24,7 @@ A [number](#number) intended to be in [degrees](https://en.wikipedia.org/wiki/De
 
 ## Answer
 
-A [string](#string) provided to the [project](/ideas/concepts/#project) by the [user](/ideas/concepts/#user) as input via the [ask and wait block](/blocks/standard/#ask-and-wait-block).
+A [string](#string) provided to the [project](/ideas/concepts/#project) by the [user](/ideas/concepts/#user) as input via the [ask and wait block](/palette/standard/#ask-and-wait-block).
 
 ## Boolean
 
@@ -121,7 +121,7 @@ A special [number](#number) that is literally not a number. When [casted](/ideas
 
 ## Opcode
 
-A [name](#name) that identifies the operation a [block](/ideas/concepts/#block) performs when run. For example, the opcode of the [`move () steps`](/blocks/standard/#motion_movesteps) block is `motion_movesteps`, and when run it moves the sprite by the given number of steps, as named.
+A [name](#name) that identifies the operation a [block](/ideas/concepts/#block) performs when run. For example, the opcode of the [`move () steps`](/palette/standard/#motion_movesteps) block is `motion_movesteps`, and when run it moves the sprite by the given number of steps, as named.
 
 ## Rotation Style
 
@@ -174,7 +174,7 @@ A type of [value](#value) consisting of a series (i.e. string) of [letters](#let
 
 ### Empty String
 
-A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](/ideas/logic/#casting#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](/ideas/concepts/#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/blocks/standard/#ask-and-wait-block) anything yet.
+A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](/ideas/logic/#casting#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](/ideas/concepts/#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/palette/standard/#ask-and-wait-block) anything yet.
 
 ## Undefined
 
@@ -196,7 +196,7 @@ Also, official ("real") usernames are registered with the [Scratch website](http
 
 Official usernames can only be changed under extraordinarily rare circumstances (e.g. the username contained sensitive information about the user that the [Scratch team](https://en.scratch-wiki.info/wiki/Scratch_Team) decided to change for them), meaning that once it is created, it usually cannot be altered later.
 
-Scripts can detect the current user's username via the [(`username`) block](/blocks/standard/#username-block). If the user is signed in, the block reports their username. If the user is signed out, the block reports an [empty string](#empty-string). In the official Scratch editor, the username reported by the username block should remain constant for the entire run of the project.
+Scripts can detect the current user's username via the [(`username`) block](/palette/standard/#username-block). If the user is signed in, the block reports their username. If the user is signed out, the block reports an [empty string](#empty-string). In the official Scratch editor, the username reported by the username block should remain constant for the entire run of the project.
 
 > The only exception to this rule in official contexts is when the user does the following steps in sequence:
 >
@@ -244,7 +244,7 @@ They will not be specified in this specification as of yet (since they cannot be
 * `null`: A special value representing nothing. Distinct from [undefined](#undefined) in that it is meant to *explicitly* be nothing, whereas undefined exists for representing unknown behavior or values.
   * The writers of this specification do not know if `null` can be produced by existing blocks without modification.
     * If it is found to be an obtainable value, it may be documented further. Otherwise, it will not be, and is likely not necessary for inclusion in a reimplementation of Scratch.
-  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](/blocks/nonstandard/#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
+  * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](/palette/nonstandard/#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
     * When [casted](/ideas/logic/#to-string) to a [string](#string), it is written as `null`.
     * When [casted](/ideas/logic/#to-number) to a [number](#number), it is casted to `0`.
     * When [casted](/ideas/logic/#to-boolean) to a [boolean](#boolean), it is [`false`](/ideas/logic/#casting#falsy).

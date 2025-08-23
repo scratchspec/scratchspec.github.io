@@ -20,14 +20,14 @@ features:
   - title: Introduction
     link: /intro/
     details: An explanation of what this spec is trying to achieve.
-  - title: Concepts
+  - title: Ideas
     link: /ideas/
     details: Formal definitions for basic Scratch concepts.
   - title: Runtime
     link: /runtime/
     details: How scripts run.
   - title: Palette
-    link: /blocks/
+    link: /palette/
     details: Every. Block. Ever.
   - title: File Format
     link: /files/

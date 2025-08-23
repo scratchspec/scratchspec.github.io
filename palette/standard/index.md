@@ -1,4 +1,4 @@
-# Standard Blocks {#/blocks/standard/}
+# Standard Blocks {#/palette/standard/}
 
 This section documents each and every block that is available in Scratch 3.0, and its precise functionality.
 
@@ -263,7 +263,7 @@ TODO
 
 ### Special custom blocks
 
-> This section may be moved to a [relevant section](/ideas/nonstandard/), though it will have to be clarified that these blocks can be loaded into Scratch, they just don't do anything outside of [mods](/ideas/concepts/#mod).
+> This section may be moved to a [relevant section](/palette/nonstandard/), though it will have to be clarified that these blocks can be loaded into Scratch, they just don't do anything outside of [mods](/ideas/concepts/#mod).
 
 Usually, when a custom block or parameter is used outside of its definition, it does nothing or returns `0`. However, there are specific custom blocks and parameters that have unique behaviors when used outside of their definitions, specifically in certain Scratch [mods](/ideas/concepts/#mod).
 
