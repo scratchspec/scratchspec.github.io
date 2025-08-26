@@ -1,4 +1,4 @@
-# Obsolete Blocks {#/palette/obsolete/}
+# Obsolete Blocks
 
 ::: info
 

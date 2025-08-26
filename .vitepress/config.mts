@@ -29,8 +29,11 @@ export default defineConfig({
         text: 'Introduction',
         link: '/intro/',
         items: [
-          { text: 'Contribute', link: '/intro/#contributing' },
-          { text: 'TODO', link: '/todo/' },
+          {
+            text: 'Contribute', link: '/intro/#contributing', items: [
+              { text: 'TODO', link: '/todo/' }
+            ]
+          },
           { text: 'FAQ', link: '/intro/#faq' }
         ]
       },
@@ -63,6 +66,27 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Input / Output',
+        link: '/io/',
+        items: [
+
+        ]
+      },
+      {
+        text: 'Networking',
+        link: '/network/',
+        items: [
+
+        ]
+      },
+      {
+        text: 'Scratch Link',
+        link: '/devices/',
+        items: [
+
+        ]
+      },
+      {
         text: 'Test Pages',
         items: [
           { text: 'Single File?', link: '/full/' }
@@ -73,6 +97,16 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/OceanIsEndless/scratch-spec' }
     ],
+
+    footer: {
+      message: '',
+      copyright: 'Licensed under <a href="https://github.com/OceanIsEndless/scratch-spec/blob/main/LICENSE">CC-BY-4.0</a>'
+    },
+
+    editLink: {
+      pattern: 'https://github.com/OceanIsEndless/scratch-spec/edit/main/:path',
+      text: 'Edit this page on GitHub'
+    },
 
     search: {
       provider: 'local'
@@ -91,5 +125,10 @@ export default defineConfig({
       md.use(scratchblocksPlugin) // https://github.com/OceanIsEndless/scratch-spec/pull/5#issuecomment-3137259965
       // May add more if needed
     }
+  },
+  
+  lastUpdated: true,
+  sitemap: {
+    hostname: 'https://oceanisendless.github.io/scratch-spec/'
   }
 })

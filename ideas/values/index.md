@@ -1,4 +1,4 @@
-# Values {#/ideas/values/}
+# Values
 
 Values are data stored in the [runtime](/ideas/concepts/#runtime) that can be interacted with and manipulated by [blocks](/ideas/concepts/#block). In Scratch, the following types of values exist:
 

@@ -1,4 +1,4 @@
-# File Format {#/files/}
+# File Format
 
 > This section will be expanded once other stuff gets documented. For now, runtime behavior is more pressing than file formatting.
 

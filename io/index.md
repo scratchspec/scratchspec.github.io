@@ -1,4 +1,4 @@
-# Input / Output {#/io/}
+# Input / Output
 
 > TODO: Coming soon, probably
 

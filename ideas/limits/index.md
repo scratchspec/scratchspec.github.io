@@ -1,4 +1,4 @@
-# Limits {#/ideas/limits/}
+# Limits
 
 These constant values will show up a lot throughout this specification. They can be changed to one's liking, however for true accuracy to Scratch, they should all have their "**Standard Scratch**:" values. Alternative values are provided as well.
 

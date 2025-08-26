@@ -1,4 +1,4 @@
-# Standard Blocks {#/palette/standard/}
+# Standard Blocks
 
 This section documents each and every block that is available in Scratch 3.0, and its precise functionality.
 

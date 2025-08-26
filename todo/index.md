@@ -1,4 +1,4 @@
-# TODO {#/todo/}
+# TODO
 
 This spec is a work in progress; it's nowhere near complete. **Please [contribute](/intro/#contributing) if you can!** Anywhere that says TODO is something that needs to be worked on, as well as any sections that are empty or missing.
 

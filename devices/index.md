@@ -1,4 +1,4 @@
-# Scratch Link {#/devices/}
+# Scratch Link
 
 ::: info
 This section will be expanded in the future, but it remains incomplete for now. Other sections such as [Ideas](/ideas/), [Runtime](/runtime/), and [Palette](/palette/) are a higher priority to write at the moment, and writing this section well (such that it provides accurate and useful information) will require lots of research and effort.

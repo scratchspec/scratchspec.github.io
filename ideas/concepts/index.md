@@ -1,4 +1,4 @@
-# Concepts {#/ideas/concepts/}
+# Concepts
 
 The following Scratch concepts are referenced throughout this specification:
 

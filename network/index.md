@@ -1,4 +1,4 @@
-# Network {#/network/}
+# Networking
 
 ::: info
 This section will be expanded in the future, but it remains incomplete for now. Other sections such as [Ideas](/ideas/), [Runtime](/runtime/), and [Palette](/palette/) are a higher priority to write at the moment. However, once started, it does not seem it should be *too* difficult to complete.

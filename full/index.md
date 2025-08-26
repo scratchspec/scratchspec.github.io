@@ -1,7 +1,5 @@
 ---
-navbar: false
 search: false
-sidebar: false
 ---
 
 # Scratch Specification
@@ -16,66 +14,105 @@ This page is experimental and might not render or work properly. It is intended 
 
 ---
 
-<!--@include: @/intro/index.md-->
+<!--@include: @/intro/index.md{1,1}--> {#/intro/}
+<!--@include: @/intro/index.md{2,}-->
 
 ---
 
-<!--@include: @todo/index.md-->
+<!--@include: @/todo/index.md{1,1}--> {#/todo/}
+<!--@include: @/todo/index.md{2,}-->
 
 ---
 
-<!--@include: @ideas/index.md-->
+<!--@include: @/ideas/index.md{1,1}--> {#/ideas/}
+<!--@include: @/ideas/index.md{2,}-->
 
 ---
 
-<!--@include: @ideas/concepts/index.md-->
+<!--@include: @/ideas/concepts/index.md{1,1}--> {#/ideas/concepts/}
+<!--@include: @/ideas/concepts/index.md{2,}-->
 
 ---
 
-<!--@include: @ideas/values/index.md-->
+<!--@include: @/ideas/values/index.md{1,1}--> {#/ideas/values/}
+<!--@include: @/ideas/values/index.md{2,}-->
 
 ---
 
-<!--@include: @ideas/limits/index.md-->
+<!--@include: @/ideas/limits/index.md{1,1}--> {#/ideas/limits/}
+<!--@include: @/ideas/limits/index.md{2,}-->
 
 ---
 
-<!--@include: @ideas/logic/index.md-->
+<!--@include: @/ideas/logic/index.md{1,1}--> {#/ideas/logic/}
+<!--@include: @/ideas/logic/index.md{2,}-->
 
 ---
 
-<!--@include: @blocks/index.md-->
+<!--@include: @/runtime/index.md{1,1}--> {#/runtime/}
+<!--@include: @/runtime/index.md{2,}-->
 
 ---
 
-<!--@include: @blocks/standard/index.md-->
+<!--@include: @/palette/index.md{1,1}--> {#/palette/}
+<!--@include: @/palette/index.md{2,}-->
 
 ---
 
-<!--@include: @blocks/obsolete/index.md-->
+<!--@include: @palette/standard/index.md{1,1}-->  {#/palette/standard/}
+<!--@include: @palette/standard/index.md{2,}-->
 
 ---
 
-<!--@include: @blocks/nonstandard/index.md-->
+<!--@include: @palette/obsolete/index.md{1,1}-->  {#/palette/obsolete/}
+<!--@include: @palette/obsolete/index.md{2,}-->
 
 ---
 
-<!--@include: @files/index.md-->
+<!--@include: @palette/nonstandard/index.md{1,1}-->  {#/palette/nonstandard/}
+<!--@include: @palette/nonstandard/index.md{2,}-->
+
+---
+
+<!--@include: @files/index.md{1,1}--> {#/files/}
+<!--@include: @files/index.md{2,}-->
+
+---
+
+<!--@include: @io/index.md{1,1}--> {#/io/}
+<!--@include: @io/index.md{2,}-->
+
+---
+
+<!--@include: @network/index.md{1,1}--> {#/network/}
+<!--@include: @network/index.md{2,}-->
+
+---
+
+<!--@include: @devices/index.md{1,1}--> {#/devices/}
+<!--@include: @devices/index.md{2,}-->
 
 <script setup>
 import { onMounted } from 'vue';
 
 onMounted(() => {
   // idk much about vitepress stuff so there may be a better way of doing this :>
-  const content = document; // was going to scope it to just the page but not sure how...
+  const content = document; // was going to scope it to just the page content but not sure how...
   if (content) {
     // fix links via magical anchor links
     const links = content.querySelectorAll(`a`);
     for (const link of links) {
       const url = new URL(link.href, window.location.href);
-      if (url.pathname !== '/scratch-spec/full/' && url.pathname.startsWith('/scratch-spec/') && url.pathname !== '/scratch-spec/' && url.host === window.location.host) {
+      if (
+        url.pathname !== '/scratch-spec/full/' // If it's not linking to the page...
+        && url.pathname.startsWith('/scratch-spec/') // And it's a link under the spec base path...
+        && url.pathname !== '/scratch-spec/' // And it's not the homepage...
+        && url.host === window.location.host // And it's not linking to another domain...
+        && !link.parentElement?.classList.contains('VPNavBarMenu') // And it's not a link in the navbar...
+        && !link.parentElement?.parentElement?.classList.contains('VPDocOutlineItem') // And it's not a link in the outline...
+        ) {
         if (url.hash === '') {
-          url.hash = '#'+(url.pathname.slice('/scratch-spec'.length));
+          url.hash = '#'+(url.pathname.startsWith('/scratch-spec/full/') ? url.pathname.slice('/scratch-spec/full'.length) : url.pathname.slice('/scratch-spec'.length));
         }
         link.href = url.hash;
       }

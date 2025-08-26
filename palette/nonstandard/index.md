@@ -1,4 +1,4 @@
-# Nonstandard Blocks {#/palette/nonstandard/}
+# Nonstandard Blocks
 
 ::: info
 

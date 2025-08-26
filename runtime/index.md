@@ -1,4 +1,4 @@
-# Runtime {#/runtime/}
+# Runtime
 
 > TODO: Coming soon, probably
 

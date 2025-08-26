@@ -1,4 +1,4 @@
-# Logic {#/ideas/logic/}
+# Logic
 
 Internally, Scratch follows certain rules and steps to perform operations. They are provided here for reference.
 

@@ -1,4 +1,4 @@
-# Introduction {#/intro/}
+# Introduction
 
 This document is a serious attempt to create a [programming language specification](https://en.wikipedia.org/wiki/Programming_language_specification) of [Scratch 3.0](https://en.scratch-wiki.info/wiki/scratch_3.0). It will detail the exact behavior of Scratch so that it can be accurately reproducible from this document alone, preserving its behavior and aiding in [ports](https://en.wikipedia.org/wiki/Porting) of it to other platforms. This project is entirely "for fun" (note the quotation marks) and is not affilated with the [Scratch Foundation](https://www.scratchfoundation.org/) or related parties in any way whatsoever, though please [donate](https://www.scratchfoundation.org/donate) to them if you can so that they may continue to support and improve [Scratch](https://scratch.mit.edu/) for all.
 
@@ -39,14 +39,14 @@ This specification is a **work-in-progress** and is probably not very helpful or
 
 ### Where to start?
 
-* If you want a **general understanding** of Scratch's inner workings for whatever reason, find whatever interests you in the sidebar to the left. Use the search bar in the top-left to find something specific. You can gloss over whatever you don't need to know.
-* If you want **formal definitions** of Scratch terms, see [Concepts](/ideas/).
-* If you want to accurately **recreate blocks**, see [Palette](/palette/).
-  * If you want to recreate **old blocks**, see [obsolete blocks](/palette/obsolete/).
-  * If you want **more blocks**, see [nonstandard blocks](/palette/nonstandard/).
-* If you want to know **how scripts run**, see [runtime](/runtime/).
-* If you want to learn about project files, see [files](/files/).
-* If you want an in-depth explanation of how Scratch receives input, renders graphics, and plays sounds, see [I/O](/io/).
+* If you want a **general understanding** of Scratch's inner workings for whatever reason, find what interests you in the sidebar to the left. Use the search tool up at the top to find something specific. You can simply gloss over anything else you don't want to read.
+* If you want **formal definitions** for basic Scratch terms, see [Ideas](/ideas/).
+* If you want to understand specific **block behaviors**, see [Palette](/palette/).
+  * If you want to know more on **removed blocks**, see [Obsolete Blocks](/palette/obsolete/).
+  * If you want to know more on **blocks from mods**, see [Nonstandard Blocks](/palette/nonstandard/).
+* If you want to know **how scripts run**, see [Runtime](/runtime/).
+* If you want to learn about the file format used for saving Scratch projects, see [File Format](/files/).
+* If you want an in-depth explanation of how Scratch receives input, renders graphics, and plays sounds, see [Input / Output](/io/).
 * If you want to understand how Scratch handles **cloud variables** and other **web requests**, see [Networking](/network/).
 * If you want a deep dive into **Scratch Link** and Scratch-to-**hardware connectivity**, see [Devices](/devices/).
 
