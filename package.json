@@ -5,12 +5,12 @@
     "docs:preview": "vitepress preview ./"
   },
   "dependencies": {
-    "node": "^22.18.0",
-    "sb-mdit": "^0.3.0",
+    "node": "^24.6.0",
+    "sb-mdit": "^0.4.1",
     "vitepress": "^1.6.4"
   },
   "devDependencies": {
-    "@types/node": "^24.2.0",
+    "@types/node": "^24.3.0",
     "markdown-it-mathjax3": "^4.3.2"
   }
 }

@@ -32,11 +32,11 @@ A special type of [value](#value) used to represent the result of a logical oper
 
 ### True
 
-A kind of [boolean](#boolean) used to represent a yes or an affirmative answer as a result of a logical operation. When casted to a [string](#string), it is written as `true`. When casted to a [number](#number), it is casted to `1`. It is considered [truthy](/ideas/logic/#casting#truthy), as it is itself the definition of truthy.
+A kind of [boolean](#boolean) used to represent a yes or an affirmative answer as a result of a logical operation. When casted to a [string](#string), it is written as `true`. When casted to a [number](#number), it is casted to `1`. It is considered [truthy](/ideas/logic/#truthy), as it is itself the definition of truthy.
 
 ### False
 
-A kind of [boolean](#boolean) used to represent a no or a negative answer as a result of a logical operation. When casted to a [string](#string), it is written as `false`. When casted to a [number](#number), it is casted to `0`. It is considered [falsy](/ideas/logic/#casting#falsy), as it is itself the definition of falsy.
+A kind of [boolean](#boolean) used to represent a no or a negative answer as a result of a logical operation. When casted to a [string](#string), it is written as `false`. When casted to a [number](#number), it is casted to `0`. It is considered [falsy](/ideas/logic/#falsy), as it is itself the definition of falsy.
 
 ## Direction
 
@@ -170,11 +170,11 @@ The following table describes a sprite's *rendered* direction when using differe
 
 ## String
 
-A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](/ideas/logic/#casting#truthy) except for the [empty string](#empty-string), the string `0`, and the string `false` (case-insensitive), which are considered [falsy](/ideas/logic/#casting#falsy).
+A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](/ideas/logic/#truthy) except for the [empty string](#empty-string), the string `0`, and the string `false` (case-insensitive), which are considered [falsy](/ideas/logic/#falsy).
 
 ### Empty String
 
-A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](/ideas/logic/#casting#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](/ideas/concepts/#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/palette/standard/#ask-and-wait-block) anything yet.
+A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](/ideas/logic/#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](/ideas/concepts/#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/palette/standard/#ask-and-wait-block) anything yet.
 
 ## Undefined
 
@@ -247,4 +247,4 @@ They will not be specified in this specification as of yet (since they cannot be
   * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](/palette/nonstandard/#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
     * When [casted](/ideas/logic/#to-string) to a [string](#string), it is written as `null`.
     * When [casted](/ideas/logic/#to-number) to a [number](#number), it is casted to `0`.
-    * When [casted](/ideas/logic/#to-boolean) to a [boolean](#boolean), it is [`false`](/ideas/logic/#casting#falsy).
+    * When [casted](/ideas/logic/#to-boolean) to a [boolean](#boolean), it is [`false`](/ideas/logic/#falsy).
