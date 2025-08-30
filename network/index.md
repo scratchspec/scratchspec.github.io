@@ -1,7 +1,7 @@
 # Networking
 
 ::: info
-This section will be expanded in the future, but it remains incomplete for now. Other sections such as [Ideas](/ideas/), [Runtime](/runtime/), and [Palette](/palette/) are a higher priority to write at the moment. However, once started, it does not seem it should be *too* difficult to complete.
+This section will be expanded in the future, but it remains incomplete for now. Other sections such as [Ideas](/concepts/), [Runtime](/runtime/), and [Palette](/palette/) are a higher priority to write at the moment. However, once started, it does not seem it should be *too* difficult to complete.
 
 In the meantime, here are some resources that may be useful if one would like to learn more about Scratch's handling of external network connections:
 

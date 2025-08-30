@@ -1,6 +1,6 @@
-# Concepts
+# Ideas
 
-The following Scratch concepts are referenced throughout this specification:
+The following ideas are foundational to Scratch and referenced throughout this specification:
 
 ## Asset
 
@@ -8,11 +8,11 @@ A [costume](#costume) or [sound](#sound).
 
 ### Costume
 
-A costume is an [image file](https://en.wikipedia.org/wiki/Digital_image) and a type of [asset](#asset) that can be graphically rendered to represent a [target](#target). It can be identified by its [name](/ideas/values/#name) or [number](/ideas/values/#integer). Costumes can either be [bitmap](https://en.wikipedia.org/wiki/Raster_graphics) or [vector](https://en.wikipedia.org/wiki/Vector_graphics).
+A costume is an [image file](https://en.wikipedia.org/wiki/Digital_image) and a type of [asset](#asset) that can be graphically rendered to represent a [target](#target). It can be identified by its [name](/concepts/values/#name) or [number](/concepts/values/#integer). Costumes can either be [bitmap](https://en.wikipedia.org/wiki/Raster_graphics) or [vector](https://en.wikipedia.org/wiki/Vector_graphics).
 
 ### Sound
 
-A sound is an [audio file](https://en.wikipedia.org/wiki/Digital_audio) and a type of [asset](#asset) that can be audibly played to the user via [blocks](#block). It can be identified by its [name](/ideas/values/#name).
+A sound is an [audio file](https://en.wikipedia.org/wiki/Digital_audio) and a type of [asset](#asset) that can be audibly played to the user via [blocks](#block). It can be identified by its [name](/concepts/values/#name).
 
 ## Block
 
@@ -22,7 +22,7 @@ The fundamental component of Scratch as a programming language. In fact, it is s
 
 * Accepts values or blocks as arguments
 * Has a specific pre-defined operation that it performs
-* Can be run and reports (i.e. outputs, returns) a single value (or [none at all](/ideas/values/#undefined))
+* Can be run and reports (i.e. outputs, returns) a single value (or [none at all](/concepts/values/#undefined))
 
 Blocks can be run, meaning that its operation is performed using the arguments it is given and the value resulting from the operation is reported, if any. When put together, blocks create [scripts](#script).
 
@@ -38,15 +38,15 @@ Blocks can be run, meaning that its operation is performed using the arguments i
 
 > TODO: Research... 🤔🤔🤔
 
-An independent, temporary copy created of a [sprite](#sprite) that retains all of the original sprite's [scripts](#script), [variables](#variable), [lists](#list), [costumes](#costume), and [sounds](#sound). It exists on its own entirely separate of the original sprite, so the scripts it runs only affect itself. Unlike sprites, it does not have a [name](/ideas/values/#name), is not saved in [project files](/files/), and can be deleted with blocks.
+An independent, temporary copy created of a [sprite](#sprite) that retains all of the original sprite's [scripts](#script), [variables](#variable), [lists](#list), [costumes](#costume), and [sounds](#sound). It exists on its own entirely separate of the original sprite, so the scripts it runs only affect itself. Unlike sprites, it does not have a [name](/concepts/values/#name), is not saved in [project files](/files/), and can be deleted with blocks.
 
 Since it does not have a name, it cannot be directly referenced via existing blocks (e.g. you cannot tell another sprite to [glide to](/palette/#glide-to-block) it). They are deleted when the runtime stops, and can also be deleted manually using the [`delete this clone` block](/palette/#delete-clone-block).
 
-Clones can be created with the [create clone block](/palette/#create-clone-block) so long as the [maximum number of clones](/ideas/limits/#max-clones) has not been reached. Code can be written specifically for the clones of a sprite via the use of the [when I start as a clone block](/palette/#when-i-start-as-a-clone-block). The [stage](#stage) is the only [target](#target) which cannot be cloned, whereas both sprites *and clones* can themselves be cloned.
+Clones can be created with the [create clone block](/palette/#create-clone-block) so long as the [maximum number of clones](/concepts/limits/#max-clones) has not been reached. Code can be written specifically for the clones of a sprite via the use of the [when I start as a clone block](/palette/#when-i-start-as-a-clone-block). The [stage](#stage) is the only [target](#target) which cannot be cloned, whereas both sprites *and clones* can themselves be cloned.
 
 ## Edge
 
-> The usefulness of defining "Edge" is up for debate. It may be best left to the section about [fencing](/ideas/logic/#fencing). Feel free to offer insight!
+> The usefulness of defining "Edge" is up for debate. It may be best left to the section about [fencing](/concepts/logic/#fencing). Feel free to offer insight!
 
 A boundary around the viewing area of the [stage](#stage) that restricts the [costume](#costume) of a [sprite](#sprite) from going off-screen.
 
@@ -60,11 +60,11 @@ The button that is clicked to start a project. It is also known as the green fla
 
 > Definitions for general terms indirectly related to Scratch may be put into their own section instead, however this is up for debate. Feel free to offer insight!
 
-The programming language that Scratch 3.0 runs in. The logic it uses is largely similar to the logic Scratch uses due to Scratch's dependence on JavaScript for performing operations and manipulating values. In fact, this is where the type of value [undefined](/ideas/values/#undefined) is taken from; it is a type of value in JavaScript for representing what is not defined or known. Thanks to the quirks of Scratch and [no-op hidden reporter blocks](#hidden-blocks), we can obtain this type of value.
+The programming language that Scratch 3.0 runs in. The logic it uses is largely similar to the logic Scratch uses due to Scratch's dependence on JavaScript for performing operations and manipulating values. In fact, this is where the type of value [undefined](/concepts/values/#undefined) is taken from; it is a type of value in JavaScript for representing what is not defined or known. Thanks to the quirks of Scratch and [no-op hidden reporter blocks](#hidden-blocks), we can obtain this type of value.
 
 ## List
 
-A series of [items](/ideas/values/#item) stored together in sequence. Each item is referenced by its numerical index (aka item #), a positive [integer](/ideas/values/#integer) ranging from `1` to the [length](/ideas/values/#length) of the list (inclusive). Lists can be empty, meaning that they have a length of `0` and contain no items. There is also a [maximum number of items](/ideas/limits/#max-items) that a list can hold, aka a limit to its length.
+A series of [items](/concepts/values/#item) stored together in sequence. Each item is referenced by its numerical index (aka item #), a positive [integer](/concepts/values/#integer) ranging from `1` to the [length](/concepts/values/#length) of the list (inclusive). Lists can be empty, meaning that they have a length of `0` and contain no items. There is also a [maximum number of items](/concepts/limits/#max-items) that a list can hold, aka a limit to its length.
 
 ## Mod
 
@@ -111,15 +111,15 @@ A target exists as its own independent unit. However, targets can interact with 
 
 ## User
 
-The individual who is interacting with the [project](#project) and provides input. They may optionally have a [username](/ideas/values/#username) that the project can use to identify them.
+The individual who is interacting with the [project](#project) and provides input. They may optionally have a [username](/concepts/values/#username) that the project can use to identify them.
 
 ## Variable
 
-A [named](/ideas/values/#name) container belonging to a [target](#target) that holds exactly one [value](/ideas/values/#value) and is interacted with via [blocks](#block). The following operations are often performed with variables:
+A [named](/concepts/values/#name) container belonging to a [target](#target) that holds exactly one [value](/concepts/values/#value) and is interacted with via [blocks](#block). The following operations are often performed with variables:
 
 * **Get**: Read the current value of the variable.
 * **Set**: Modify the current value of the variable.
 
-Some variables are created on a project-by-project basis for general use by [scripts](#script). For example, a `(score)` variable can be created to keep track of an arbitrary point value. Others are directly built into the [runtime](#runtime) and cannot be deleted. For example, the [`(x position)`](/ideas/values/#x-position) variable always exists in every [sprite](#sprite) to set its rendered horizontal position.
+Some variables are created on a project-by-project basis for general use by [scripts](#script). For example, a `(score)` variable can be created to keep track of an arbitrary point value. Others are directly built into the [runtime](#runtime) and cannot be deleted. For example, the [`(x position)`](/concepts/values/#x-position) variable always exists in every [sprite](#sprite) to set its rendered horizontal position.
 
 General purpose variables can be interacted with using [variables blocks](/palette/#variables-blocks). Runtime variables have their own dedicated blocks instead and are usually limited or sandboxed in some way, unlike general purpose variables.

@@ -1,6 +1,6 @@
 # Values
 
-Values are data stored in the [runtime](/ideas/concepts/#runtime) that can be interacted with and manipulated by [blocks](/ideas/concepts/#block). In Scratch, the following types of values exist:
+Values are data stored in the [runtime](/concepts/ideas/#runtime) that can be interacted with and manipulated by [blocks](/concepts/ideas/#block). In Scratch, the following types of values exist:
 
 * [String](#string)
 * [Number](#number)
@@ -16,7 +16,7 @@ There are lots of terms used to refer to these types of values and particular su
 
 ## Value
 
-A general value. This can be a [string](#string), [number](#number), [boolean](#boolean), or in rare cases [undefined](#undefined). [Variables](/ideas/concepts/#variable) can hold individual values, and a [list](/ideas/concepts/#list) can store many of them as [items](#item).
+A general value. This can be a [string](#string), [number](#number), [boolean](#boolean), or in rare cases [undefined](#undefined). [Variables](/concepts/ideas/#variable) can hold individual values, and a [list](/concepts/ideas/#list) can store many of them as [items](#item).
 
 ## Angle
 
@@ -24,7 +24,7 @@ A [number](#number) intended to be in [degrees](https://en.wikipedia.org/wiki/De
 
 ## Answer
 
-A [string](#string) provided to the [project](/ideas/concepts/#project) by the [user](/ideas/concepts/#user) as input via the [ask and wait block](/palette/standard/#ask-and-wait-block).
+A [string](#string) provided to the [project](/concepts/ideas/#project) by the [user](/concepts/ideas/#user) as input via the [ask and wait block](/palette/standard/#ask-and-wait-block).
 
 ## Boolean
 
@@ -32,11 +32,11 @@ A special type of [value](#value) used to represent the result of a logical oper
 
 ### True
 
-A kind of [boolean](#boolean) used to represent a yes or an affirmative answer as a result of a logical operation. When casted to a [string](#string), it is written as `true`. When casted to a [number](#number), it is casted to `1`. It is considered [truthy](/ideas/logic/#truthy), as it is itself the definition of truthy.
+A kind of [boolean](#boolean) used to represent a yes or an affirmative answer as a result of a logical operation. When casted to a [string](#string), it is written as `true`. When casted to a [number](#number), it is casted to `1`. It is considered [truthy](/concepts/logic/#truthy), as it is itself the definition of truthy.
 
 ### False
 
-A kind of [boolean](#boolean) used to represent a no or a negative answer as a result of a logical operation. When casted to a [string](#string), it is written as `false`. When casted to a [number](#number), it is casted to `0`. It is considered [falsy](/ideas/logic/#falsy), as it is itself the definition of falsy.
+A kind of [boolean](#boolean) used to represent a no or a negative answer as a result of a logical operation. When casted to a [string](#string), it is written as `false`. When casted to a [number](#number), it is casted to `0`. It is considered [falsy](/concepts/logic/#falsy), as it is itself the definition of falsy.
 
 ## Direction
 
@@ -54,15 +54,15 @@ The way a sprite's direction impacts how it is rendered is determined by its [ro
 
 ## Integer
 
-A whole [number](#number), or a number that is not a fraction (e.g. `42`, `-37`). Many [blocks](/ideas/concepts/#block) report integers (e.g. `round ()`, `costume [number v]`, `loudness`, `item # of () in [list v]`) and expect integers (e.g. `item () of [list v]`), just to name a few.
+A whole [number](#number), or a number that is not a fraction (e.g. `42`, `-37`). Many [blocks](/concepts/ideas/#block) report integers (e.g. `round ()`, `costume [number v]`, `loudness`, `item # of () in [list v]`) and expect integers (e.g. `item () of [list v]`), just to name a few.
 
 ## Item
 
-A [value](#value) in a [list](/ideas/concepts/#list).
+A [value](#value) in a [list](/concepts/ideas/#list).
 
 ## Key
 
-A [name](#name) used by Scratch for referring to a key on the [user](/ideas/concepts/#user)'s keyboard. Specific keys are referred to by name. To refer to any arbitrary key (as in, "press any key to continue"), the name `any` can be used.
+A [name](#name) used by Scratch for referring to a key on the [user](/concepts/ideas/#user)'s keyboard. Specific keys are referred to by name. To refer to any arbitrary key (as in, "press any key to continue"), the name `any` can be used.
 
 It is good to note that Scratch does not standardly support special keys other than the ones listed below, making it more versatile across platforms (i.e. it won't conflict with keyboard shortcuts used by other applications running on the user's computer).
 
@@ -83,7 +83,7 @@ TODO: Document all keys and figure out exactly what keys Scratch does and doesn'
 
 ## Length
 
-A positive [integer](#integer) representing how many [letters](#letter) or [items](#item) there are in a [string](#string) or [list](/ideas/concepts/#list), respectively.
+A positive [integer](#integer) representing how many [letters](#letter) or [items](#item) there are in a [string](#string) or [list](/concepts/ideas/#list), respectively.
 
 ## Letter
 
@@ -91,15 +91,15 @@ An individual [UTF-16](https://en.wikipedia.org/wiki/UTF-16) [code unit](https:/
 
 ## Name
 
-A [string](#string) with the intention of identifying something. This can be applied to a great number of things, but is usually used in regards to a variable, list, costume, sound, [user](#username), or [sprite](/ideas/concepts/#sprite).
+A [string](#string) with the intention of identifying something. This can be applied to a great number of things, but is usually used in regards to a variable, list, costume, sound, [user](#username), or [sprite](/concepts/ideas/#sprite).
 
 ## Number
 
-A [numerical](https://en.wikipedia.org/wiki/Number) [value](#value). Most numbers are [real](https://en.wikipedia.org/wiki/Real_number) and can be positive (`+`), negative (`-`), whole (`#`), or fractional (`#.#`). In [JavaScript](/ideas/concepts/#javascript), these numbers are internally stored as [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) values. Thus, Scratch follows largely the same rules JavaScript does when operating on numbers, though with exceptions. In addition to real numbers, special kinds of numbers exist too, which are for situations that cannot be fully expressed with real numbers.
+A [numerical](https://en.wikipedia.org/wiki/Number) [value](#value). Most numbers are [real](https://en.wikipedia.org/wiki/Real_number) and can be positive (`+`), negative (`-`), whole (`#`), or fractional (`#.#`). In [JavaScript](/concepts/ideas/#javascript), these numbers are internally stored as [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) values. Thus, Scratch follows largely the same rules JavaScript does when operating on numbers, though with exceptions. In addition to real numbers, special kinds of numbers exist too, which are for situations that cannot be fully expressed with real numbers.
 
 ### Infinity
 
-A special [number](#number) that is always greater than any other number. When [casted](/ideas/logic/#to-string) to a [string](#string), it is written as `Infinity`. It is created when the result of a mathematical operation is too large to be represented as a real number.
+A special [number](#number) that is always greater than any other number. When [casted](/concepts/logic/#to-string) to a [string](#string), it is written as `Infinity`. It is created when the result of a mathematical operation is too large to be represented as a real number.
 
 ```sb
 [Infinity] + (1) // Infinity
@@ -111,21 +111,21 @@ A special [number](#number) that is always greater than any other number. When [
 
 ### -Infinity
 
-A special [number](#number) that is always lower than any other number. When [casted](/ideas/logic/#to-string) to a [string](#string), it is written as `-Infinity`. It is created in the same manner as [Infinity](#infinity).
+A special [number](#number) that is always lower than any other number. When [casted](/concepts/logic/#to-string) to a [string](#string), it is written as `-Infinity`. It is created in the same manner as [Infinity](#infinity).
 
 Whether `-Infinity` or `Infinity` is produced by an operation is determined in the same way that a real number would be negative or not. For example, `(1) / (n)` produces a positive number, while `(-1) / (n)` produces a negative number. In the same manner, `(1) / (0)` produces positive infinity, while `(-1) / (0)` produces negative infinity.
 
 ### NaN
 
-A special [number](#number) that is literally not a number. When [casted](/ideas/logic/#to-string) to a [string](#string), it is written as `NaN`. It is created by doing unknown or unrepresentable things with numbers, such as multiplying [`Infinity`](#infinity) by `0`, adding `Infinity` to [`-Infinity`](#-infinity), or getting the square root of a negative number. Unlike Infinity, it does not have a negative counterpart. It is interpreted as a `0` when passed as input to other mathematical operations, unlike in [JavaScript](/ideas/concepts/#javascript) where it causes most operations to report `NaN`.
+A special [number](#number) that is literally not a number. When [casted](/concepts/logic/#to-string) to a [string](#string), it is written as `NaN`. It is created by doing unknown or unrepresentable things with numbers, such as multiplying [`Infinity`](#infinity) by `0`, adding `Infinity` to [`-Infinity`](#-infinity), or getting the square root of a negative number. Unlike Infinity, it does not have a negative counterpart. It is interpreted as a `0` when passed as input to other mathematical operations, unlike in [JavaScript](/concepts/ideas/#javascript) where it causes most operations to report `NaN`.
 
 ## Opcode
 
-A [name](#name) that identifies the operation a [block](/ideas/concepts/#block) performs when run. For example, the opcode of the [`move () steps`](/palette/standard/#motion_movesteps) block is `motion_movesteps`, and when run it moves the sprite by the given number of steps, as named.
+A [name](#name) that identifies the operation a [block](/concepts/ideas/#block) performs when run. For example, the opcode of the [`move () steps`](/palette/standard/#motion_movesteps) block is `motion_movesteps`, and when run it moves the sprite by the given number of steps, as named.
 
 ## Rotation Style
 
-A [string](#string) that determines how a [sprite](/ideas/concepts/#sprite)'s [direction](#direction) impacts the way it is visibly rotated when rendered. Officially, it can only be one of the following strings: `all around`, `left-right`, or `don't rotate`.
+A [string](#string) that determines how a [sprite](/concepts/ideas/#sprite)'s [direction](#direction) impacts the way it is visibly rotated when rendered. Officially, it can only be one of the following strings: `all around`, `left-right`, or `don't rotate`.
 
 * `all around`: The sprite faces in its direction **clockwise**. At `0`, it faces **up**; at `90`, it faces **right**; at `180`, it faces **down**; and at `-90`, it faces **left**.
 * `left-right`: If the sprite's direction is less than `0`, it faces **left** (`-90`). Otherwise, it faces **right** (`90`).
@@ -170,19 +170,19 @@ The following table describes a sprite's *rendered* direction when using differe
 
 ## String
 
-A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](/ideas/logic/#truthy) except for the [empty string](#empty-string), the string `0`, and the string `false` (case-insensitive), which are considered [falsy](/ideas/logic/#falsy).
+A type of [value](#value) consisting of a series (i.e. string) of [letters](#letter), also known as text. All strings are considered [truthy](/concepts/logic/#truthy) except for the [empty string](#empty-string), the string `0`, and the string `false` (case-insensitive), which are considered [falsy](/concepts/logic/#falsy).
 
 ### Empty String
 
-A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](/ideas/logic/#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](/ideas/concepts/#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/palette/standard/#ask-and-wait-block) anything yet.
+A [string](#string) containing no letters. It has a [length](#length) of `0` and is one of the only strings considered [falsy](/concepts/logic/#falsy). Also known as a "null string," it is typically used in place of a value where there is none, e.g. getting an [item](#item) from a [list](/concepts/ideas/#list) when it does not exist, or getting the [answer](#answer) provided by a user when they have not been [asked](/palette/standard/#ask-and-wait-block) anything yet.
 
 ## Undefined
 
-A special [value](#value) that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](/ideas/concepts/#hidden-blocks). In most cases, however, Scratch uses `0` or an [empty string](#empty-string) to represent nothing.
+A special [value](#value) that represents nothing. When converted to a [string](#string), it is written as `undefined`. This type of value is uncommon but can be produced by [hidden reporter blocks](/concepts/ideas/#hidden-blocks). In most cases, however, Scratch uses `0` or an [empty string](#empty-string) to represent nothing.
 
 ## Username
 
-A [name](#name) used to reference a [user](/ideas/concepts/#user). In standard Scratch, usernames:
+A [name](#name) used to reference a [user](/concepts/ideas/#user). In standard Scratch, usernames:
 
 * Are always 3 to 20 [letters](#letter) [long](#length) (inclusive)
 * Can only contain the following symbols:
@@ -207,7 +207,7 @@ Scripts can detect the current user's username via the [(`username`) block](/pal
 > * Signs in to their account from the same window while the project is open
 >   * A menu exists for the user to sign in to their account without reloading the page
 >
-> Then the reported username is changed from the empty string to the username that the user signed in with, without reloading the project. After this happens, the user cannot change their username again without reloading the project or modifying the [runtime](/ideas/concepts/#runtime) directly, e.g. via [developer tools](https://en.wikipedia.org/wiki/Web_development_tools).
+> Then the reported username is changed from the empty string to the username that the user signed in with, without reloading the project. After this happens, the user cannot change their username again without reloading the project or modifying the [runtime](/concepts/ideas/#runtime) directly, e.g. via [developer tools](https://en.wikipedia.org/wiki/Web_development_tools).
 
 Due to the aforementioned limitations of real usernames, project *can* technically check if the user's username is "real" or not by:
 
@@ -223,13 +223,13 @@ In most cases, however, projects will probably not notice anything wrong with th
 
 ## X Position
 
-A [number](#number) representing a horizontal position on the Scratch coordinate plane. All [sprites](/ideas/concepts/#sprite) have one.
+A [number](#number) representing a horizontal position on the Scratch coordinate plane. All [sprites](/concepts/ideas/#sprite) have one.
 
 > TODO: document coordinate system
 
 ## Y Position
 
-A [number](#number) representing a vertical position on the Scratch coordinate plane. All [sprites](/ideas/concepts/#sprite) have one.
+A [number](#number) representing a vertical position on the Scratch coordinate plane. All [sprites](/concepts/ideas/#sprite) have one.
 
 > TODO: document coordinate system
 
@@ -245,6 +245,6 @@ They will not be specified in this specification as of yet (since they cannot be
   * The writers of this specification do not know if `null` can be produced by existing blocks without modification.
     * If it is found to be an obtainable value, it may be documented further. Otherwise, it will not be, and is likely not necessary for inclusion in a reimplementation of Scratch.
   * This value can be casted to other data types. (`null` was obtained via "custom extensions" in [a modification of Scratch](/palette/nonstandard/#turbowarp) that still has largely the same behaviors as standard Scratch to see how it would behave if somehow obtained.)
-    * When [casted](/ideas/logic/#to-string) to a [string](#string), it is written as `null`.
-    * When [casted](/ideas/logic/#to-number) to a [number](#number), it is casted to `0`.
-    * When [casted](/ideas/logic/#to-boolean) to a [boolean](#boolean), it is [`false`](/ideas/logic/#falsy).
+    * When [casted](/concepts/logic/#to-string) to a [string](#string), it is written as `null`.
+    * When [casted](/concepts/logic/#to-number) to a [number](#number), it is casted to `0`.
+    * When [casted](/concepts/logic/#to-boolean) to a [boolean](#boolean), it is [`false`](/concepts/logic/#falsy).

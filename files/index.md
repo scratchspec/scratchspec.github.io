@@ -2,15 +2,15 @@
 
 > This section will be expanded once other stuff gets documented. For now, runtime behavior is more pressing than file formatting.
 
-Scratch projects can be saved and loaded from a computer as files. Scratch has several project file formats, each with their own complicated structures and loading behaviors. Even with a perfectly accurate [runtime](/ideas/concepts/#runtime) environment, a saved project that is not properly loaded may not work as it was intended to, and could very well break! The purpose of this section is to lay out how project files are created and interpeted.
+Scratch projects can be saved and loaded from a computer as files. Scratch has several project file formats, each with their own complicated structures and loading behaviors. Even with a perfectly accurate [runtime](/concepts/ideas/#runtime) environment, a saved project that is not properly loaded may not work as it was intended to, and could very well break! The purpose of this section is to lay out how project files are created and interpeted.
 
 ## SB3
 
 The .sb3 file format is the standard format for storing Scratch **3.0** projects, the version of Scratch that this specification documents. In reality, it is a renamed [.zip](https://en.wikipedia.org/wiki/ZIP_(file_format)) file that contains the following files:
 
 * `project.json`, a [.json](https://en.wikipedia.org/wiki/JSON) file storing info.
-* Various image files used as [costumes](/ideas/concepts/#costume).
-* Various audio files used as [sounds](/ideas/concepts/#sound).
+* Various image files used as [costumes](/concepts/ideas/#costume).
+* Various audio files used as [sounds](/concepts/ideas/#sound).
 
 TODO: Specify!!!
 

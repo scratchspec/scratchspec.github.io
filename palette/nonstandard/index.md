@@ -6,7 +6,7 @@ This section is not a high priority, as this specification is primarily meant to
 
 :::
 
-This section serves to document blocks that do not exist at all in Scratch, but have been added unofficially to [modifications](/ideas/concepts/#mod) of Scratch. They are specified here in order to allow projects using these nonstandard blocks to function properly if one were to create a reimplementation of the Scratch VM with supporting these blocks in mind.
+This section serves to document blocks that do not exist at all in Scratch, but have been added unofficially to [modifications](/concepts/ideas/#mod) of Scratch. They are specified here in order to allow projects using these nonstandard blocks to function properly if one were to create a reimplementation of the Scratch VM with supporting these blocks in mind.
 
 > This is a dynamic section and may never be able to satisfy any particular standards for completeness. [You can help](/intro/#contributing) by adding [missing blocks](/todo/#todo-blocks) with reliable sources (e.g. links to source code).
 
@@ -30,9 +30,9 @@ the block in scratchblocks with its [ARG]uments
 
 **Arguments:**
 
-| Name: | [Casted](/ideas/logic/#casting) to:                                                                                                    | Provides the:                  |
+| Name: | [Casted](/concepts/logic/#casting) to:                                                                                                    | Provides the:                  |
 |:-----:|:-------------------------------------------------------------------------------------------------------------------------:|:------------------------------:|
-| `ARG` | [the kind of value this argument is casted to before use by the block, linking to the procedure used to cast it](/ideas/values/) | What it provides to the block. |
+| `ARG` | [the kind of value this argument is casted to before use by the block, linking to the procedure used to cast it](/concepts/values/) | What it provides to the block. |
 
 **Procedure:**
 
@@ -66,7 +66,7 @@ None
 
 **Procedure:**
 
-When the [runtime](/ideas/concepts/#runtime) first starts, no [keys](/ideas/values/#key) have been pressed. If the block is run before any keys are pressed, it reports the [empty string](/ideas/values/#empty-string). Otherwise, the [name](/ideas/values/#name) of the last key to have been pressed is reported.
+When the [runtime](/concepts/ideas/#runtime) first starts, no [keys](/concepts/values/#key) have been pressed. If the block is run before any keys are pressed, it reports the [empty string](/concepts/values/#empty-string). Otherwise, the [name](/concepts/values/#name) of the last key to have been pressed is reported.
 
 ### Addon blocks
 

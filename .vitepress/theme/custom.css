@@ -1,0 +1,50 @@
+/* .vitepress/theme/custom.css */
+:root {
+  --vp-c-brand-1: #855cd6;
+  --vp-button-brand-bg: #855cd6;
+  --vp-c-brand-hover-bg: #714fb6;
+  --vp-button-brand-active-bg: #714fb6;
+
+  --vp-c-bg: #fcfcfc;
+  --vp-c-bg-soft: #e6f0ff;
+
+  --vp-c-text-1: #575e75;
+  --vp-c-text-2: #575e75;
+
+  --vp-font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dark {
+    --vp-c-brand-1: #ccb3ff;
+
+    --vp-c-bg: #202020;
+    --vp-c-bg-soft: #292d32;
+
+    --vp-c-text-1: #ffffff;
+    --vp-c-text-2: #eeeeee;
+}
+
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6 {
+  font-weight: 700;
+  line-height: 27.2px;
+}
+
+.vp-doc p {
+  line-height: 27.2px;
+}
+
+.vp-doc hr {
+  margin-block-start: 48px;
+  margin-block-end: 24px;
+  margin-bottom: 24px;
+  margin-top: 48px;
+}
+
+.vp-doc a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
+}

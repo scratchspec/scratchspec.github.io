@@ -21,7 +21,7 @@ features:
     link: /intro/
     details: An explanation of what this spec is trying to achieve.
   - title: Ideas
-    link: /ideas/
+    link: /concepts/
     details: Formal definitions for basic Scratch concepts.
   - title: Runtime
     link: /runtime/

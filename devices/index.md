@@ -1,7 +1,7 @@
 # Scratch Link
 
 ::: info
-This section will be expanded in the future, but it remains incomplete for now. Other sections such as [Ideas](/ideas/), [Runtime](/runtime/), and [Palette](/palette/) are a higher priority to write at the moment, and writing this section well (such that it provides accurate and useful information) will require lots of research and effort.
+This section will be expanded in the future, but it remains incomplete for now. Other sections such as [Ideas](/concepts/), [Runtime](/runtime/), and [Palette](/palette/) are a higher priority to write at the moment, and writing this section well (such that it provides accurate and useful information) will require lots of research and effort.
 
 In the meantime, here are some resources that may be useful if one would like to learn more about Scratch Link's inner workings and protocols:
 

@@ -15,7 +15,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Intro', link: '/intro/' },
-      { text: 'Ideas', link: '/ideas/' },
+      { text: 'Concepts', link: '/concepts/' },
       { text: 'Runtime', link: '/runtime/' },
       { text: 'Palette', link: '/palette/' },
       { text: 'Files', link: '/files/' },
@@ -38,13 +38,13 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Ideas',
-        link: '/ideas/',
+        text: 'Concepts',
+        link: '/concepts/',
         items: [
-          { text: 'Concepts', link: '/ideas/concepts/' },
-          { text: 'Values', link: '/ideas/values/' },
-          { text: 'Limits', link: '/ideas/limits/' },
-          { text: 'Logic', link: '/ideas/logic/' }
+          { text: 'Ideas', link: '/concepts/ideas/' },
+          { text: 'Values', link: '/concepts/values/' },
+          { text: 'Limits', link: '/concepts/limits/' },
+          { text: 'Logic', link: '/concepts/logic/' }
         ]
       },
       {
@@ -115,6 +115,12 @@ export default defineConfig({
     outline: {
       level: [1, 6],
       label: 'Contents'
+    },
+
+    lastUpdated: {
+      formatOptions: {
+        dateStyle: 'short'
+      }
     }
   },
 

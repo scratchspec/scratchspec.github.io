@@ -28,9 +28,9 @@ the block in scratchblocks with its [ARG]uments
 
 **Arguments:**
 
-| Name: | [Casted](/ideas/logic/#casting) to:                                                                                                    | Provides the:                  |
+| Name: | [Casted](/concepts/logic/#casting) to:                                                                                                    | Provides the:                  |
 |:-----:|:-------------------------------------------------------------------------------------------------------------------------:|:------------------------------:|
-| `ARG` | [the kind of value this argument is casted to before use by the block, linking to the procedure used to cast it](/ideas/values/) | What it provides to the block. |
+| `ARG` | [the kind of value this argument is casted to before use by the block, linking to the procedure used to cast it](/concepts/values/) | What it provides to the block. |
 
 **Procedure:**
 
@@ -38,7 +38,7 @@ A deep dive into what the block does in fulfilling its operation.
 
 ## Motion blocks
 
-These blocks relate to motion, or moving sprites. They manipulate the x position, y position, and direction of a sprite in order to position it in the desired manner. Notably, they do not do anything when used from the [stage](/ideas/concepts/#stage).
+These blocks relate to motion, or moving sprites. They manipulate the x position, y position, and direction of a sprite in order to position it in the desired manner. Notably, they do not do anything when used from the [stage](/concepts/ideas/#stage).
 
 ### Standard motion blocks
 
@@ -58,9 +58,9 @@ move (STEPS) steps
 
 **Arguments**:
 
-| Name: | [Casted](/ideas/logic/#casting) to: | Provides the:                         |
+| Name: | [Casted](/concepts/logic/#casting) to: | Provides the:                         |
 |:-----:|:----------------------:|:-------------------------------------:|
-|`STEPS`| [number](/ideas/logic/#to-number)   | Number of steps (aka pixels) to move. |
+|`STEPS`| [number](/concepts/logic/#to-number)   | Number of steps (aka pixels) to move. |
 
 **Procedure:**
 
@@ -80,7 +80,7 @@ In scratchblocks, this operation can also be replicated as:
 go to x: ((x position) + (([sin v] of (direction)) * (STEPS))) y: ((y position) + (([cos v] of (direction)) * (STEPS)))
 ```
 
-After the sprite is moved, its position is [fenced](/ideas/logic/#fencing-position).
+After the sprite is moved, its position is [fenced](/concepts/logic/#fencing-position).
 
 ### Hidden motion blocks
 
@@ -156,7 +156,7 @@ TODO
 
 ## Sensing blocks
 
-These blocks relate to sensing, or detecting various values. They can read information that couldn't be determined otherwise in order to make the project more aware of its [runtime](/ideas/concepts/#runtime) context.
+These blocks relate to sensing, or detecting various values. They can read information that couldn't be determined otherwise in order to make the project more aware of its [runtime](/concepts/ideas/#runtime) context.
 
 ### Standard sensing blocks
 
@@ -168,7 +168,7 @@ TODO
 
 **Operation:**
 
-Reports the [username](/ideas/values/#username) of the [user](/ideas/concepts/#user) that has loaded the [project](/ideas/concepts/#project) in the context of the Scratch website.
+Reports the [username](/concepts/values/#username) of the [user](/concepts/ideas/#user) that has loaded the [project](/concepts/ideas/#project) in the context of the Scratch website.
 
 **Block:**
 
@@ -184,10 +184,10 @@ None
 
 * If the user is signed into their Scratch account (username known):
   * Their username is known, as the user is registered with Scratch and signed into their account.
-  * **Report the user's [username](/ideas/values/#username).**
+  * **Report the user's [username](/concepts/values/#username).**
 * If the user is not signed into their account (username unknown):
   * Their username is not known, as the user is using Scratch without being signed into an account.
-  * **Report an [empty string](/ideas/values/#empty-string).**
+  * **Report an [empty string](/concepts/values/#empty-string).**
 
 Technically, this block can report any username registered with the Scratch website or the empty string without breaking anything. Although it is meant to report the username of the user who has loaded the project, there is no way for a project to confirm that the reported username is actually theirs.
 
@@ -263,9 +263,9 @@ TODO
 
 ### Special custom blocks
 
-> This section may be moved to a [relevant section](/palette/nonstandard/), though it will have to be clarified that these blocks can be loaded into Scratch, they just don't do anything outside of [mods](/ideas/concepts/#mod).
+> This section may be moved to a [relevant section](/palette/nonstandard/), though it will have to be clarified that these blocks can be loaded into Scratch, they just don't do anything outside of [mods](/concepts/ideas/#mod).
 
-Usually, when a custom block or parameter is used outside of its definition, it does nothing or returns `0`. However, there are specific custom blocks and parameters that have unique behaviors when used outside of their definitions, specifically in certain Scratch [mods](/ideas/concepts/#mod).
+Usually, when a custom block or parameter is used outside of its definition, it does nothing or returns `0`. However, there are specific custom blocks and parameters that have unique behaviors when used outside of their definitions, specifically in certain Scratch [mods](/concepts/ideas/#mod).
 
 A strategy that some Scratch mods use to add their own blocks to Scratch without breaking compatibility (making the project not load in standard Scratch) is by adding them as custom blocks without definitions. In normal Scratch, when a custom block does not have a definition, it won't do anything special; however, when the blocks are run in mods of Scratch, they can be coded to have different behaviors. The behaviors of these blocks in standard Scratch and modifications are specified below:
 

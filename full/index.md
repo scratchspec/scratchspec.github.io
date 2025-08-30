@@ -12,50 +12,52 @@ This page is experimental and might not render or work properly. It is intended 
 
 :::
 
----
-
-<!--@include: @/intro/index.md{1,1}--> {#/intro/}
-<!--@include: @/intro/index.md{2,}-->
+<!-- Below, custom heading anchors are applied to the top level heading of each section to make them unique and identifiable when the section links are automatically converted to heading links by the setup script for viewing. The custom anchor should exactly match the absolute path to the section as if it were being linked to. -->
 
 ---
 
-<!--@include: @/todo/index.md{1,1}--> {#/todo/}
-<!--@include: @/todo/index.md{2,}-->
+<!--@include: @intro/index.md{1,1}--> {#/intro/}
+<!--@include: @intro/index.md{2,}-->
 
 ---
 
-<!--@include: @/ideas/index.md{1,1}--> {#/ideas/}
-<!--@include: @/ideas/index.md{2,}-->
+<!--@include: @todo/index.md{1,1}--> {#/todo/}
+<!--@include: @todo/index.md{2,}-->
 
 ---
 
-<!--@include: @/ideas/concepts/index.md{1,1}--> {#/ideas/concepts/}
-<!--@include: @/ideas/concepts/index.md{2,}-->
+<!--@include: @concepts/index.md{1,1}--> {#/concepts/}
+<!--@include: @concepts/index.md{2,}-->
 
 ---
 
-<!--@include: @/ideas/values/index.md{1,1}--> {#/ideas/values/}
-<!--@include: @/ideas/values/index.md{2,}-->
+<!--@include: @concepts/ideas/index.md{1,1}--> {#/concepts/ideas/}
+<!--@include: @concepts/ideas/index.md{2,}-->
 
 ---
 
-<!--@include: @/ideas/limits/index.md{1,1}--> {#/ideas/limits/}
-<!--@include: @/ideas/limits/index.md{2,}-->
+<!--@include: @concepts/values/index.md{1,1}--> {#/concepts/values/}
+<!--@include: @concepts/values/index.md{2,}-->
 
 ---
 
-<!--@include: @/ideas/logic/index.md{1,1}--> {#/ideas/logic/}
-<!--@include: @/ideas/logic/index.md{2,}-->
+<!--@include: @concepts/limits/index.md{1,1}--> {#/concepts/limits/}
+<!--@include: @concepts/limits/index.md{2,}-->
 
 ---
 
-<!--@include: @/runtime/index.md{1,1}--> {#/runtime/}
-<!--@include: @/runtime/index.md{2,}-->
+<!--@include: @concepts/logic/index.md{1,1}--> {#/concepts/logic/}
+<!--@include: @concepts/logic/index.md{2,}-->
 
 ---
 
-<!--@include: @/palette/index.md{1,1}--> {#/palette/}
-<!--@include: @/palette/index.md{2,}-->
+<!--@include: @runtime/index.md{1,1}--> {#/runtime/}
+<!--@include: @runtime/index.md{2,}-->
+
+---
+
+<!--@include: @palette/index.md{1,1}--> {#/palette/}
+<!--@include: @palette/index.md{2,}-->
 
 ---
 
@@ -96,15 +98,13 @@ This page is experimental and might not render or work properly. It is intended 
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  // idk much about vitepress stuff so there may be a better way of doing this :>
-  const content = document.querySelector('.vp-doc'); // was going to scope it to just the page content but not sure how...
+  const content = document.querySelector('.vp-doc');
   if (content) {
-    // fix links via magical anchor links
     const links = content.querySelectorAll(`a`);
-    for (const link of links) {
+    for (const link of links) { // For each link...
       const url = new URL(link.href, window.location.href);
       if (
-        url.pathname !== '/scratch-spec/full/' // If it's not linking to the page...
+        url.pathname !== window.location.pathname // If it's not a link on the page...
         && url.pathname.startsWith('/scratch-spec/') // And it's a link under the spec base path...
         && url.pathname !== '/scratch-spec/' // And it's not the homepage...
         && url.host === window.location.host // And it's not linking to another domain...
@@ -114,34 +114,10 @@ onMounted(() => {
           url.hash = '#'+url.pathname.slice('/scratch-spec'.length);
         }
         if (document.getElementById(url.hash.slice(1))) { // And the element being linked to actually exists...
-          link.href = url.hash;
+          link.href = url.hash; // Then link to the heading on the page, instead of the separate section.
         } // Otherwise it is linked to as a separate page.
       }
     }
-
-    /* Still trying to figure out how to make the headings look nicer
-    // increase level of headings so it looks nicer
-    for (let i = 6; i >= 1; i--) {
-      const headings = content.querySelectorAll(`h${i}`);
-      headings.forEach((heading, index) => {
-        if (!(i === 1 && index === 0)) {
-          if (i < 6) {
-            heading.outerHTML = `<h${i + 1} id="${heading.id}">${heading.innerHTML}</h${i + 1}>`;
-          } else {
-            // hacky, but it works :]
-            heading.outerHTML = `<h6 role="heading" aria-level="7" id="${heading.id}">${heading.innerHTML}</h6>`;
-          }
-        }
-      });
-    } */
   }
 });
 </script>
-
-<style>
-  div[role="heading"] {
-    position: relative;
-    font-weight: 500;
-    outline: none;
-  }
-</style>

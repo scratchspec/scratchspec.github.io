@@ -6,7 +6,7 @@ These constant values will show up a lot throughout this specification. They can
 
 ### Stage Width
 
-The horizontal size of the stage. This is an arbitrary positive [integer](/ideas/values/#integer).
+The horizontal size of the stage. This is an arbitrary positive [integer](/concepts/values/#integer).
 
 **Standard Scratch**: `480`
 
@@ -14,7 +14,7 @@ The horizontal size of the stage. This is an arbitrary positive [integer](/ideas
 
 ### Stage Height
 
-The vertical size of the stage. This is an arbitrary positive [integer](/ideas/values/#integer).
+The vertical size of the stage. This is an arbitrary positive [integer](/concepts/values/#integer).
 
 **Standard Scratch**: `360`
 
@@ -56,7 +56,7 @@ The vertical position of the bottom edge. This is derived from the [stage height
 
 ### Max Items
 
-The maximum [length](/ideas/values/#length) of a [list](/ideas/concepts/#list), aka the most items that one list can hold. This limit is imposed to prevent excessive memory usage by [projects](/ideas/concepts/#project). This is an arbitrary positive [integer](/ideas/values/#integer).
+The maximum [length](/concepts/values/#length) of a [list](/concepts/ideas/#list), aka the most items that one list can hold. This limit is imposed to prevent excessive memory usage by [projects](/concepts/ideas/#project). This is an arbitrary positive [integer](/concepts/values/#integer).
 
 **Standard Scratch**: `200000`
 
@@ -64,7 +64,7 @@ The maximum [length](/ideas/values/#length) of a [list](/ideas/concepts/#list), 
 
 ### Max Clones
 
-The maximum number of [clones](/ideas/concepts/#clone) that can exist at a time. If this limit is reached, another clone cannot be created until one is deleted. This limit is imposed to prevent excessive memory usage by [projects](/ideas/concepts/#project). This is an arbitrary positive [integer](/ideas/values/#integer).
+The maximum number of [clones](/concepts/ideas/#clone) that can exist at a time. If this limit is reached, another clone cannot be created until one is deleted. This limit is imposed to prevent excessive memory usage by [projects](/concepts/ideas/#project). This is an arbitrary positive [integer](/concepts/values/#integer).
 
 **Standard Scratch**: `300`
 

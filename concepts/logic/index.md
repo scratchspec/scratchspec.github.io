@@ -8,60 +8,60 @@ Most blocks automatically convert values between types for use using certain log
 
 ### To String
 
-Scratch uses the following logic to convert any given [value](/ideas/values/#value) to a [string](/ideas/values/#string):
+Scratch uses the following logic to convert any given [value](/concepts/values/#value) to a [string](/concepts/values/#string):
 
-* If the value is a [**string**](/ideas/values/#string):
+* If the value is a [**string**](/concepts/values/#string):
   * **Return the value**, as it is already a string.
-* If the value is a [**number**](/ideas/values/#number):
+* If the value is a [**number**](/concepts/values/#number):
   * **Follow the [logic JavaScript does](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)** to cast a number to a string **and return it.**
     * TODO: specify this better
-  * If the value is [**NaN**](/ideas/values/#nan), **return the string `NaN`.**
-  * If the value is [**Infinity**](/ideas/values/#infinity), **return the string `Infinity`.**
-  * If the value is [**-Infinity**](/ideas/values/#infinity), **return the string `-Infinity`.**
-* If the value is a [**boolean**](/ideas/values/#boolean):
-  * If the value is [**true**](/ideas/values/#boolean), **return the string `true`.**
-  * If the value is [**false**](/ideas/values/#boolean), **return the string `false`.**
-* If the value is [**undefined**](/ideas/values/#undefined), **return the string `undefined`.**
-* If the value is [**something else**](/ideas/values/#other-values), **follow the logic [JavaScript](/ideas/concepts/#javascript) has for the `toString` method of that value** to convert it to a string **and return it.** (Likely unnecessary though, as no known "other values" can be encountered.)
+  * If the value is [**NaN**](/concepts/values/#nan), **return the string `NaN`.**
+  * If the value is [**Infinity**](/concepts/values/#infinity), **return the string `Infinity`.**
+  * If the value is [**-Infinity**](/concepts/values/#infinity), **return the string `-Infinity`.**
+* If the value is a [**boolean**](/concepts/values/#boolean):
+  * If the value is [**true**](/concepts/values/#boolean), **return the string `true`.**
+  * If the value is [**false**](/concepts/values/#boolean), **return the string `false`.**
+* If the value is [**undefined**](/concepts/values/#undefined), **return the string `undefined`.**
+* If the value is [**something else**](/concepts/values/#other-values), **follow the logic [JavaScript](/concepts/ideas/#javascript) has for the `toString` method of that value** to convert it to a string **and return it.** (Likely unnecessary though, as no known "other values" can be encountered.)
   * If the value is somehow **null**, **return the string `null`.**
   * TODO: Explain this step better or maybe just omit it because this step is not needed
 
 ### To Number
 
-Scratch uses the following logic to convert any given [value](/ideas/values/#value) to a [number](/ideas/values/#number):
+Scratch uses the following logic to convert any given [value](/concepts/values/#value) to a [number](/concepts/values/#number):
 
-* If the value is [**NaN**](/ideas/values/#nan), **return the number `0`.**
-* If the value is a [**number**](/ideas/values/#number), **return the value** as it is.
-* If the value is [**undefined**](/ideas/values/#undefined), **return the number `0`.**
-* If the value is [**true**](/ideas/values/#true), **return the number `1`.**
-* If the value is [**false**](/ideas/values/#false), **return the number `0`.**
-* If the value is a [**string**](/ideas/values/#string) or [something else](/ideas/values/#other-values):
+* If the value is [**NaN**](/concepts/values/#nan), **return the number `0`.**
+* If the value is a [**number**](/concepts/values/#number), **return the value** as it is.
+* If the value is [**undefined**](/concepts/values/#undefined), **return the number `0`.**
+* If the value is [**true**](/concepts/values/#true), **return the number `1`.**
+* If the value is [**false**](/concepts/values/#false), **return the number `0`.**
+* If the value is a [**string**](/concepts/values/#string) or [something else](/concepts/values/#other-values):
   * **If the value can be converted to a number** according to [these rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)**, return it.**
   * **Otherwise, return the number `0`.**
-  * TODO: specify string -> number coercion better b/c [JavaScript](/ideas/concepts/#javascript) logic
+  * TODO: specify string -> number coercion better b/c [JavaScript](/concepts/ideas/#javascript) logic
 
 ### To Boolean
 
-Scratch uses the following logic to convert any given [value](/ideas/values/#value) to a [boolean](/ideas/values/#boolean):
+Scratch uses the following logic to convert any given [value](/concepts/values/#value) to a [boolean](/concepts/values/#boolean):
 
 #### Falsy
 
-A value is **falsy**, or casted to [**false**](/ideas/values/#false), if the value is:
+A value is **falsy**, or casted to [**false**](/concepts/values/#false), if the value is:
 
-* an [**empty string**](/ideas/values/#empty-string) (no [letters](/ideas/values/#letter), [length](/ideas/values/#length) is `0`),
-* the **[strings](/ideas/values/#string) `0`** or **`false`** (case-insensitive),
-* one of the **[numbers](/ideas/values/#number) `0`**, **`-0`**, or [**`NaN`**](/ideas/values/#nan),
-* [**undefined**](/ideas/values/#undefined),
-* [**null**](/ideas/values/#other-values) (rare),
+* an [**empty string**](/concepts/values/#empty-string) (no [letters](/concepts/values/#letter), [length](/concepts/values/#length) is `0`),
+* the **[strings](/concepts/values/#string) `0`** or **`false`** (case-insensitive),
+* one of the **[numbers](/concepts/values/#number) `0`**, **`-0`**, or [**`NaN`**](/concepts/values/#nan),
+* [**undefined**](/concepts/values/#undefined),
+* [**null**](/concepts/values/#other-values) (rare),
 * or **false**.
 
 #### Truthy
 
-Any value that is **not** [**falsy**](#falsy) is considered **truthy** and casted to [**true**](/ideas/values/#true).
+Any value that is **not** [**falsy**](#falsy) is considered **truthy** and casted to [**true**](/concepts/values/#true).
 
 ### To Direction
 
-Scratch uses the following logic to convert any given [value](/ideas/values/#value) to a [direction](/ideas/values/#direction):
+Scratch uses the following logic to convert any given [value](/concepts/values/#value) to a [direction](/concepts/values/#direction):
 
 1. [**Cast the value to number**](#to-number).
 2. **Plug the casted value** into the following equation **as $a$ to find $d$:**

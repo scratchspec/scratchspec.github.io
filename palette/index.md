@@ -11,5 +11,5 @@ This spec is in early stages, and its scope is still being considered. Although 
 The following blocks are being documented here:
 
 * [Standard Blocks](/palette/standard/): All blocks that are supported or exist in Scratch 3.0.
-* [Nonstandard Blocks](/palette/nonstandard/): All blocks that are supported or exist in [modifications](/ideas/concepts/#mod) of Scratch 3.0.
+* [Nonstandard Blocks](/palette/nonstandard/): All blocks that are supported or exist in [modifications](/concepts/ideas/#mod) of Scratch 3.0.
 * [Obsolete Blocks](/palette/obsolete/): All blocks that existed in previous versions of Scratch, and how they would *probably* behave if they were still functional in Scratch 3.0.
