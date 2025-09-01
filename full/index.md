@@ -1,5 +1,7 @@
 ---
 search: false
+prev: false
+next: false
 ---
 
 # Scratch Specification
@@ -12,7 +14,7 @@ This page is experimental and might not render or work properly. It is intended 
 
 :::
 
-<!-- Below, custom heading anchors are applied to the top level heading of each section to make them unique and identifiable when the section links are automatically converted to heading links by the setup script for viewing. The custom anchor should exactly match the absolute path to the section as if it were being linked to. -->
+<!-- Below, custom heading anchors are applied to the top level heading of each section to make them unique and identifiable when the section links are automatically converted to heading links by the setup script for viewing. The custom anchor link should exactly match the absolute path of the section that would be used if it were linked to normally. -->
 
 ---
 

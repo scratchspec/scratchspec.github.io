@@ -109,7 +109,7 @@ A special [number](#number) that is always greater than any other number. When [
 (1) / (0) // Infinity
 ```
 
-### -Infinity
+### -Infinity {#-infinity}
 
 A special [number](#number) that is always lower than any other number. When [casted](/concepts/logic/#to-string) to a [string](#string), it is written as `-Infinity`. It is created in the same manner as [Infinity](#infinity).
 

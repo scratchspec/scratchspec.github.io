@@ -87,9 +87,9 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Test Pages',
+        text: 'Other Pages',
         items: [
-          { text: 'Single File?', link: '/full/' }
+          { text: 'Single File', link: '/full/' }
         ]
       }
     ],
@@ -100,7 +100,7 @@ export default defineConfig({
 
     footer: {
       message: '',
-      copyright: 'Licensed under <a href="https://github.com/OceanIsEndless/scratch-spec/blob/main/LICENSE">CC-BY-4.0</a>'
+      copyright: '<a href="https://github.com/OceanIsEndless/scratch-spec/blob/main/LICENSE">Licensed under CC-BY-4.0</a>'
     },
 
     editLink: {
