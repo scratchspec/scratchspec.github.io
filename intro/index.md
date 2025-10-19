@@ -17,7 +17,7 @@ The information about Scratch in this specification is, of course, derived from 
 
 ## Contributing
 
-Please [contribute on GitHub](https://github.com/OceanIsEndless/scratch-spec/pulls) (must be **13** or older, [need a GitHub account](https://github.com/signup)) or [comment on my Scratch profile](https://scratch.mit.edu/users/Endless-Ocean/#comments) (just [need a Scratch account](https://scratch.mit.edu/join)) if you can:
+Please [contribute on GitHub](https://github.com/scratchspec/scratchspec.github.io/pulls) (must be **13** or older, [need a GitHub account](https://github.com/signup)) or [comment on my Scratch profile](https://scratch.mit.edu/users/Endless-Ocean/#comments) (just [need a Scratch account](https://scratch.mit.edu/join)) if you can:
 
 * **Summarize** key **points** of sections (things can get *ridiculously wordy* at times)
 * **Provide insight** into the workings of Scratch (know info that should be here)

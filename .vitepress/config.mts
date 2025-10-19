@@ -6,7 +6,6 @@ export default defineConfig({
   title: "Scratch Specification",
   description: "An explanation of Scratch 3.0",
   // head: [['link', { rel: 'icon', href: '/favicon.ico' }]], // https://github.com/vuejs/vitepress/discussions/2475#discussioncomment-11238929
-  base: "/scratch-spec/", // https://vitepress.dev/guide/deploy#setting-a-public-base-path
   ignoreDeadLinks: true,
   cleanUrls: true,
 
@@ -95,16 +94,16 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/OceanIsEndless/scratch-spec' }
+      { icon: 'github', link: 'https://github.com/scratchspec/scratchspec.github.io' }
     ],
 
     footer: {
       message: '',
-      copyright: '<a href="https://github.com/OceanIsEndless/scratch-spec/blob/main/LICENSE">Licensed under CC-BY-4.0</a>'
+      copyright: '<a href="https://github.com/scratchspec/scratchspec.github.io/blob/main/LICENSE">Licensed under CC-BY-4.0</a>'
     },
 
     editLink: {
-      pattern: 'https://github.com/OceanIsEndless/scratch-spec/edit/main/:path',
+      pattern: 'https://github.com/scratchspec/scratchspec.github.io/edit/main/:path',
       text: 'Edit this page on GitHub'
     },
 
@@ -128,13 +127,13 @@ export default defineConfig({
     math: true,
     toc: { level: [1, 2, 3, 4, 5, 6] },
     config: (md) => {
-      md.use(scratchblocksPlugin) // https://github.com/OceanIsEndless/scratch-spec/pull/5#issuecomment-3137259965
+      md.use(scratchblocksPlugin) // https://github.com/scratchspec/scratchspec.github.io/pull/5#issuecomment-3137259965
       // May add more if needed
     }
   },
   
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://oceanisendless.github.io/scratch-spec/'
+    hostname: 'https://scratchspec.github.io'
   }
 })
