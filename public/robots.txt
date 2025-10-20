@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://scratchspec.github.io/sitemap.xml
+
+# Robots are welcome :D (Mostly because I don't have to pay for GitHub Pages :)

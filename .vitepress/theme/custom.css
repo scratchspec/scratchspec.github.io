@@ -48,3 +48,26 @@
 .vp-doc a:hover {
   text-decoration: underline;
 }
+
+/* Modified from https://github.com/ScratchEverywhere/ScratchEverywhere.github.io/blob/eff8aa7328be1f0764de320cfe48d01da7fed5c2/.vitepress/theme/custom.css#L1
+it makes inline scratch blocks actually inline, so that's pretty epic :D */
+
+.scratchblocks-style-scratch3, .scratchblocks-style-scratch2 {
+  display: inline;
+  width: unset;
+  translate: 0 8.25%;
+}
+
+p .scratchblocks-style-scratch3, p .scratchblocks-style-scratch2 {
+  translate: 0 33%;
+}
+
+p .scratchblocks-style-scratch3 {
+  height: 2.5em;
+}
+
+.emoji {
+  display: inline;
+  max-width: 24px;
+  max-height: 1em;
+}

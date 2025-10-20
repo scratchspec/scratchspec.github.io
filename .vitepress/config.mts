@@ -88,7 +88,8 @@ export default defineConfig({
       {
         text: 'Other Pages',
         items: [
-          { text: 'Single File', link: '/full/' }
+          { text: 'Single File', link: '/full/' },
+          { text: 'Test Page', link: '/test/' }
         ]
       }
     ],
@@ -129,6 +130,18 @@ export default defineConfig({
     config: (md) => {
       md.use(scratchblocksPlugin) // https://github.com/scratchspec/scratchspec.github.io/pull/5#issuecomment-3137259965
       // May add more if needed
+    },
+    emoji: {
+      shortcuts: {},
+      defs: {
+        meow: '<img src="/emoji/meow.png" class="emoji" alt="meow emoji">',
+        gobo: '<img src="/emoji/gobo.png" class="emoji" alt="gobo emoji">',
+        waffle: '<img src="/emoji/waffle.png" class="emoji" alt="waffle emoji">',
+        semicolon: '<img src="/emoji/semicolon.png" class="emoji" alt="semicolon emoji">',
+        ";": '<img src="/emoji/semicolon.png" class="emoji" alt="semicolon emoji">',
+        nategrin: '<img src="/emoji/nategrin.png" class="emoji" alt="nategrin emoji">'
+        // May add more for no reason, but not really necessary atm, was bored :P
+      }
     }
   },
   
