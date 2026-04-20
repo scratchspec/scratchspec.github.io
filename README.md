@@ -6,10 +6,20 @@ To read it, you can visit the [published page](https://scratchspec.github.io/), 
 
 ## Roadmap
 
-As of October 19, 2025, I have finally returned to working on this project! Apologies for the long break, as I have been busy with other things, but I'm really devoted to finishing this project! Here is a roadmap of what I'll be doing. (Note: Some things may be done out of order to meet certain needs faster.)
+As of April 20, 2026, I have finally returned to working on this project! Apologies for the long break after the long break that I said was over but wasn't, as I have been busy with other things (a whole lot busier and bored-er than I thought I would be), but I'm still really devoted to finishing this project! Here is a roadmap of what I'll be doing. (Note: Some things may be done out of order to meet certain needs faster.)
 
 > [!NOTE]
 > I'm not really an expert on Scratch, and even after writing this I probably won't be, so if you happen to have any deep knowledge of what Scratch does, it would be very helpful if you could contribute it! I'll be referencing Scratch's source code as I write, and I will be sure to analyze and fact-check every single detail, but if you already know a lot about something regarding Scratch then you may be able to explain it much better than I can, especially since I have a tendency to put big words where I don't understand things... yeah...
+
+### Scope
+
+Originally I was going to make this thing as extensive as possible, but for now I'll confine myself to these basic goals:
+
+- Describe the functionality of every block (because that's what actually does stuff)
+- Define _relevant_ concepts, data types, etc. (start with what matters first)
+- Figure out how to throw all that other stuff in ***later***
+
+\\/ \\/ \\/ \\/ \\/ Kindly ignore all this nonsense \\/ \\/ \\/ \\/ \\/
 
 ### Pre-Write
 
@@ -55,4 +65,4 @@ As of October 19, 2025, I have finally returned to working on this project! Apol
 
 ## Status
 
-It's a lot. I'm kind of overwhelmed when I see how much goes into Scratch that I don't understand. This spec could go absolutely nowhere. But I will really put in the effort and try to follow through on this project. I'll be taking things one step at a time, and seeing where it goes!
+...So I'm just gonna, like, actually start now-
